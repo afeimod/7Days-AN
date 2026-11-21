@@ -24,9 +24,15 @@ extern "C" JNIEXPORT jstring JNICALL Java_org_hebdomad_android_GameActivity_rend
 extern "C" JNIEXPORT void JNICALL Java_org_hebdomad_android_GameActivity_setAspect(JNIEnv*,jclass,jint value){aspect_mode.store(value);}
 extern "C" JNIEXPORT void JNICALL Java_org_hebdomad_android_GameActivity_setRenderScale(JNIEnv*,jclass,jint value){render_scale.store(value==2?2:1);}
 static void scaled_target(int &w,int &h){
-    int factor=render_scale.load();if(factor==1||!port_window)return;
-    int dw,dh;SDL_GetWindowSizeInPixels(port_window,&dw,&dh);
-    if(w!=scene_width||h!=scene_height)return;
+    if(!port_window)return;
+    bool legacy_scene_target=w==320&&h==240;
+    if(legacy_scene_target){
+        int target_width=scene_width,target_height=scene_height;
+        if((target_width<=0||target_height<=0)&&!SDL_GetWindowSizeInPixels(port_window,&target_width,&target_height))return;
+        if(target_width<=0||target_height<=0)return;
+        w=target_width;h=target_height;
+    }else if(w!=scene_width||h!=scene_height)return;
+    int factor=render_scale.load();if(factor==1)return;
     GLint limit,renderbuffer_limit;glGetIntegerv(GL_MAX_TEXTURE_SIZE,&limit);glGetIntegerv(GL_MAX_RENDERBUFFER_SIZE,&renderbuffer_limit);limit=std::min({limit,renderbuffer_limit,6144});
     float ratio=std::min(static_cast<float>(factor),static_cast<float>(limit)/std::max(w,h));
     w=static_cast<int>(w*ratio);h=static_cast<int>(h*ratio);
@@ -146,8 +152,10 @@ extern "C" void SDLCALL port_gl_viewport(GLint x,GLint y,GLsizei w,GLsizei h){
 static std::set<GLuint> bitmap_textures;
 static std::set<GLuint> ui_textures;
 static void GL_APIENTRY trace_texture(GLenum target,GLint level,GLint internal,GLsizei w,GLsizei h,GLint border,GLenum format,GLenum type,const void *data){
-    static int n=0;if(n++<60)port_log("Texture image %dx%d format=%x data=%p caller=%p",w,h,format,data,__builtin_return_address(0));
+    int original_w=w,original_h=h;
     if(!data)scaled_target(w,h);
+    if(original_w!=w||original_h!=h)port_log("Scaled scene texture %dx%d -> %dx%d",original_w,original_h,w,h);
+    static int n=0;if(n++<60)port_log("Texture image %dx%d format=%x data=%p caller=%p",w,h,format,data,__builtin_return_address(0));
     glTexImage2D(target,level,internal,w,h,border,format,type,data);
     // The title/menu is uploaded as a 320x240 RGB surface. It contains
     // already-composited text, so avoid a second bilinear blur when scaled.
@@ -183,9 +191,10 @@ static void GL_APIENTRY corrected_matrix(GLint location,GLsizei count,GLboolean 
     glUniformMatrix4fv(location,count,transpose,value);
 }
 static void GL_APIENTRY trace_renderbuffer(GLenum target,GLenum internal,GLsizei w,GLsizei h){
-    bool scene=w==scene_width&&h==scene_height;
-    int original=w;scaled_target(w,h);if(original!=w)port_log("Scene renderbuffer %dx%d (2x rendering)",w,h);
+    bool scene=(w==scene_width&&h==scene_height)||(w==320&&h==240);
+    int original_w=w,original_h=h;scaled_target(w,h);
     if(scene){actual_width.store(w);actual_height.store(h);}
+    if(original_w!=w||original_h!=h)port_log("Scaled scene renderbuffer %dx%d -> %dx%d",original_w,original_h,w,h);
     glRenderbufferStorage(target,internal,w,h);
 }
 static void GL_APIENTRY trace_subtexture(GLenum target,GLint level,GLint x,GLint y,GLsizei w,GLsizei h,GLenum format,GLenum type,const void *data){
@@ -227,6 +236,36 @@ static void native_resolution(unsigned char){
     *reinterpret_cast<unsigned char*>(0x3dec28)=0;
     port_log("Original low-resolution render mode disabled; using native drawable dimensions");
 }
+static void transition_overlay(int state){
+    auto *game_state=reinterpret_cast<const unsigned char*>(state);
+    int global_state=reinterpret_cast<int(*)()>(0xd9a24)();
+    if(*reinterpret_cast<const int*>(global_state+0x6e0)==2)return;
+    if(!game_state[0xa8])return;
+    float alpha=*reinterpret_cast<const float*>(game_state+0xc4);
+    if(!(alpha>0.f))return;
+
+    float color[4];
+    memcpy(color,game_state+0xac,3*sizeof(float));
+    color[3]=alpha;
+    // 过门遮罩按实际场景宽高比扩展，覆盖 4:3 投影留下的两侧区域。
+    float width=scene_height>0?240.f*scene_width/scene_height:320.f;
+    float x=(320.f-width)*0.5f;
+    reinterpret_cast<void(*)(float,float,float,float,const float*)>(0x106748)(x,0.f,width,240.f,color);
+}
+static void dialogue_rectangle(float x,float y,float width,float height,const void *color){
+    uintptr_t caller=reinterpret_cast<uintptr_t>(__builtin_return_address(0))&~uintptr_t(1);
+    if(caller>=0xf3ebc&&caller<0xf3fac&&x==0.f&&width==320.f&&height==32.f&&(y==0.f||y==208.f)){
+        float projection_scale=(4.f/3)*scene_height/std::max(scene_width,1);
+        if(projection_scale>0.f){
+            width=320.f/projection_scale;
+            x=(320.f-width)*0.5f;
+        }
+    }
+    alignas(8) unsigned char rectangle[220];
+    reinterpret_cast<void(*)(void*,float,float,float,float,float,float,float,float,const void*)>(0x100c94)(
+        rectangle,x,y,x+width,y+height,0.f,0.f,1.f,1.f,color);
+    reinterpret_cast<void(*)(void*,int)>(0x1035dc)(rectangle,0);
+}
 
 // SDL guarantees this append-only ABI order. The original 3.4.18 executable has
 // exactly 1,270 entries, matching the 3.4.20 header included with this project.
@@ -258,6 +297,8 @@ bool install_platform_hooks() {
     port_patch(0x105dbc,reinterpret_cast<void*>(native_resolution));
     port_patch(0x105edc,reinterpret_cast<void*>(port_wide_resize));
     port_patch(0x106464,reinterpret_cast<void*>(port_wide_projection));
+    port_patch(0x0f5a00,reinterpret_cast<void*>(transition_overlay));
+    port_patch(0x106748,reinterpret_cast<void*>(dialogue_rectangle));
     port_patch(0xe3cf0,reinterpret_cast<void*>(create_context));
     port_patch(0xe46c8,reinterpret_cast<void*>(destroy_context));
     port_patch(0xe4760,reinterpret_cast<void*>(refresh_context));
