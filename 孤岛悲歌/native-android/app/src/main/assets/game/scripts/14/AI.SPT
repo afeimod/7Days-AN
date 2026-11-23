@@ -1,0 +1,227 @@
+spt 84600;
+rotate 0 1 0 50 0 500;
+rotate 0 1 0 50 50 1648;
+rotate 0 -1 0 50 0 100;
+
+spt 84610;
+toward 14611 0 0;
+moveto 10 0 14611 0 0;
+toward 14630 150;
+sleep 5;
+toward 14640 150;
+sleep 5;
+
+spt 84612;
+toward 14600 0 0;
+
+spt 84613;
+follow 0;
+move 0 0 1 15 0 100;
+move 0 -1 0 15 0 200;
+toward 14600 0 0;
+moveto 15 0 14600 0 -350;
+round 14600 50 0 4096 0;
+follow 1;
+
+spt 84661;
+playsound 1;
+move -1 0 0 5 0 100;
+
+spt 84662;
+move 1 0 0 5 0 100;
+
+spt 846631;
+sleep 20;
+playsound 1;
+move 0 -1 0 5 0 145;
+
+spt 84663;
+follow 0;
+toward 9142 100 0;
+moveto 10 1 9142 100 -300;
+
+spt 84664;
+follow 1;
+
+spt 846010;
+sleep 8;
+playsound 1;
+move 0 -1 0 5 2 119;
+sleep 5;
+playsound 1;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 1;
+
+spt 846020;
+sleep 8;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 1;
+
+spt 846030;
+sleep 6;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 1;
+
+spt 846040;
+sleep 4;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 1;
+
+spt 846050;
+sleep 2;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 1;
+
+spt 846060;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 0;
+
+spt 846070;
+sleep 14;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 1;
+
+spt 846080;
+sleep 12;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 1;
+
+spt 846090;
+sleep 10;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 1;
+
+spt 846100;
+sleep 8;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 1;
+
+spt 846110;
+sleep 10;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 1;
+
+spt 846120;
+sleep 6;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 1;
+
+spt 846130;
+sleep 4;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 1;
+
+spt 846140;
+sleep 2;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 1;
+
+spt 846150;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 0;
+
+spt 846160;
+sleep 14;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 1;
+
+spt 846170;
+sleep 12;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 1;
+
+spt 846180;
+sleep 10;
+move 0 -1 0 5 2 119;
+sleep 5;
+move 0 1 0 5 2 119;
+sleep 5;
+goto 1;
+
+spt 836010;
+follow 0;
+sleep 1;
+playsound 2;
+
+spt 800100;
+playsound 4;
+sleep 5;
+cgtexture 1;
+setflags 14;
+
+spt 846401;
+playsound 7 6 1;
+goto 0;
+
+spt 846402;
+cgtexture 7;
+cgtexture 8;
+cgtexture 9;
+goto 0;
+
+spt 83333333;
+sleep 15;
+toward 46120 300;
+
+spt 83333334;
+move 0 0 0 10 0 50;
+setstill;
+
+spt 83333335;
+rotate 1 0 0 500 0 1024;
+
+spt 83333336;
+toward 33 300;
+
+spt 83333340;
+sleep 150;
+unremove 33333340 -1 -1 -1 -1;

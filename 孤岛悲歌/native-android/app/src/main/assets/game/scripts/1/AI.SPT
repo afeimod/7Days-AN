@@ -1,0 +1,148 @@
+spt 811;
+rolltext 8;
+
+spt 812;
+cgtexture 2;
+cgtexture 3;
+cgtexture 4;
+cgtexture 5;
+cgtexture 6;
+cgtexture 5;
+cgtexture 4;
+cgtexture 3;
+goto 0;
+
+spt 813;
+playsound 0 6 1;
+goto 0;
+
+spt 814;
+playsound 0 7 1;
+goto 0;
+
+spt 800100;
+playsound 2;
+sleep 5;
+cgtexture 1;
+setflags 1;
+
+spt 84444429;
+move 0 0 0 4 0 16;
+
+spt 84444430;
+toward 117 150;
+sleep 5;
+toward 118 150;
+sleep 5;
+toward 44444500 150;
+
+spt 84444431;
+toward 44444431 150;
+move 0 0 0 4 0 32;
+
+spt 84444432;
+follow 0;
+toward 44444431 -10 0;
+moveto 10 2 44444431 -10 -300;
+
+spt 84444433;
+moveto 10 2 44444410 60 0;
+follow 1;
+
+spt 84444420;
+move 0 1 0 20 20 115;
+move 0 -1 0 4 0 8;
+playsound 1;
+move 0 1 0 4 0 8;
+move 0 -1 0 2 0 4;
+move 0 1 0 2 0 4;
+
+spt 84444410;
+move 0 0 0 -15 0 -30;
+
+spt 84444411;
+toward 44444409 512;
+moveto 4 0 44444409 0 0;
+toward 44444420 512;
+
+spt 84444412;
+toward 44444431 512;
+
+spt 84444413;
+move 0 0 0 4 0 32;
+toward 117 150;
+sleep 5;
+toward 118 150;
+sleep 5;
+toward 44444431 150;
+move 0 0 0 4 0 64;
+
+spt 84444480;
+toward 44444480 250;
+moveto 8 0 44444480 0 0;
+toward 44444482 250;
+sleep 5;
+
+spt 84444482;
+move 0 0 0 -4 0 -64;
+
+spt 84444481;
+follow 0;
+toward 44444482 -20 0;
+sleep 20;
+toward 0 60 0;
+follow 1;
+
+spt 84444490;
+toward 44444490 250;
+moveto 8 0 44444490 0 0;
+toward 44444492 250;
+sleep 5;
+
+spt 84444492;
+move 0 0 0 -4 0 -64;
+
+spt 84444491;
+follow 0;
+toward 44444492 -20 0;
+sleep 20;
+toward 0 60 0;
+follow 1;
+
+spt 84444510;
+toward 44444500 150;
+sleep 5;
+
+spt 84444511;
+toward 44444499 150;
+moveto 8 0 44444499 0 0;
+toward 44444500 150;
+
+spt 84444520;
+toward 44444521 150;
+sleep 5;
+
+spt 84444521;
+follow 0;
+toward 44444521 0 0;
+moveto 10 1 44444521 0 -100;
+sleep 8;
+toward 44444522 0 0;
+moveto 10 1 44444522 0 -100;
+sleep 8;
+moveto 10 2 0 60 0;
+follow 1;
+
+spt 84444530;
+toward 10110 150;
+
+spt 84444540;
+toward 44444541 150;
+
+spt 84444560;
+toward 44444561 512;
+
+spt 84444561;
+follow 0;
+moveto 10 2 0 60 0;
+toward 44444561 0 0;

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "0",
+    "source_sha256": "4517c31d77752827ec9dabb65dc1f6eee74c92e9e4cc26f303c04b0075d882fe",
+    "sha256": "0a0cad28c2e44c4cba4a8b795717a8a7d99abc8d57da29d7a2847f853c2311f4",
+    "frames": 109,
+    "fps": 25.0,
+    "size": [
+      960,
+      768
+    ],
+    "enhancement": "4x Lanczos enlargement and mild sharpening; no invented detail"
+  },
+  {
+    "id": "1",
+    "source_sha256": "490ed8eae74091dab70e00439513f4598995de2a5f443f15f077e23047ab5c70",
+    "sha256": "0e7d3d1f6bea319931ee0ce302b1eab6561c91cee78b895a4d6d95bcc8f2889f",
+    "frames": 75,
+    "fps": 25.0,
+    "size": [
+      960,
+      512
+    ],
+    "enhancement": "4x Lanczos enlargement and mild sharpening; no invented detail"
+  },
+  {
+    "id": "2",
+    "source_sha256": "ef96f7cf45dcc9766e6bf98a31f710f6a9d8baef24d6d54396a14d2b6ab45f2a",
+    "sha256": "072b43a4368a3b59c35697c9d8f79b134ea200ad67c75b8bbc9e6a03993fde3d",
+    "frames": 74,
+    "fps": 25.0,
+    "size": [
+      960,
+      512
+    ],
+    "enhancement": "4x Lanczos enlargement and mild sharpening; no invented detail"
+  },
+  {
+    "id": "3",
+    "source_sha256": "017fbae6efa5f86640d33c0b3163f34e2bc504ac3d5aeef0db06a23b07209349",
+    "sha256": "cf0a721be61801f6e20d1d955d8cf656fecce60e67f6b1e07c3786f67a6cf424",
+    "frames": 191,
+    "fps": 29.97002997002997,
+    "size": [
+      960,
+      704
+    ],
+    "enhancement": "4x Lanczos enlargement and mild sharpening; no invented detail"
+  },
+  {
+    "id": "4",
+    "source_sha256": "199978af3605b53cbaf32de292f05e74c8ff125ba80356f0c148523e2714ca1f",
+    "sha256": "5ba449e39f82829c66bda29e37f81c76bb4fc36939b4684a56f4403769f83b49",
+    "frames": 298,
+    "fps": 29.97002997002997,
+    "size": [
+      960,
+      704
+    ],
+    "enhancement": "4x Lanczos enlargement and mild sharpening; no invented detail"
+  },
+  {
+    "id": "5",
+    "source_sha256": "0a5c2fa408ed9f5f8544319a307e5e9dc5afcc9de0264189c81515f095646b09",
+    "sha256": "df48dbedbbe432a957e0861f14d1788b7e98542a503fb7a201232d10b9f1118e",
+    "frames": 161,
+    "fps": 29.97002997002997,
+    "size": [
+      960,
+      704
+    ],
+    "enhancement": "4x Lanczos enlargement and mild sharpening; no invented detail"
+  },
+  {
+    "id": "6",
+    "source_sha256": "06a0ee4eea026764e2c7c08cfa56b2a7b187965bed4092d526ad62147e7bb69f",
+    "sha256": "9cb4906cf59a8ef04f8dfe20f0128652c1da97f580eb7c2bb6d80af5b0af87ef",
+    "frames": 899,
+    "fps": 29.97002997002997,
+    "size": [
+      960,
+      704
+    ],
+    "enhancement": "4x Lanczos enlargement and mild sharpening; no invented detail"
+  },
+  {
+    "id": "7",
+    "source_sha256": "62a184f4d431c5a82e9af55dd7516f58fd7c18b61a20361c21f5fc4c1d01e8d1",
+    "sha256": "7d2f6bdf8a265136d10aa0ab6032bc30b190462a7b5137be2b537c34747fe2bf",
+    "frames": 150,
+    "fps": 29.97002997002997,
+    "size": [
+      960,
+      704
+    ],
+    "enhancement": "4x Lanczos enlargement and mild sharpening; no invented detail"
+  },
+  {
+    "id": "8",
+    "source_sha256": "0ec955caf1dc2a229341ca4dff8a65a9fafd569601c5c374d8b7876f9cc4a475",
+    "sha256": "9a152b0a4d2657cfc771c8ec6a86deaf5bf2f42e78c93458e9075d148101b2ab",
+    "frames": 1607,
+    "fps": 30.0,
+    "size": [
+      960,
+      1152
+    ],
+    "enhancement": "4x Lanczos enlargement and mild sharpening; no invented detail"
+  },
+  {
+    "id": "head",
+    "source_sha256": "fed54be083093a524eb00edeed099e302a883740c32c551d302a12511f154e30",
+    "sha256": "c82c6be431137f4e6a2720aafe9bf72723c42d2127dd604de1a359a03330c2e1",
+    "frames": 717,
+    "fps": 29.97002997002997,
+    "size": [
+      960,
+      704
+    ],
+    "enhancement": "4x Lanczos enlargement and mild sharpening; no invented detail"
+  },
+  {
+    "id": "logo",
+    "source_sha256": "bb028f65d8a2ad31acc17d5524784314179c32f5c3d5f13f8c8fc81881a0c79b",
+    "sha256": "8a94e1b45a2bb2dec001f6642482e9a171cba8fc6b63ae2f4518b225f339a51a",
+    "frames": 124,
+    "fps": 25.0,
+    "size": [
+      960,
+      1280
+    ],
+    "enhancement": "4x Lanczos enlargement and mild sharpening; no invented detail"
+  },
+  {
+    "id": "recall",
+    "source_sha256": "0b0f328f950c4fe0b048985ba492cf9f7e0da0db0aa03abc5787b57ef5bbe16a",
+    "sha256": "2048fa4b47b782eb58fb0bcefe022fa97d5946f0ddcfecc5584e6958c9c6071b",
+    "frames": 1236,
+    "fps": 29.97002997002997,
+    "size": [
+      960,
+      704
+    ],
+    "enhancement": "4x Lanczos enlargement and mild sharpening; no invented detail"
+  }
+]

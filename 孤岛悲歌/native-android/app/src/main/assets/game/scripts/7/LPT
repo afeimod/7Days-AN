@@ -1,0 +1,108 @@
+object 11772;
+type 101;
+objnum 8;
+objs 101;
+objs 102;
+objs 103;
+objs 104;
+objs 105;
+objs 106;
+objs 107;
+objs 108;
+
+//鼠标数量;
+posnum 2;
+poss 3;
+poss 6;
+
+mousenum 2;
+//黑珠鼠标;
+mouseitem 21210;
+itemmouse 1002;
+//白珠鼠标;
+mouseitem 21550;
+itemmouse 1001;
+
+HasResult 71699;
+OverResult 71700;
+NoResult 71701;
+ObserveResult 71702;
+FailResult 71704;
+
+object 117721;
+type 0;
+HasResult 71703;
+
+object 11710;
+type 0;
+HasResult 71710;
+
+object 11730;
+type 0;
+HasResult 71730;
+
+object 11740;
+type 0;
+HasResult 71740;
+
+object 11750;
+type 0;
+HasResult 71750;
+
+object 11751;
+type 0;
+HasResult 71751;
+
+object 11752;
+type 0;
+HasResult 71752;
+
+object 11753;
+type 0;
+HasResult 71753;
+
+object 11754;
+type 0;
+HasResult 71754;
+
+object 11760;
+type 0;
+HasResult 71760;
+
+object 11761;
+type 0;
+HasResult 71761;
+
+object 11780;
+type 1;
+HasResult 71780;
+
+object 11790;
+type 0;
+HasResult 71790;
+
+object 11803;
+type 0;
+HasResult 71800;
+
+object 11802;
+type 0;
+HasResult 71802;
+
+object 11820;
+type 4;
+HasResult 71820;
+
+object 11830;
+type 4;
+HasResult 71830;
+
+object 1;
+type 1001;
+
+object 3;
+type 1001;
+
+object 40070;
+type 0;
+HasResult 400100;

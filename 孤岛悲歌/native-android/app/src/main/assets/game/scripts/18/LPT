@@ -1,0 +1,31 @@
+object 18010;
+type 0;
+HasResult 78010;
+
+object 18020;
+type 0;
+HasResult 78020;
+
+object 18030;
+type 0;
+HasResult 78030;
+
+object 18040;
+type 0;
+HasResult 78040;
+
+object 18050;
+type 0;
+HasResult 78050;
+
+object 18110;
+type 0;
+HasResult 78110;
+
+object 18120;
+type 0;
+HasResult 78120;
+
+object 40180;
+type 0;
+HasResult 400100;

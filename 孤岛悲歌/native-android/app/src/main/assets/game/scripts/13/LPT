@@ -1,0 +1,125 @@
+object 14301;
+//objnum 1;
+//objs 14301;
+//type 106;
+type 11;
+item 24420;
+//mouse 1009;
+//HasResult 74304;
+HasResult 74301;
+//OverResult 74301;
+NoResult 79999;
+ObserveResult 74300;
+//ObserveResult 74301;
+
+object 14311;
+type 104;
+item 20031;
+HasResult 74290;
+OverResult 74292;
+FailResult 74293;
+ObserveResult 74291;
+
+object 14110;
+type 0;
+HasResult 74110;
+
+object 14120;
+type 0;
+HasResult 74120;
+
+object 14130;
+type 0;
+HasResult 74120;
+
+object 141401;
+type 11;
+HasResult 74140;
+NoResult 79999;
+item 23540;
+ObserveResult 74120;
+
+object 141501;
+type 11;
+HasResult 74150;
+NoResult 79999;
+item 23540;
+ObserveResult 74120;
+
+object 141601;
+type 11;
+HasResult 74160;
+NoResult 79999;
+item 23540;
+ObserveResult 74120;
+
+object 14141;
+type 0;
+HasResult 74141;
+
+object 14151;
+type 0;
+HasResult 74151;
+
+object 14161;
+type 0;
+HasResult 74161;
+
+object 14410;
+type 2;
+HasResult 74410;
+NoResult 74180;
+
+object 14190;
+type 0;
+HasResult 74190;
+
+object 14200;
+type 0;
+HasResult 74200;
+
+object 14431;
+type 2;
+HasResult 74430;
+NoResult 74220;
+
+object 14269;
+type 0;
+HasResult 74269;
+
+object 14270;
+type 0;
+HasResult 74270;
+
+object 14310;
+type 0;
+HasResult 74310;
+
+object 14420;
+type 1;
+HasResult 74420;
+
+object 144301;
+type 11;
+HasResult 744301;
+NoResult 79999;
+item 20011;
+ObserveResult 744302;
+
+object 14441;
+type 2;
+HasResult 74440;
+NoResult 74210;
+
+object 14510;
+type 0;
+HasResult 74510;
+
+object 40130;
+type 0;
+HasResult 400100;
+
+object 95141;
+type 108;
+ObserveResult 795141;
+OverResult 795142;

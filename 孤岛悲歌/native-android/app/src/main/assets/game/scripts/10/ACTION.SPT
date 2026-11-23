@@ -1,0 +1,216 @@
+act 10;
+layer;
+fog 1 300 400 0 0 0 1;
+playback 4;
+
+act 73010;
+layer;
+call 0 89999;
+call 0 83010;
+setaction 0 47 0 1;
+setaction 0 47 2 3;
+setaction 0 47 2 3;
+setaction 0 47 2 7;
+talk 53010;
+call 0 83011;
+talk 530101;
+
+act 73020;
+layer;
+call 0 83022;
+sleep 3;
+call 2 83020;
+sleep 20;
+talk 53020;
+
+act 73030;
+layer;
+talk 53030;
+
+act 73040;
+layer;
+talk 53040;
+
+act 73050;
+layer;
+talk 53050;
+
+act 73060;
+layer;
+info 63061;
+
+act 73230;
+layer;
+playsound 3;
+fadeout 16;
+setblack 6;
+loadmap 8 9082 180;
+fog 0 300 1000 100 200 100;
+fadein 16;
+goscript 8;
+
+act 73240;
+layer;
+playsound 4;
+fadeout 16;
+setblack 6;
+loadmap 11 9111 270;
+fog 1 300 400 0 0 0 1;
+fadein 16;
+goscript 11;
+
+act 74001;
+layer;
+talk 53040;
+call 0 8299;
+call 2 8300;
+play 13050;
+
+act 74000;
+layer;
+//call 2 8001;
+talk 53050;
+
+act 400;
+layer;
+playsound 0;
+call 5001 8401;
+playsound 0;
+call 5002 8401;
+playsound 0;
+call 5003 8401;
+playsound 0;
+call 5004 8401;
+goscript 740001;
+
+act 740001;
+layer;
+playsound 0;
+call 5005 8401;
+playsound 0;
+call 5006 8401;
+playsound 0;
+call 5007 8401;
+playsound 0;
+call 5008 8401;
+call 2 8301;
+goscript 740002;
+
+act 740002;
+layer;
+setaction 0 48 0 1;
+playsound 5;
+setaction 0 48 2 7;
+talk 53050;
+call 0 8302;
+change 13050 13051;
+
+act 401;
+layer;
+talk 53050;
+
+act 300;
+layer;
+call 2 8301;
+talk 53051;
+playsound 6;
+sleep 15;
+talk 530511;
+call 0 83051;
+//call 2 83052;
+playsound 1;
+call 13060 83021;
+goscript 3001;
+
+act 3001;
+layer;
+sleep 5;
+follow 1;
+talk 53052;
+change 13051 13052;
+
+act 73052;
+layer;
+info 63052;
+
+act 299;
+layer;
+call 0 8303;
+call 2 8304;
+play 13051;
+
+act 301;
+layer;
+talk 59999;
+
+act 302;
+layer;
+talk 59999;
+
+act 77777711;
+layer;
+talk 57777711;
+
+act 77777721;
+layer;
+talk 57777721;
+
+act 77777731;
+layer;
+talk 57777731;
+
+act 77777741;
+layer;
+talk 57777741;
+
+act 77777751;
+layer;
+talk 57777751;
+
+act 77777761;
+layer;
+talk 57777761;
+
+act 77777811;
+layer;
+talk 57777811;
+
+act 77777821;
+layer;
+talk 57777821;
+
+act 77777831;
+layer;
+talk 57777831;
+
+act 77777841;
+layer;
+talk 57777841;
+
+act 77777851;
+layer;
+talk 57777851;
+
+act 77777861;
+layer;
+talk 57777861;
+
+act 77777871;
+layer;
+talk 57777871;
+
+act 77777881;
+layer;
+talk 57777881;
+
+act 77777891;
+layer;
+talk 57777891;
+
+act 77777900;
+layer;
+talk 57777900;
+
+act 77778000;
+layer;
+info 67778000;

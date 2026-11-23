@@ -1,0 +1,160 @@
+object 14610;
+type 0;
+HasResult 74610;
+
+object 14612;
+type 0;
+HasResult 74612;
+
+object 14620;
+type 11;
+HasResult 74621;
+NoResult 79999;
+item 23550;
+ObserveResult 74620;
+
+object 14621;
+type 11;
+HasResult 74621;
+NoResult 79999;
+item 23550;
+ObserveResult 74620;
+
+object 14630;
+type 11;
+HasResult 74631;
+NoResult 79999;
+item 23550;
+ObserveResult 74630;
+
+object 14631;
+type 11;
+HasResult 74631;
+NoResult 79999;
+item 23550;
+ObserveResult 74630;
+
+object 14640;
+type 11;
+HasResult 74641;
+NoResult 79999;
+item 23550;
+ObserveResult 74640;
+
+object 14641;
+type 11;
+HasResult 74641;
+NoResult 79999;
+item 23550;
+ObserveResult 74640;
+
+object 14650;
+type 11;
+HasResult 74651;
+NoResult 79999;
+item 23550;
+ObserveResult 74650;
+
+object 14651;
+type 11;
+HasResult 74651;
+NoResult 79999;
+item 23550;
+ObserveResult 74650;
+
+object 14600;
+type 0;
+HasResult 74600;
+
+object 14661;
+type 0;
+HasResult 74660;
+
+object 14662;
+type 0;
+HasResult 74660;
+
+object 14670;
+type 11;
+HasResult 74671;
+NoResult 79999;
+item 23970;
+ObserveResult 74670;
+
+object 14680;
+type 11;
+HasResult 74681;
+NoResult 79999;
+item 24730;
+ObserveResult 74680;
+
+object 14681;
+type 11;
+HasResult 74671;
+NoResult 79999;
+item 23970;
+ObserveResult 74682;
+
+object 14710;
+type 1;
+HasResult 74710;
+
+object 14810;
+type 0;
+HasResult 74810;
+
+object 14820;
+type 0;
+HasResult 74820;
+
+object 14830;
+type 0;
+HasResult 74830;
+
+object 46200;
+type 0;
+HasResult 746200;
+
+object 46210;
+type 0;
+HasResult 746210;
+
+object 46198;
+type 0;
+HasResult 746220;
+
+object 46199;
+type 0;
+HasResult 746220;
+
+object 40140;
+type 0;
+HasResult 400100;
+
+object 33333333;
+type 0;
+HasResult 73333333;
+
+object 33333334;
+type 0;
+HasResult 73333334;
+
+//触摸阿大中毒;
+object 33333338;
+type 0;
+HasResult 73333341;
+
+//帮阿大解毒;
+object 33333339;
+type 0;
+HasResult 733333402;
+
+//阿大死亡，从阿大身上获得戒指;
+object 33333340;
+type 1;
+HasResult 733333391;
+
+//阿大死亡;
+object 33333341;
+type 0;
+HasResult 333333382;

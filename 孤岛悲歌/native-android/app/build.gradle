@@ -1,0 +1,14 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'org.island.nativevalidation'
+    compileSdk 34
+    defaultConfig {
+        applicationId 'org.island.nativevalidation'
+        minSdk 26
+        targetSdk 34
+        versionCode 4
+        versionName '0.4.0-dev'
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8; targetCompatibility JavaVersion.VERSION_1_8 }
+    buildTypes { release { minifyEnabled false } }
+}

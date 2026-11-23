@@ -1,0 +1,27 @@
+spt 85030;
+toward 15060 200;
+
+spt 800100;
+playsound 0;
+sleep 5;
+cgtexture 1;
+setflags 15;
+
+spt 850601;
+follow 0;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+follow 1;
+
+spt 850602;
+toward 150621 300;
+
+spt 850621;
+playsound 2;
+move 0 1 0 10 2 96;

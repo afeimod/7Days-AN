@@ -1,0 +1,5059 @@
+{
+  "maps": [
+    {
+      "level": 1,
+      "entities": 46,
+      "draw_batches": 45,
+      "spawn": [
+        -377.0,
+        -368.0,
+        68.0
+      ]
+    },
+    {
+      "level": 2,
+      "entities": 96,
+      "draw_batches": 84,
+      "spawn": [
+        742.0,
+        -351.0,
+        -130.0
+      ]
+    },
+    {
+      "level": 3,
+      "entities": 87,
+      "draw_batches": 86,
+      "spawn": [
+        80.0,
+        -16.0,
+        60.0
+      ]
+    },
+    {
+      "level": 4,
+      "entities": 37,
+      "draw_batches": 45,
+      "spawn": [
+        -192.0,
+        800.0,
+        60.0
+      ]
+    },
+    {
+      "level": 5,
+      "entities": 32,
+      "draw_batches": 42,
+      "spawn": [
+        -511.0,
+        1388.0,
+        60.0
+      ]
+    },
+    {
+      "level": 6,
+      "entities": 41,
+      "draw_batches": 49,
+      "spawn": [
+        190.0,
+        1334.0,
+        60.0
+      ]
+    },
+    {
+      "level": 7,
+      "entities": 57,
+      "draw_batches": 46,
+      "spawn": [
+        254.0,
+        1134.0,
+        60.0
+      ]
+    },
+    {
+      "level": 8,
+      "entities": 115,
+      "draw_batches": 99,
+      "spawn": [
+        -332.0,
+        -240.0,
+        68.0
+      ]
+    },
+    {
+      "level": 9,
+      "entities": 90,
+      "draw_batches": 91,
+      "spawn": [
+        -144.0,
+        288.0,
+        268.0
+      ]
+    },
+    {
+      "level": 10,
+      "entities": 59,
+      "draw_batches": 56,
+      "spawn": [
+        1104.0,
+        408.0,
+        68.0
+      ]
+    },
+    {
+      "level": 11,
+      "entities": 137,
+      "draw_batches": 129,
+      "spawn": [
+        194.0,
+        1800.0,
+        60.0
+      ]
+    },
+    {
+      "level": 12,
+      "entities": 162,
+      "draw_batches": 128,
+      "spawn": [
+        2672.0,
+        2016.0,
+        252.0
+      ]
+    },
+    {
+      "level": 13,
+      "entities": 53,
+      "draw_batches": 52,
+      "spawn": [
+        2672.0,
+        2016.0,
+        252.0
+      ]
+    },
+    {
+      "level": 14,
+      "entities": 92,
+      "draw_batches": 71,
+      "spawn": [
+        384.0,
+        -1200.0,
+        252.0
+      ]
+    },
+    {
+      "level": 15,
+      "entities": 25,
+      "draw_batches": 21,
+      "spawn": [
+        0.0,
+        1376.0,
+        60.0
+      ]
+    },
+    {
+      "level": 16,
+      "entities": 49,
+      "draw_batches": 50,
+      "spawn": [
+        -336.0,
+        1496.0,
+        60.0
+      ]
+    },
+    {
+      "level": 17,
+      "entities": 63,
+      "draw_batches": 68,
+      "spawn": [
+        832.0,
+        48.0,
+        252.0
+      ]
+    },
+    {
+      "level": 18,
+      "entities": 15,
+      "draw_batches": 13,
+      "spawn": [
+        172.0,
+        -154.0,
+        812.0
+      ]
+    }
+  ],
+  "issues": [],
+  "omitted_embedded_model_previews": [
+    {
+      "level": 1,
+      "model": 0,
+      "face": 257,
+      "material": "shitoufeixu"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 258,
+      "material": "shuiqiang"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 259,
+      "material": "menmei"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 260,
+      "material": "huailouti"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 261,
+      "material": "tiemen"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 262,
+      "material": "shui"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 263,
+      "material": "huaping2"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 264,
+      "material": "cunpandian"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 265,
+      "material": "xiaoxiangzi1"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 266,
+      "material": "gao"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 267,
+      "material": "128muxiang"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 268,
+      "material": "64muxiang"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 269,
+      "material": "64muxiang"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 270,
+      "material": "64muxiang"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 271,
+      "material": "shui"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 272,
+      "material": "shuihua1"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 273,
+      "material": "shui"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 274,
+      "material": "shuiqiang"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 275,
+      "material": "shui"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 276,
+      "material": "shui"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 277,
+      "material": "shuihua1"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 278,
+      "material": "shui"
+    },
+    {
+      "level": 1,
+      "model": 0,
+      "face": 279,
+      "material": "xiaoxiangzi1"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 241,
+      "material": "migang"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 242,
+      "material": "cunpandian"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 243,
+      "material": "gancao"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 244,
+      "material": "huaping1"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 245,
+      "material": "tiedingd"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 246,
+      "material": "ycmen"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 247,
+      "material": "qianghui"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 248,
+      "material": "qianghui"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 249,
+      "material": "qianghui"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 250,
+      "material": "qianghui"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 251,
+      "material": "qianghui"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 252,
+      "material": "qianghui"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 253,
+      "material": "qianghui"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 254,
+      "material": "qianghui"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 255,
+      "material": "qianghui"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 256,
+      "material": "qianghui"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 257,
+      "material": "qianghui"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 258,
+      "material": "qianghui"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 259,
+      "material": "qianghui"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 260,
+      "material": "qianghui"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 261,
+      "material": "qianghui"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 262,
+      "material": "xiaojiazi"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 263,
+      "material": "daxiangzi2"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 264,
+      "material": "ditu"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 265,
+      "material": "shengxiudeyaoshi"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 266,
+      "material": "guizi3"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 267,
+      "material": "zihua"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 268,
+      "material": "duandeng"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 269,
+      "material": "duandeng"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 270,
+      "material": "danwan"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 271,
+      "material": "guizi1"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 272,
+      "material": "baoxiang1"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 273,
+      "material": "zihe"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 274,
+      "material": "guizi2"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 275,
+      "material": "mumen2"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 276,
+      "material": "huiyizhuo"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 277,
+      "material": "xiaoxiangzi1"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 278,
+      "material": "zhuozi1"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 279,
+      "material": "mumen2"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 280,
+      "material": "huajia"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 281,
+      "material": "huajia"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 282,
+      "material": "guizi2"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 283,
+      "material": "duandeng"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 284,
+      "material": "duandeng"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 285,
+      "material": "duandeng"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 286,
+      "material": "key"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 287,
+      "material": "huaping1"
+    },
+    {
+      "level": 2,
+      "model": 0,
+      "face": 288,
+      "material": "migang"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 226,
+      "material": "gancao"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 227,
+      "material": "masheng"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 228,
+      "material": "jiankong"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 229,
+      "material": "cunpandian"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 230,
+      "material": "xiaoxiangzi1"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 231,
+      "material": "daxiangzi1"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 232,
+      "material": "danwan"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 233,
+      "material": "ziyu"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 234,
+      "material": "wugui"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 235,
+      "material": "dangong"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 236,
+      "material": "baoxiang1"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 237,
+      "material": "guizi2"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 238,
+      "material": "guizi2"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 239,
+      "material": "bianfu"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 240,
+      "material": "bianfu"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 241,
+      "material": "bianfu"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 242,
+      "material": "guizi2"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 243,
+      "material": "guizi2"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 244,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 245,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 246,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 247,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 248,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 249,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 250,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 251,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 252,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 253,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 254,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 255,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 256,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 257,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 258,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 259,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 260,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 261,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 262,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 263,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 264,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 265,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 266,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 267,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 268,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 269,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 270,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 271,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 272,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 273,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 274,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 275,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 276,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 277,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 278,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 279,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 280,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 281,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 282,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 283,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 284,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 285,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 286,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 287,
+      "material": "dici"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 288,
+      "material": "xiaoxiangzi1"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 289,
+      "material": "hualun"
+    },
+    {
+      "level": 3,
+      "model": 0,
+      "face": 290,
+      "material": "masheng"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 157,
+      "material": "yaoguan"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 158,
+      "material": "yaojia"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 159,
+      "material": "gancao"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 160,
+      "material": "daxiangzi2"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 161,
+      "material": "danwan"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 162,
+      "material": "zihe"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 163,
+      "material": "jieduyao"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 164,
+      "material": "siyecao"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 165,
+      "material": "yaogui"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 166,
+      "material": "heizhu"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 167,
+      "material": "fadianji"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 168,
+      "material": "zhuozi1"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 169,
+      "material": "xiaoxiangzi2"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 170,
+      "material": "guitai"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 171,
+      "material": "yaogui"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 172,
+      "material": "yaogui"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 173,
+      "material": "yaogui"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 174,
+      "material": "guitai"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 175,
+      "material": "yaogui"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 176,
+      "material": "siyecao"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 177,
+      "material": "tian"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 178,
+      "material": "tian"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 179,
+      "material": "yaojia"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 180,
+      "material": "yaojia"
+    },
+    {
+      "level": 4,
+      "model": 0,
+      "face": 181,
+      "material": "yaogui"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 160,
+      "material": "chuihuichen"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 161,
+      "material": "keheng3"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 162,
+      "material": "jiubamen"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 163,
+      "material": "cunpandian"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 164,
+      "material": "cidai"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 165,
+      "material": "baizhu"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 166,
+      "material": "zihua"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 167,
+      "material": "jiutong"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 168,
+      "material": "jiujia"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 169,
+      "material": "jiujia"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 170,
+      "material": "jiutong"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 171,
+      "material": "jiutong"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 172,
+      "material": "jiutong"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 173,
+      "material": "jiutong"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 174,
+      "material": "jiujia"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 175,
+      "material": "jiubamen"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 176,
+      "material": "dipian"
+    },
+    {
+      "level": 5,
+      "model": 0,
+      "face": 177,
+      "material": "ruyinji"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 105,
+      "material": "cunpandian"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 106,
+      "material": "duanya2"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 107,
+      "material": "duanya1"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 108,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 109,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 110,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 111,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 112,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 113,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 114,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 115,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 116,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 117,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 118,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 119,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 120,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 121,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 122,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 123,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 124,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 125,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 126,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 127,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 128,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 129,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 130,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 131,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 132,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 133,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 134,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 135,
+      "material": "tanta"
+    },
+    {
+      "level": 6,
+      "model": 0,
+      "face": 136,
+      "material": "bianfu"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 205,
+      "material": "longmen"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 206,
+      "material": "longmen"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 207,
+      "material": "longmen"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 208,
+      "material": "cunpandian"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 209,
+      "material": "tyshimen"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 210,
+      "material": "shizhu"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 211,
+      "material": "duanya2"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 212,
+      "material": "duanya1"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 213,
+      "material": "danwan"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 214,
+      "material": "bianfu"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 215,
+      "material": "langan"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 216,
+      "material": "shizhuo"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 217,
+      "material": "ding"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 218,
+      "material": "kaiguan1"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 219,
+      "material": "shensuomuqiao"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 220,
+      "material": "langan"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 221,
+      "material": "bianfu"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 222,
+      "material": "bianfu"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 223,
+      "material": "shizhu"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 224,
+      "material": "shizhu"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 225,
+      "material": "shizhu"
+    },
+    {
+      "level": 7,
+      "model": 0,
+      "face": 226,
+      "material": "bianfu"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 270,
+      "material": "shadai"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 271,
+      "material": "ange"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 272,
+      "material": "ange"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 273,
+      "material": "cunpandian"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 274,
+      "material": "pohuapen"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 275,
+      "material": "zhuozi1"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 276,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 277,
+      "material": "huapen"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 278,
+      "material": "riji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 279,
+      "material": "jieduyao"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 280,
+      "material": "siyecao"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 281,
+      "material": "jian3"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 282,
+      "material": "ziyu"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 283,
+      "material": "jian"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 284,
+      "material": "wugui"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 285,
+      "material": "danwan"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 286,
+      "material": "baojian"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 287,
+      "material": "shizhuo"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 288,
+      "material": "pohuapen"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 289,
+      "material": "huapen"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 290,
+      "material": "ange"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 291,
+      "material": "huapenjia"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 292,
+      "material": "baoxiang1"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 293,
+      "material": "leitai"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 294,
+      "material": "wuqijia"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 295,
+      "material": "baoxiang1"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 296,
+      "material": "wuqijia"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 297,
+      "material": "huapenjia"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 298,
+      "material": "ange"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 299,
+      "material": "huapen"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 300,
+      "material": "huapen"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 301,
+      "material": "huapen"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 302,
+      "material": "huapen"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 303,
+      "material": "pohuapen"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 304,
+      "material": "ange"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 305,
+      "material": "ange"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 306,
+      "material": "siyecao"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 307,
+      "material": "cilunzhijia"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 308,
+      "material": "cilun"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 309,
+      "material": "cilunzhijia"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 310,
+      "material": "cilun"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 311,
+      "material": "cilunzhijia"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 312,
+      "material": "cilun"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 313,
+      "material": "cilunzhijia"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 314,
+      "material": "cilun"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 315,
+      "material": "cilunzhijia"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 316,
+      "material": "cilun"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 317,
+      "material": "cilunzhijia"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 318,
+      "material": "cilun"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 319,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 320,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 321,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 322,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 323,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 324,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 325,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 326,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 327,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 328,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 329,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 330,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 331,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 332,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 333,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 334,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 335,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 336,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 337,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 338,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 339,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 340,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 341,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 342,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 343,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 344,
+      "material": "xiaoxiangzi1"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 345,
+      "material": "ange"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 346,
+      "material": "ange"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 347,
+      "material": "huapenjia"
+    },
+    {
+      "level": 8,
+      "model": 0,
+      "face": 348,
+      "material": "huapenjia"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 226,
+      "material": "chuihuichen"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 227,
+      "material": "keheng2"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 228,
+      "material": "duandeng3"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 229,
+      "material": "duandeng3"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 230,
+      "material": "zhuozi3"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 231,
+      "material": "shuzhuangtai"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 232,
+      "material": "shuzhuangtai"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 233,
+      "material": "juan"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 234,
+      "material": "cunpandian"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 235,
+      "material": "gancao"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 236,
+      "material": "huaping2"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 237,
+      "material": "gancao"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 238,
+      "material": "huaping1"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 239,
+      "material": "chakong"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 240,
+      "material": "banzhi"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 241,
+      "material": "zihe"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 242,
+      "material": "jian2"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 243,
+      "material": "jingkuang"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 244,
+      "material": "zhizhu"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 245,
+      "material": "jian4"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 246,
+      "material": "riji"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 247,
+      "material": "menkuang"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 248,
+      "material": "menkuang"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 249,
+      "material": "taishiyi"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 250,
+      "material": "shuzhuo"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 251,
+      "material": "huajia"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 252,
+      "material": "shujia"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 253,
+      "material": "xiaoxiangzi1"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 254,
+      "material": "pingfeng"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 255,
+      "material": "shuangrenchuang"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 256,
+      "material": "guizi1"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 257,
+      "material": "shujia"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 258,
+      "material": "huajia"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 259,
+      "material": "huajia"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 260,
+      "material": "menkuang"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 261,
+      "material": "chakong"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 262,
+      "material": "chakong"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 263,
+      "material": "chakong"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 264,
+      "material": "chakong"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 265,
+      "material": "chakong"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 266,
+      "material": "chakong"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 267,
+      "material": "chakong"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 268,
+      "material": "chakong"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 269,
+      "material": "chakong"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 270,
+      "material": "chakong"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 271,
+      "material": "chakong"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 272,
+      "material": "huaping1"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 273,
+      "material": "huaping2"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 274,
+      "material": "juan"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 275,
+      "material": "juan"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 276,
+      "material": "juan"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 277,
+      "material": "juan"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 278,
+      "material": "juan"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 279,
+      "material": "juan"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 280,
+      "material": "juan"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 281,
+      "material": "juan"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 282,
+      "material": "juan"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 283,
+      "material": "juan"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 284,
+      "material": "juan"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 285,
+      "material": "juan"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 286,
+      "material": "juan"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 287,
+      "material": "huichen"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 288,
+      "material": "shujia"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 289,
+      "material": "duandeng3"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 290,
+      "material": "riji"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 291,
+      "material": "bianfu"
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "face": 292,
+      "material": "bianfu"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 148,
+      "material": "duanya4"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 149,
+      "material": "blessshe"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 150,
+      "material": "tyshimen"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 151,
+      "material": "tyshimen"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 152,
+      "material": "shuzhishiban3"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 153,
+      "material": "shuzhishiban8"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 154,
+      "material": "shuzhishiban6"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 155,
+      "material": "shuzhishiban2"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 156,
+      "material": "shuzhishiban4"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 157,
+      "material": "shuzhishiban1"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 158,
+      "material": "shuzhishiban7"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 159,
+      "material": "shuzhishiban5"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 160,
+      "material": "shuzhishiban9"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 161,
+      "material": "shuzhishiban2"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 162,
+      "material": "shuzhishiban5"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 163,
+      "material": "shuzhishiban3"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 164,
+      "material": "shuzhishiban8"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 165,
+      "material": "shuzhishiban1"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 166,
+      "material": "shuzhishiban5"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 167,
+      "material": "shuzhishiban6"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 168,
+      "material": "shuzhishiban3"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 169,
+      "material": "shuzhishiban2"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 170,
+      "material": "shuzhishiban0"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 171,
+      "material": "shuzhishiban7"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 172,
+      "material": "shuzhishiban5"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 173,
+      "material": "shuzhishiban4"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 174,
+      "material": "shuzhishiban2"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 175,
+      "material": "shuzhishiban9"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 176,
+      "material": "pingtukuang"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 177,
+      "material": "pintu"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 178,
+      "material": "pintu"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 179,
+      "material": "pintu"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 180,
+      "material": "pintu"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 181,
+      "material": "pintu"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 182,
+      "material": "pintu"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 183,
+      "material": "pintu"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 184,
+      "material": "pintu"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 185,
+      "material": "duanya4"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 186,
+      "material": "bianfu"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 187,
+      "material": "bianfu"
+    },
+    {
+      "level": 10,
+      "model": 0,
+      "face": 188,
+      "material": "bianfu"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 287,
+      "material": "chuihuichen"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 288,
+      "material": "keheng1"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 289,
+      "material": "tielongduan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 290,
+      "material": "haishenzhiyan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 291,
+      "material": "xueji"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 292,
+      "material": "diantimen1"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 293,
+      "material": "diantimen3"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 294,
+      "material": "diantimen2"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 295,
+      "material": "cunpandian"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 296,
+      "material": "juan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 297,
+      "material": "chakong"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 298,
+      "material": "cidai"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 299,
+      "material": "tiegun"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 300,
+      "material": "danwan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 301,
+      "material": "fangdajing"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 302,
+      "material": "zhuozi2"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 303,
+      "material": "guizi2"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 304,
+      "material": "guizi3"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 305,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 306,
+      "material": "xiaoxiangzi1"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 307,
+      "material": "tielong"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 308,
+      "material": "tielong"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 309,
+      "material": "tielong"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 310,
+      "material": "tielong"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 311,
+      "material": "tielong"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 312,
+      "material": "tyshimen"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 313,
+      "material": "tyshimen"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 314,
+      "material": "tyshimen"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 315,
+      "material": "tymumen"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 316,
+      "material": "tyshimen"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 317,
+      "material": "xiaoxiangzi1"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 318,
+      "material": "tymumen"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 319,
+      "material": "tymumen"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 320,
+      "material": "tymumen"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 321,
+      "material": "dici"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 322,
+      "material": "dici"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 323,
+      "material": "dici"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 324,
+      "material": "dici"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 325,
+      "material": "tyshimen"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 326,
+      "material": "tyshimen"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 327,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 328,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 329,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 330,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 331,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 332,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 333,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 334,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 335,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 336,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 337,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 338,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 339,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 340,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 341,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 342,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 343,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 344,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 345,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 346,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 347,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 348,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 349,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 350,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 351,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 352,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 353,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 354,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 355,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 356,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 357,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 358,
+      "material": "tanta"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 359,
+      "material": "duanya2"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 360,
+      "material": "duanya1"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 361,
+      "material": "tyshimen"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 362,
+      "material": "chakong"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 363,
+      "material": "juan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 364,
+      "material": "juan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 365,
+      "material": "juan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 366,
+      "material": "juan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 367,
+      "material": "juan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 368,
+      "material": "juan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 369,
+      "material": "juan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 370,
+      "material": "juan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 371,
+      "material": "chakong"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 372,
+      "material": "juan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 373,
+      "material": "juan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 374,
+      "material": "chakong"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 375,
+      "material": "juan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 376,
+      "material": "juan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 377,
+      "material": "chakong"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 378,
+      "material": "juan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 379,
+      "material": "juan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 380,
+      "material": "chakong"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 381,
+      "material": "juan"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 382,
+      "material": "xiaoxiangzi1"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 383,
+      "material": "chakong"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 384,
+      "material": "chakong"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 385,
+      "material": "bianfu"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 386,
+      "material": "bianfu"
+    },
+    {
+      "level": 11,
+      "model": 0,
+      "face": 387,
+      "material": "bianfu"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 315,
+      "material": "gancao"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 316,
+      "material": "gancao"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 317,
+      "material": "shuijingmen"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 318,
+      "material": "diantimen1"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 319,
+      "material": "diantimen4"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 320,
+      "material": "diantimen2"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 321,
+      "material": "jiankong2"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 322,
+      "material": "cunpandian"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 323,
+      "material": "shuzhishiban3"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 324,
+      "material": "shuzhishiban2"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 325,
+      "material": "shuzhishiban1"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 326,
+      "material": "cilun"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 327,
+      "material": "cilunzhijia"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 328,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 329,
+      "material": "baoxiang1"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 330,
+      "material": "chakong"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 331,
+      "material": "riji"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 332,
+      "material": "duanjian"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 333,
+      "material": "danwan"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 334,
+      "material": "wugui"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 335,
+      "material": "baoxiang1"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 336,
+      "material": "jianbihua1"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 337,
+      "material": "adgutou"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 338,
+      "material": "dici"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 339,
+      "material": "shuzhishiban0"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 340,
+      "material": "guizi3"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 341,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 342,
+      "material": "tymumen"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 343,
+      "material": "tymumen"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 344,
+      "material": "tymumen"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 345,
+      "material": "tymumen"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 346,
+      "material": "tyshimen"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 347,
+      "material": "tyshimen"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 348,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 349,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 350,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 351,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 352,
+      "material": "shuzhishiban0"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 353,
+      "material": "shuzhishiban0"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 354,
+      "material": "shuzhishiban0"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 355,
+      "material": "shuzhishiban0"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 356,
+      "material": "tyshimen"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 357,
+      "material": "dici"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 358,
+      "material": "dici"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 359,
+      "material": "dici"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 360,
+      "material": "tiemenkuang"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 361,
+      "material": "famen"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 362,
+      "material": "baoxiang1"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 363,
+      "material": "baoxiang1"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 364,
+      "material": "baoxiang1"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 365,
+      "material": "chakong"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 366,
+      "material": "chakong"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 367,
+      "material": "chakong"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 368,
+      "material": "chakong"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 369,
+      "material": "chakong"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 370,
+      "material": "chakong"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 371,
+      "material": "chakong"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 372,
+      "material": "chakong"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 373,
+      "material": "chakong"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 374,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 375,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 376,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 377,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 378,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 379,
+      "material": "jupianguiji"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 380,
+      "material": "cilunzhijia"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 381,
+      "material": "cilun"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 382,
+      "material": "shuzhishiban0"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 383,
+      "material": "cilun"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 384,
+      "material": "cilunzhijia"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 385,
+      "material": "cilun"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 386,
+      "material": "cilunzhijia"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 387,
+      "material": "juan"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 388,
+      "material": "juan"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 389,
+      "material": "juan"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 390,
+      "material": "juan"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 391,
+      "material": "juan"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 392,
+      "material": "juan"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 393,
+      "material": "juan"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 394,
+      "material": "juan"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 395,
+      "material": "juan"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 396,
+      "material": "juan"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 397,
+      "material": "shuzhishiban0"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 398,
+      "material": "shuzhishiban1"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 399,
+      "material": "shuzhishiban1"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 400,
+      "material": "shuzhishiban2"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 401,
+      "material": "shuzhishiban0"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 402,
+      "material": "shuzhishiban1"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 403,
+      "material": "shuzhishiban2"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 404,
+      "material": "shuzhishiban0"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 405,
+      "material": "shuzhishiban0"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 406,
+      "material": "shuzhishiban0"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 407,
+      "material": "shuzhishiban1"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 408,
+      "material": "shuzhishiban2"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 409,
+      "material": "shuzhishiban0"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 410,
+      "material": "shuzhishiban1"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 411,
+      "material": "shuzhishiban0"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 412,
+      "material": "shuzhishiban0"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 413,
+      "material": "shuzhishiban2"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 414,
+      "material": "dici"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 415,
+      "material": "dici"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 416,
+      "material": "xiaoxiangzi2"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 417,
+      "material": "bianfu"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 418,
+      "material": "bianfu"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 419,
+      "material": "bianfu"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 420,
+      "material": "bianfu"
+    },
+    {
+      "level": 12,
+      "model": 0,
+      "face": 421,
+      "material": "bianfu"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 144,
+      "material": "chuihuichen"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 145,
+      "material": "keheng4"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 146,
+      "material": "mumen2"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 147,
+      "material": "diantimen4"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 148,
+      "material": "diantimen1"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 149,
+      "material": "diantimen3"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 150,
+      "material": "cunpandian"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 151,
+      "material": "huaping2"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 152,
+      "material": "cidai"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 153,
+      "material": "ziyu"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 154,
+      "material": "jianbihua2"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 155,
+      "material": "zhuanlun"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 156,
+      "material": "guizi3"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 157,
+      "material": "guizi1"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 158,
+      "material": "danrenchuang"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 159,
+      "material": "youhua"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 160,
+      "material": "mimamenkuang"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 161,
+      "material": "mimamen"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 162,
+      "material": "guizi3"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 163,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 164,
+      "material": "tymumen"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 165,
+      "material": "tymumen"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 166,
+      "material": "tymumen"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 167,
+      "material": "tymumen"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 168,
+      "material": "tyshimen"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 169,
+      "material": "tyshimen"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 170,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 171,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 172,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 173,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 174,
+      "material": "tyshimen"
+    },
+    {
+      "level": 13,
+      "model": 0,
+      "face": 175,
+      "material": "bianfu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 217,
+      "material": "ad"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 218,
+      "material": "jushikaiguan"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 219,
+      "material": "cunpandian"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 220,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 221,
+      "material": "baojianchakong2"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 222,
+      "material": "baojianchakong1"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 223,
+      "material": "riji"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 224,
+      "material": "dashimen"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 225,
+      "material": "dashimen"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 226,
+      "material": "dashimen"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 227,
+      "material": "dashimen"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 228,
+      "material": "sanjiao"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 229,
+      "material": "sanjiao"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 230,
+      "material": "bajiaotai"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 231,
+      "material": "shui1"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 232,
+      "material": "silong4"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 233,
+      "material": "skin"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 234,
+      "material": "silong3"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 235,
+      "material": "skin"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 236,
+      "material": "silong2"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 237,
+      "material": "skin"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 238,
+      "material": "silong1"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 239,
+      "material": "shui1"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 240,
+      "material": "shui1"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 241,
+      "material": "shui1"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 242,
+      "material": "tyshimen"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 243,
+      "material": "tyshimen"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 244,
+      "material": "zhuanlun"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 245,
+      "material": "mimamenkuang"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 246,
+      "material": "mimamen"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 247,
+      "material": "tyshimen"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 248,
+      "material": "sanjiao"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 249,
+      "material": "sanjiao"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 250,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 251,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 252,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 253,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 254,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 255,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 256,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 257,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 258,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 259,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 260,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 261,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 262,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 263,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 264,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 265,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 266,
+      "material": "jiguanshizhu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 267,
+      "material": "bianfu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 268,
+      "material": "bianfu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 269,
+      "material": "bianfu"
+    },
+    {
+      "level": 14,
+      "model": 0,
+      "face": 270,
+      "material": "bianfu"
+    },
+    {
+      "level": 15,
+      "model": 0,
+      "face": 60,
+      "material": "yanjing2"
+    },
+    {
+      "level": 15,
+      "model": 0,
+      "face": 61,
+      "material": "yanjing1"
+    },
+    {
+      "level": 15,
+      "model": 0,
+      "face": 62,
+      "material": "shidiao"
+    },
+    {
+      "level": 15,
+      "model": 0,
+      "face": 63,
+      "material": "nvren"
+    },
+    {
+      "level": 15,
+      "model": 0,
+      "face": 64,
+      "material": "haidao"
+    },
+    {
+      "level": 15,
+      "model": 0,
+      "face": 65,
+      "material": "lingjiu"
+    },
+    {
+      "level": 15,
+      "model": 0,
+      "face": 66,
+      "material": "tyshimen"
+    },
+    {
+      "level": 15,
+      "model": 0,
+      "face": 67,
+      "material": "shidiao"
+    },
+    {
+      "level": 15,
+      "model": 0,
+      "face": 68,
+      "material": "shidiao"
+    },
+    {
+      "level": 15,
+      "model": 0,
+      "face": 69,
+      "material": "shidiao"
+    },
+    {
+      "level": 15,
+      "model": 0,
+      "face": 70,
+      "material": "cunpandian"
+    },
+    {
+      "level": 15,
+      "model": 0,
+      "face": 71,
+      "material": "tyshimen"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 246,
+      "material": "taoshengmen"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 247,
+      "material": "jushi"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 248,
+      "material": "jushi"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 249,
+      "material": "duanya5"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 250,
+      "material": "xbrshiti"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 251,
+      "material": "tyshimen"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 252,
+      "material": "shensuomuqiao"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 253,
+      "material": "shensuomuqiao"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 254,
+      "material": "kaiguan1"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 255,
+      "material": "tyshimen"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 256,
+      "material": "tyshimen"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 257,
+      "material": "duanya5"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 258,
+      "material": "duanya5"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 259,
+      "material": "duanya5"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 260,
+      "material": "duanya5"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 261,
+      "material": "duanya5"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 262,
+      "material": "kaiguan1"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 263,
+      "material": "daxiangzi1"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 264,
+      "material": "daxiangzi1"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 265,
+      "material": "daxiangzi1"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 266,
+      "material": "daxiangzi1"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 267,
+      "material": "danwan"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 268,
+      "material": "bianfu"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 269,
+      "material": "bianfu"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 270,
+      "material": "bianfu"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 271,
+      "material": "bianfu"
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "face": 272,
+      "material": "bianfu"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 205,
+      "material": "dianmashu"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 206,
+      "material": "diantimen3"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 207,
+      "material": "diantimen2"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 208,
+      "material": "diantimen4"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 209,
+      "material": "duandeng3"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 210,
+      "material": "zhuozi3"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 211,
+      "material": "daxiangzi1"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 212,
+      "material": "shiwai"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 213,
+      "material": "huapenjia"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 214,
+      "material": "jianbihua3"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 215,
+      "material": "riji"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 216,
+      "material": "siyecao"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 217,
+      "material": "pohuapen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 218,
+      "material": "huapen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 219,
+      "material": "xiaojiazi"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 220,
+      "material": "xianya"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 221,
+      "material": "xianya2"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 222,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 223,
+      "material": "tymumen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 224,
+      "material": "tymumen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 225,
+      "material": "tymumen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 226,
+      "material": "tymumen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 227,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 228,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 229,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 230,
+      "material": "diantikaigun"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 231,
+      "material": "tyshimen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 232,
+      "material": "tyshimen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 233,
+      "material": "tyshimen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 234,
+      "material": "tyshimen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 235,
+      "material": "huapen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 236,
+      "material": "huapen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 237,
+      "material": "huapen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 238,
+      "material": "pohuapen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 239,
+      "material": "pohuapen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 240,
+      "material": "pohuapen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 241,
+      "material": "siyecao"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 242,
+      "material": "huapenjia"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 243,
+      "material": "fabaoji"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 244,
+      "material": "dianmabiao"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 245,
+      "material": "xiaoxiangzi1"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 246,
+      "material": "cunpandian"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 247,
+      "material": "tyshimen"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 248,
+      "material": "huapenjia"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 249,
+      "material": "huapenjia"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 250,
+      "material": "xiaoxiangzi1"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 251,
+      "material": "xiaoxiangzi1"
+    },
+    {
+      "level": 17,
+      "model": 0,
+      "face": 252,
+      "material": "daxiangzi1"
+    },
+    {
+      "level": 18,
+      "model": 0,
+      "face": 159,
+      "material": "cunpandian"
+    },
+    {
+      "level": 18,
+      "model": 0,
+      "face": 160,
+      "material": "tyshimen"
+    },
+    {
+      "level": 18,
+      "model": 0,
+      "face": 161,
+      "material": "tyshimen"
+    },
+    {
+      "level": 18,
+      "model": 0,
+      "face": 162,
+      "material": "tyshimen"
+    },
+    {
+      "level": 18,
+      "model": 0,
+      "face": 163,
+      "material": "tyshimen"
+    },
+    {
+      "level": 18,
+      "model": 0,
+      "face": 164,
+      "material": "tyshimen"
+    },
+    {
+      "level": 18,
+      "model": 0,
+      "face": 165,
+      "material": "tyshimen"
+    }
+  ],
+  "omitted_exact_duplicate_surfaces": [],
+  "omitted_exact_duplicate_faces": [
+    {
+      "level": 9,
+      "model": 0,
+      "owner": 0,
+      "face": 159,
+      "duplicate_of_face": 98
+    },
+    {
+      "level": 9,
+      "model": 0,
+      "owner": 0,
+      "face": 160,
+      "duplicate_of_face": 99
+    },
+    {
+      "level": 16,
+      "model": 0,
+      "owner": 0,
+      "face": 194,
+      "duplicate_of_face": 184
+    }
+  ]
+}

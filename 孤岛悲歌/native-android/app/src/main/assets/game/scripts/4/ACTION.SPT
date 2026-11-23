@@ -1,0 +1,294 @@
+act 4;
+layer;
+fog 0 300 1000 100 200 100;
+playback 2;
+
+act 71010;
+layer;
+call 0 81010;
+talk 51010;
+
+act 71012;
+layer;
+info 61012;
+
+act 710101;
+layer;
+info 610101;
+
+act 71020;
+layer;
+get 21190;
+remove 11019 -1 -1 -1 -1;
+info 61020;
+
+act 71030;
+layer;
+info 61030;
+
+act 71040;
+layer;
+call 0 89999;
+playsound 3;
+call 11041 81040;
+get 21200;
+remove 11039 -1 -1 -1 -1;
+info 61040;
+playsound 3;
+call 11041 81041;
+
+act 71041;
+layer;
+call 0 89999;
+playsound 3;
+call 11041 81040;
+info 69993;
+playsound 3;
+call 11041 81041;
+
+act 71050;
+layer;
+info 61050;
+
+act 71060;
+layer;
+info 61060;
+
+act 71070;
+layer;
+call 0 89999;
+call 11071 81040;
+info 61070;
+call 11071 81041;
+
+act 71080;
+layer;
+call 0 89999;
+call 11081 81040;
+info 61070;
+call 11081 81041;
+
+act 71090;
+layer;
+info 61060;
+
+act 71100;
+layer;
+info 61050;
+
+act 71110;
+layer;
+//call 0 89999;
+playsound 1;
+setaction 0 46 0 2;
+open 11110;
+get 21210;
+talk 51110;
+remove 11109 -1 -1 -1 -1;
+setaction 0 46 3 5;
+info 61110;
+goscript 711101;
+
+act 711101;
+layer;
+playsound 1;
+close 11110;
+sleep 5;
+playsound 3;
+setaction 0 39 0 1;
+setaction 0 46 0 0;
+talk 51171;
+call 0 811101;
+goscript 7111011;
+
+act 7111011;
+layer;
+fadeout 16;
+setblack 3;
+playavi 7;
+setblack 3;
+fadein 16;
+talk 51172;
+Toxin;
+
+act 71120;
+layer;
+call 0 89999;
+call 11121 81040;
+info 61070;
+call 11121 81041;
+
+act 71130;
+layer;
+info 61060;
+
+act 71140;
+layer;
+info 61140;
+
+act 71150;
+layer;
+info 61150;
+
+act 71160;
+layer;
+get 21270;
+talk 51160;
+remove 11270 -1 -1 -1 -1;
+info 61160;
+showpic 13 46 62;
+
+act 71230;
+layer;
+get 21230;
+talk 51230;
+remove 11230 -1 -1 -1 -1;
+info 61230;
+
+act 71170;
+layer;
+talk 51170;
+get 21260;
+remove 11170 -1 -1 -1 -1;
+info 61170;
+
+act 71171;
+layer;
+info 61171;
+
+act 71180;
+layer;
+call 0 81181;
+call 2 81180;
+talk 51210;
+
+act 71240;
+layer;
+get 21250;
+talk 51250;
+remove 11240 -1 -1 -1 -1;
+info 61250;
+
+act 71250;
+layer;
+get 21240;
+talk 512301;
+remove 11250 -1 -1 -1 -1;
+info 61240;
+
+act 71280;
+layer;
+playsound 0;
+fadeout 16;
+setblack 6;
+loadmap 3 6104 0;
+fog 1 300 400 0 0 0 1;
+fadein 16;
+goscript 3;
+
+act 71021;
+layer;
+info 61021;
+
+act 71111;
+layer;
+//call 0 89999;
+setaction 0 46 0 2;
+playsound 1;
+open 11110;
+info 69997;
+playsound 1;
+close 11110;
+setaction 0 46 3 5;
+
+act 77030;
+layer;
+talk 51211;
+
+act 77031;
+layer;
+call 0 81181;
+call 2 877031;
+play 111811;
+
+act 710104;
+layer;
+remove 110104 -1 -1 -1 -1;
+getball 9;
+info 61220;
+
+act 710103;
+layer;
+get 21200;
+remove 110412 -1 -1 -1 -1;
+info 61040;
+playsound 3;
+call 110411 810412;
+
+act 77777711;
+layer;
+talk 57777711;
+
+act 77777721;
+layer;
+talk 57777721;
+
+act 77777731;
+layer;
+talk 57777731;
+
+act 77777741;
+layer;
+talk 57777741;
+
+act 77777751;
+layer;
+talk 57777751;
+
+act 77777761;
+layer;
+talk 57777761;
+
+act 77777811;
+layer;
+talk 57777811;
+
+act 77777821;
+layer;
+talk 57777821;
+
+act 77777831;
+layer;
+talk 57777831;
+
+act 77777841;
+layer;
+talk 57777841;
+
+act 77777851;
+layer;
+talk 57777851;
+
+act 77777861;
+layer;
+talk 57777861;
+
+act 77777871;
+layer;
+talk 57777871;
+
+act 77777881;
+layer;
+talk 57777881;
+
+act 77777891;
+layer;
+talk 57777891;
+
+act 77777900;
+layer;
+talk 57777900;
+
+act 77778000;
+layer;
+info 67778000;

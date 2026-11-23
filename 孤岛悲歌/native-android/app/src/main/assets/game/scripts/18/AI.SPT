@@ -1,0 +1,5 @@
+spt 800100;
+playsound 0;
+sleep 5;
+cgtexture 1;
+setflags 18;

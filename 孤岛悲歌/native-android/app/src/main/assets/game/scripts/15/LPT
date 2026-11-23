@@ -1,0 +1,65 @@
+object 15010;
+type 0;
+HasResult 75010;
+
+object 150101;
+type 0;
+HasResult 750100;
+
+object 150102;
+type 0;
+HasResult 750100;
+
+object 150103;
+type 0;
+HasResult 750100;
+
+object 150104;
+type 0;
+HasResult 750100;
+
+object 15020;
+type 0;
+HasResult 75020;
+
+object 15030;
+type 0;
+HasResult 75030;
+
+object 15040;
+type 2;
+HasResult 75110;
+NoResult 75040;
+
+object 15050;
+type 0;
+HasResult 75050;
+
+object 150601;
+type 11;
+HasResult 750601;
+NoResult 79999;
+item 24720;
+ObserveResult 75060;
+
+object 150611;
+type 11;
+HasResult 750611;
+NoResult 79999;
+item 22720;
+ObserveResult 75060;
+
+object 150601;
+type 11;
+HasResult 750601;
+NoResult 79999;
+item 24720;
+ObserveResult 75060;
+
+object 15210;
+type 0;
+HasResult 75210;
+
+object 40150;
+type 0;
+HasResult 400100;

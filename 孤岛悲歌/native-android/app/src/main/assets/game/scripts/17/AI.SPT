@@ -1,0 +1,58 @@
+spt 87070;
+move 0 -1 0 10 0 100;
+
+spt 87011;
+toward 44250 0 0;
+
+spt 83610;
+follow 0;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+
+spt 83611;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+
+spt 83612;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+follow 1;
+
+spt 800100;
+playsound 2;
+sleep 5;
+cgtexture 1;
+setflags 17;
+
+spt 86666666;
+follow 0;
+move 0 1 0 1 0 1;
+move 0 -1 0 1 0 1;
+move 0 1 0 1 0 1;
+move 0 -1 0 1 0 1;
+move 0 1 0 1 0 1;
+move 0 -1 0 1 0 1;
+move 0 1 0 1 0 1;
+move 0 -1 0 1 0 1;
+follow 1;

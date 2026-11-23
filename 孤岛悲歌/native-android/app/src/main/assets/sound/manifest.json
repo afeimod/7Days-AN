@@ -1,0 +1,898 @@
+[
+  {
+    "name": "2.wav",
+    "sha256": "dc21c71d44a84de9a7ee06b76eeaa8529ec28b718930c948acf130b0205be555",
+    "duration": 0.12843537414965986,
+    "rate": 22050,
+    "channels": 2,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "3-1.wav",
+    "sha256": "e0b7581c878be50103cab47a838f81be394e7417104b38d3bc6164c9fc0fff75",
+    "duration": 2.11,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "5-2.wav",
+    "sha256": "3751396b8bad77f36cfa6bedfda4f5ebace5644f8e4ef9cffe465149cf9904b4",
+    "duration": 15.510625,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "ada.wav",
+    "sha256": "f964c4dfe82a43fc9a486f2e16191d96d1890a18eb8024631b76f821b8aaebd4",
+    "duration": 4.34025,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "adajiaobusheng.wav",
+    "sha256": "c792c4694622146f8735c0661bde38dc76709be6f1fb09676c6cd79f74f61f02",
+    "duration": 0.444,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "adaku.wav",
+    "sha256": "f737788d27829bb4d5bd928546b8b80dd8d907117843e039009500901f294c84",
+    "duration": 4.654875,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "adasang.wav",
+    "sha256": "88a17f9f3fc6b5d3c6a40e3fdbf6ce95289022192c5e0161f168f0644abc8ce8",
+    "duration": 0.854875,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "angeshengyin.wav",
+    "sha256": "cd95a8d1c1f9d7edf7f9ad10c78fc129195df9184c07bb58cad227002bdaee89",
+    "duration": 1.4076643990929705,
+    "rate": 22050,
+    "channels": 2,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "baoxiang.wav",
+    "sha256": "88e63b0cbfac05676a85579f2108f33f9dd181ac6549b346cfaae655a8a4333b",
+    "duration": 0.6635,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "bianfu.wav",
+    "sha256": "08a1d9f9b84fa09b231758ab8dbfe6d0ea387d28530aa9cd8b4a39f3a628ec04",
+    "duration": 1.426125,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "bianfujianjiao.wav",
+    "sha256": "0f9fbbf037d85cd18e016e1ecc4362abcff1e9facc6f330d4446d3f5aa701dc8",
+    "duration": 0.998875,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "blow.wav",
+    "sha256": "96f3ca227269a8a2a6f46d7d5fb6627a877bfc473b1c8608ff211d246771e40a",
+    "duration": 3.009625,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "bullethit.wav",
+    "sha256": "00b8b6dbf2b237e38b423282a708abab16cb61d9b4da7c3b7f3db2c0d864c42c",
+    "duration": 0.059875,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "call.wav",
+    "sha256": "fb18604c18483af0f87abbb765b08d6fcb8d5a960d3119eabc1e77ef005d1f62",
+    "duration": 1.364625,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "catapultsend.wav",
+    "sha256": "f0a8d01ded19b80d5d9d37841074242a4f03ad44a96944c0d8c0b6ada608376b",
+    "duration": 0.606875,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "couti.wav",
+    "sha256": "92f67bdc1d67bde01e0c9e4b689ff5115a6bed65e035b713e0f8da208920fcf3",
+    "duration": 0.714125,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "cuiqisheng.wav",
+    "sha256": "4a06f57ed8303a8e2f93ed6cf56a05859fad0125825a6a245d212f3e125dacca",
+    "duration": 0.7765,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "dacilun.wav",
+    "sha256": "13c50bb53ab7cd8c658c4af4fff886f1968ebf5308ebbbd5d2d223a8b5684278",
+    "duration": 2.024,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "dah.wav",
+    "sha256": "4c5e262697fc3b65cd60366501a8c4204c229de55d7a8d01f3c245b79ca80cb0",
+    "duration": 0.242,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "dakaiguizi.wav",
+    "sha256": "eef970f8d839b935b27e469f399c0277129ab03340586e00ca331ce78a7e3762",
+    "duration": 0.803125,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "dangonghuaping.wav",
+    "sha256": "92e4944b8c51d23123d7248a82dec4796e305645b5c83dd0c4d61c271b290d94",
+    "duration": 0.048375,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "dangongmutou.wav",
+    "sha256": "6da3deccac6b1419e99c1ea769ff49b0108272e9236d9c2841fd4d5d5344d39b",
+    "duration": 0.2469375,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "dangongyanshi.wav",
+    "sha256": "29fc90f0491205f9fd07abe88c1fe7ad6fdb94cad1cb9538ecb8f951a5c50edd",
+    "duration": 0.151375,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "daojuchenggong.wav",
+    "sha256": "8ed14194c0642c21948555de7988ed5995a7a356b1d03c11a3b096123b5a2e1c",
+    "duration": 0.117875,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "daojuhuode.wav",
+    "sha256": "c792c4694622146f8735c0661bde38dc76709be6f1fb09676c6cd79f74f61f02",
+    "duration": 0.444,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "daojushiba.wav",
+    "sha256": "9c380779ce525c143ef427030e05d0d5b714e222d230d844b21869f4d0fb39c3",
+    "duration": 0.165,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "daojushibai.wav",
+    "sha256": "69d0b009e4ed339276f19c2025faf0fa49695e4eaeb12a9b00c3874ac7fe1458",
+    "duration": 0.0825,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "di.wav",
+    "sha256": "e495d0554e167d891eba843d8b2d00fa80ed6fc268e3986eea11f57500553342",
+    "duration": 0.1663125,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "diaoxuanya.wav",
+    "sha256": "2b673e4c2a5e57647a7a0f3a47bea7a4712fa7332bbad86d8466fcd32af762bc",
+    "duration": 3.550375,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "dici.wav",
+    "sha256": "72ea7385654782281d474d788c976fa090549e304894f4c8989ef86b80cfd8bf",
+    "duration": 0.616875,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "dingqiangkaojin.wav",
+    "sha256": "c5ceb43d9cbf8fc8f7e03981db48839a34d02d4ed4858bcdaa0421922fa64bc5",
+    "duration": 1.519,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "duqi.wav",
+    "sha256": "f7b4dbafbf5c451f2aa3b37bdd704369f03f844d4d660687df82c3e99782119f",
+    "duration": 0.974625,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "dusi.wav",
+    "sha256": "548115ad7f9cddf0236dc773e8f911dbd208a72552864eb375616dd81bd610d6",
+    "duration": 43.9275,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "fabaoji.wav",
+    "sha256": "a94240052fd2c990b246d5d852dcc2275107b1a4db84e1522d273f00f01955b6",
+    "duration": 1.21225,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "fadianji.wav",
+    "sha256": "dd5789f2894e121af6a175a0dee428fa4917544aced2bad78471be58ae5e802a",
+    "duration": 0.60975,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "feng.wav",
+    "sha256": "f6a9d8c3f2caac1a51d97d348d1ee2e44d4a306d2e5e774473715b21f12b65c3",
+    "duration": 5.79175,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "fengsheng.wav",
+    "sha256": "3e61c5a8f6134dfb0559a43816c34352525dc456110e15fdafdf2f9f127f3993",
+    "duration": 4.654875,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "footleft.wav",
+    "sha256": "9be418ba84487438d9e680f8edaae34522cae8930b316c7c5445088e67960fcf",
+    "duration": 0.193375,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "footleft1.wav",
+    "sha256": "a629dbee8cf1500a020c37c4b72ed92532abb72af54ed716f8a24afa84dcdde9",
+    "duration": 0.4645,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "footleft2.wav",
+    "sha256": "99a57af648a0596982efa94b963e8b63d7fe1467d1794173e51529f0bb75725b",
+    "duration": 0.330625,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "footright.wav",
+    "sha256": "f3ee460139ec796d04aeadede71bed80613ef0fc0c903542cb505a1dfbe0628e",
+    "duration": 0.095875,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "gaomochanimen.wav",
+    "sha256": "0e7af5e69030517a4a9b5c4d87ecf22f61f4eb019612dde8090437d8d887ee08",
+    "duration": 0.6674375,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "gaomochayaoshi.wav",
+    "sha256": "a3e977362dd70f3c7a30938d482f935003633884dae6c09b29c6a7a441c035c5",
+    "duration": 0.4255,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "gear.wav",
+    "sha256": "e0b7581c878be50103cab47a838f81be394e7417104b38d3bc6164c9fc0fff75",
+    "duration": 2.11,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "gongjian.wav",
+    "sha256": "24912a4d76610370b40c5ec34e96ab7e8961e81051b22f1136b9bd0b2a30357b",
+    "duration": 1.148875,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "guanbibaoxiang.wav",
+    "sha256": "73a2e73bc2eef6d7c9150a420827aea4a33104ac06b605af903e474bf5e614ee",
+    "duration": 0.223375,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "guanbiguizi.wav",
+    "sha256": "c6895f6bc20c33e7c7297cac43217c34a56c9e2e6cc5354ab80f8e4df834174c",
+    "duration": 0.2734375,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "guancouti.wav",
+    "sha256": "7ca3e1cb41e1af1b0a942ce8f203235374bd65049f9031859f670045a1212d7c",
+    "duration": 0.1814375,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "guanmumen.wav",
+    "sha256": "fd8289173fe92ecb56218fae9283c275c4d6cc94d351ac944d5ddf0c58c55c9e",
+    "duration": 0.7059375,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "guantiemen.wav",
+    "sha256": "d10b8b7892558f480ad8444ba735ecdb2636e58604b52146b67a38760194bf98",
+    "duration": 1.84825,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "gunzhu.wav",
+    "sha256": "c792c4694622146f8735c0661bde38dc76709be6f1fb09676c6cd79f74f61f02",
+    "duration": 0.444,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "hit.wav",
+    "sha256": "13163ec0d4bc229272c7d0612111b51d787c3772ffd8b9671de08efb9d9d6c6f",
+    "duration": 0.4675,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "hitload.wav",
+    "sha256": "44d8187d0b03fe110ddcdc61f30dbd1610212cb73f7ac3fb157bd413425d4081",
+    "duration": 0.4615625,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "hitroad.wav",
+    "sha256": "3bdfe70976be31e3c03df0f9d3daa5f28eacb241fae3341b2e45f61505d28e29",
+    "duration": 0.923125,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "hitroad1.wav",
+    "sha256": "ae9a65d45e745a95f448aec26cc509c531a916b6202fd16c05def83585b42220",
+    "duration": 0.605,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "huangpinsui.wav",
+    "sha256": "7c25f36036567d71d1b76a5a509b78c0516c02fc5fef6f32b262d7f646716119",
+    "duration": 0.59475,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "huanhu.wav",
+    "sha256": "6a97b40720965c7526b6382df1aeb906340d40082278a442bb00904a463cb253",
+    "duration": 0.863875,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "itemfail.wav",
+    "sha256": "c792c4694622146f8735c0661bde38dc76709be6f1fb09676c6cd79f74f61f02",
+    "duration": 0.444,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "itemsuc.wav",
+    "sha256": "c792c4694622146f8735c0661bde38dc76709be6f1fb09676c6cd79f74f61f02",
+    "duration": 0.444,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "jiguankaidong.wav",
+    "sha256": "0072f6b686a420d8fc0334709936dfc78e0b3c92be07d87958e0579c8f727300",
+    "duration": 1.0200625,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "jinshumochashitou.wav",
+    "sha256": "de6d52ad958071af79ad7f6f8d58b50c5da96c0da243e3583047056a447c4b78",
+    "duration": 0.6033125,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "kaimumen.wav",
+    "sha256": "e8c1e0fa9b2cf48b3d6bd947617ed8d252aac84ea3a65da92f7e4da947f00f75",
+    "duration": 2.611875,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "kaiqijiguan.wav",
+    "sha256": "bed5a6eb4c00a74a74ae62b520e551cd05e13d9f99d0eb9eb37fbc13bcda2e54",
+    "duration": 0.63675,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "kaishimen.wav",
+    "sha256": "60c4fa68142089998925b6e5fbd11329cfdc3c6b2ea0413d8c0c638ac756ca76",
+    "duration": 3.143625,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "left.wav",
+    "sha256": "22fdce2fe9a2803e98c343efd126472d96150f06e3724e2db1b829d90f6477dd",
+    "duration": 0.7581632653061224,
+    "rate": 44100,
+    "channels": 2,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "logohit.wav",
+    "sha256": "83722f5067967828fd9af14c02df734b93d9fabced06fcb3b6aa785112e35528",
+    "duration": 0.898,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "luyinjibofang.wav",
+    "sha256": "141f069c043d7aff69e73b20d106f54bfe778f31a3b07888b248e041b7b82ebf",
+    "duration": 1.827,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "muhuzangshenchu.wav",
+    "sha256": "ae6f8678af25a78fd629fdfed053e2b36b4060edd812a55923b32bb53066910a",
+    "duration": 0.5573125,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "ok.wav",
+    "sha256": "85dc2d1b24d03ced060362bed6172a5bc0248d85d8aca577a16d3f8a44c6f6e8",
+    "duration": 0.74325,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "openwooddoor.wav",
+    "sha256": "1d408453bf654967980662e000574a7a04dd9d11f58ce65a9214b15167eaddf8",
+    "duration": 4.02675,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "over.wav",
+    "sha256": "7a574d14e8b29662db0665d87f96d43bef9cb7ca99857d8a6f7199989317fcb6",
+    "duration": 3.1635,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "pick.wav",
+    "sha256": "d2d0d1c199d50cbe1b3d3081e684729462b0c6d0bc7c10572efde07edcf5475a",
+    "duration": 0.31125,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "pickhit.wav",
+    "sha256": "1d7f677e744360c36fa3d6ea96a3e3a7b8dd2c207055648728740e2fc2435ba7",
+    "duration": 0.15525,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "pintusheng.wav",
+    "sha256": "dc3e4bcf499cf13d90db6cdc0366c9c97abeb9c116dee806773ae89ec3b99ce9",
+    "duration": 0.710375,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "qiaomutou.wav",
+    "sha256": "ea8d29015f1c20f723e8bc4738f42e5e1e9cffaa52f7ba00069d3d4649810b8e",
+    "duration": 0.177125,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "qiaosuimutou.wav",
+    "sha256": "d02782518b195f347de65837630af674a58a3dee34d6e6278a5180bc8e128d41",
+    "duration": 1.335625,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "qiaosuimutou.wav.wav",
+    "sha256": "513e6199ced9b9de6dc479b41fd5080bab782ef8ed7a6b86b7f651c6a2fae21f",
+    "duration": 0.687,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "qiaotietiao.wav",
+    "sha256": "8e77db740ebc70d7d3f07e0f0867b3bc41594ed25b0448df9afa5e4c0cbfed91",
+    "duration": 0.400625,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "readyjump.wav",
+    "sha256": "eecc3504991661672ce27c38ef16ffee288bb2ae43827bf5d6769edeb48c8d03",
+    "duration": 0.367875,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "right.wav",
+    "sha256": "4d0f3a0bed797ba09cc71dd5903d7a8442ba813904edfed9eb3c9660e08c3e3d",
+    "duration": 0.6277324263038548,
+    "rate": 44100,
+    "channels": 2,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "run.wav",
+    "sha256": "83be1525c1717269df580186417d092196a6a5596a065de50ec7a709aa87fd49",
+    "duration": 0.478625,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "run1.wav",
+    "sha256": "e5c2e3fd3361b2b8ca41ee1370782d4c01967aa3b3df5bb1809990bada852e63",
+    "duration": 0.544625,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "run2.wav",
+    "sha256": "848e06a5e2ecf98640c3739fc5d4b4ff15cd2dc659d74e1eb9c5576e8fcdd065",
+    "duration": 0.484375,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "select.wav",
+    "sha256": "8ffe6351199b351770afc0731fe008d8aabcb81eab49244b97988132672feb3b",
+    "duration": 0.344125,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "shengjiangti.wav",
+    "sha256": "91261801f8c9a6a062cd5778ab89581759cf489358637b97a0f620b0ca4be0d4",
+    "duration": 7.643625,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "shengjiangti1.wav",
+    "sha256": "a2657ff6cc366b424afabf6e334cca1644c5f63b84f41558a86cbba5f8353f0c",
+    "duration": 0.931875,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "shensuoqiao.wav",
+    "sha256": "488f2a4d2910fb354d175dc4ff07a3b8c681c0e7c36617ee9c49d52b33a466d5",
+    "duration": 4.68525,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "shitoutanta.wav",
+    "sha256": "a2877307acdb1e34371f38cc8464eda866b88e22227b6ae65e3b032b107198e6",
+    "duration": 6.22125,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "shitoutanta1.wav",
+    "sha256": "af8cd2e13b6bd3751e2f0283b0f82fdd3971f5141f8f6a01973a6edb8b482843",
+    "duration": 1.4023125,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "shiyongheibaizhu.wav",
+    "sha256": "c792c4694622146f8735c0661bde38dc76709be6f1fb09676c6cd79f74f61f02",
+    "duration": 0.444,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "shui1.wav",
+    "sha256": "40a311e79df5ef2dd1473f712791dec9b1e1d4e4e7bcb75bd1dc529c8199a6ed",
+    "duration": 2.663375,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "shui11.wav",
+    "sha256": "9dfd86c74de23d8833addbb71866f5313047a904ed927403c55a24e87de5477f",
+    "duration": 0.8895625,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "shui2.wav",
+    "sha256": "bb5888e3e4e5cdc9eed5b0462158d8927b7300f1a14be00bb36ced88b1a68796",
+    "duration": 1.348375,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "shui3.wav",
+    "sha256": "a3fb70a870ae1022733e346f7e8b83c6e9bcf0ab87cd64b9bdef7d42fc7cf833",
+    "duration": 0.4660625,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "shuijingmen.wav",
+    "sha256": "c792c4694622146f8735c0661bde38dc76709be6f1fb09676c6cd79f74f61f02",
+    "duration": 0.444,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "sound1.wav",
+    "sha256": "bb375e706b38fe8aa836d9130b3dbf6036701be98582dedadbddd49e8dd63ca7",
+    "duration": 3.374875,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "sound2.wav",
+    "sha256": "71dd769cf769fccf880039ddd2f051f0d05b4a6f472e109e4223e47024a92c19",
+    "duration": 0.444,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "sound3.wav",
+    "sha256": "69e3e638b7cf53f712cac3bbaf495588ad3b4a1968d14c839accf9d77c9f07d1",
+    "duration": 0.444,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "sound4.wav",
+    "sha256": "c792c4694622146f8735c0661bde38dc76709be6f1fb09676c6cd79f74f61f02",
+    "duration": 0.444,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "tantingqi.wav",
+    "sha256": "c792c4694622146f8735c0661bde38dc76709be6f1fb09676c6cd79f74f61f02",
+    "duration": 0.444,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "teilong.wav",
+    "sha256": "cf03e013ee96f14c80eae9af8d0f2290a19d0f305d6026f92008902cd1029d82",
+    "duration": 1.22625,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "teilongdiaoxia.wav",
+    "sha256": "1d6295eb0093f936a970a2cb802ff70179cfb62dbfb6e4f67ab679864ae54f3f",
+    "duration": 0.744,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "texiaoyin.wav",
+    "sha256": "c792c4694622146f8735c0661bde38dc76709be6f1fb09676c6cd79f74f61f02",
+    "duration": 0.444,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "tiemen.wav",
+    "sha256": "d333a4757252275cf2669dac3eb96874863250221b405ca448f5d4ced575ddce",
+    "duration": 3.055875,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "tiezhalan.wav",
+    "sha256": "1d6295eb0093f936a970a2cb802ff70179cfb62dbfb6e4f67ab679864ae54f3f",
+    "duration": 0.744,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "tongyong.wav",
+    "sha256": "c792c4694622146f8735c0661bde38dc76709be6f1fb09676c6cd79f74f61f02",
+    "duration": 0.444,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "wood.wav",
+    "sha256": "b9eec678139e483b49deba3328bd7beb5959fc5f679a802a10441c0b80682bc0",
+    "duration": 1.109625,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "xiangzidiaoxia.wav",
+    "sha256": "6e2468ab54beae725d0673561820c6088c0908c24595c040bdd31550976b5a0a",
+    "duration": 0.3514375,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "xiangzihuadong.wav",
+    "sha256": "d16d5a05cdd5ceb7a1f99a08d6cf9803167d6f07d08d3bafea40ce8490ce6537",
+    "duration": 0.730125,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "zhen.wav",
+    "sha256": "c792c4694622146f8735c0661bde38dc76709be6f1fb09676c6cd79f74f61f02",
+    "duration": 0.444,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  },
+  {
+    "name": "zhuanlun.wav",
+    "sha256": "19f328ff16d39e982b1239bf471d32f4de3cf782a8f60ea001b22bbd6f58a645",
+    "duration": 0.711,
+    "rate": 8000,
+    "channels": 1,
+    "sample_rate_assumed": true
+  },
+  {
+    "name": "zhuanlunsheng.wav",
+    "sha256": "6ea5cb30f127ca8237241f7c698b88ebf31b7c15c39bfafc02212c528a591568",
+    "duration": 0.304875,
+    "rate": 16000,
+    "channels": 1,
+    "sample_rate_assumed": false
+  }
+]

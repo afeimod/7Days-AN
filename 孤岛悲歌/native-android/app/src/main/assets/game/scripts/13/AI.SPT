@@ -1,0 +1,156 @@
+spt 84130;
+move 0 -1 0 10 0 100;
+
+spt 84190;
+toward 14190 0 0;
+
+spt 84191;
+toward 14270 100;
+sleep 3;
+toward 14311 150;
+sleep 3;
+toward 14301 150;
+sleep 3;
+
+spt 84300;
+rotate 0 1 0 50 0 1024;
+bound;
+
+spt 89999;
+move 0 0 0 -6 0 -12;
+
+spt 83610;
+follow 0;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+
+spt 83611;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+
+spt 83612;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+follow 1;
+
+spt 84291;
+toward 14190 200;
+
+spt 84292;
+toward 44040 0 0;
+moveto 10 0 44040 0 0;
+toward 14190 0 0;
+
+spt 84293;
+follow 0;
+moveto 10 0 44050 0 0;
+toward 44030 0 0;
+
+spt 84299;
+move -1 0 0 5 0 60;
+sleep 10;
+
+spt 84294;
+unremove 3 -1 -1 -1 -1;
+toward 44020 150;
+moveto 5 0 44020 0 0;
+sleep 5;
+toward 44030 150;
+moveto 5 0 44030 0 0;
+toward 14301 150;
+sleep 5;
+toward 0 0 0;
+sleep 10;
+
+spt 84295;
+toward 44040 150;
+moveto 5 0 44040 0 0;
+toward 0 150;
+move 0 1 0 2 0 20;
+sleep 20;
+move 0 -1 0 2 0 20;
+toward 44030 150;
+moveto 5 0 44030 0 0;
+toward 44070 150;
+moveto 5 0 44070 0 0;
+
+spt 84296;
+toward 44020 150;
+sleep 10;
+toward 44060 150;
+moveto 5 0 44060 0 0;
+toward 14311 0 0;
+
+spt 84297;
+toward 44070 150;
+moveto 5 0 44070 0 0;
+toward 44020 150;
+moveto 5 0 44020 0 0;
+toward 44010 150;
+moveto 10 0 44010 0 0;
+remove 3 -1 -1 -1 -1;
+
+spt 842900;
+toward 14200 200;
+move 0 0 0 5 0 10;
+setstill;
+sleep 5;
+
+spt 84200;
+moveto 10 20 44050 0 0;
+toward 0 0 0;
+
+spt 84298;
+sleep 10;
+toward 44040 0 0;
+move 1 0 0 10 0 60;
+move 0 -1 0 10 0 10;
+follow 1;
+
+spt 84310;
+toward 14311 0 0;
+sleep 5;
+toward 14420 0 0;
+sleep 5;
+
+spt 84311;
+move -1 0 0 5 2 75;
+unremove 14420 14310 -1 -1 -1;
+
+spt 844301;
+rotate 0 -1 0 50 0 1024;
+bound;
+
+spt 800100;
+playsound 4;
+sleep 5;
+cgtexture 1;
+setflags 13;
+
+spt 895141;
+follow 0;
+moveto 15 1 0 60 0;
+toward 95141 0 0;
+moveto 15 2 95141 60 -30;
+toward 95141 0 0;

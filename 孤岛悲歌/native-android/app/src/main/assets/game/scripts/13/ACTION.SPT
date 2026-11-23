@@ -1,0 +1,378 @@
+act 13;
+layer;
+fog 0 300 1000 100 200 100;
+playback 3;
+
+act 74510;
+layer;
+playsound 6;
+fadeout 16;
+setblack 6;
+loadmap 14 9141 90;
+fog 1 450 500 0 0 0 1;
+fadein 16;
+goscript 14;
+
+act 74301;
+layer;
+playsound 5;
+call 14301 84300;
+talk 54300;
+removeitem 24420;
+
+act 79999;
+layer;
+talk 59999;
+
+act 74110;
+layer;
+info 64110;
+
+act 74120;
+layer;
+info 64120;
+
+act 74130;
+layer;
+call 14129 84130;
+
+act 74141;
+layer;
+info 64141;
+
+act 74151;
+layer;
+info 64141;
+
+act 74161;
+layer;
+info 64141;
+
+act 74180;
+layer;
+call 0 89999;
+setaction 0 46 0 2;
+playsound 4;
+open 14410;
+info 69993;
+playsound 4;
+close 14410;
+setaction 0 46 3 5;
+
+act 74190;
+layer;
+call 0 84190;
+talk 54190;
+call 0 84191;
+talk 54191;
+
+act 74200;
+layer;
+info 64200;
+
+act 74210;
+layer;
+call 0 89999;
+playsound 4;
+open 14441;
+info 69993;
+playsound 4;
+close 14441;
+
+act 74220;
+layer;
+call 0 89999;
+playsound 0;
+open 14431;
+info 69996;
+playsound 0;
+close 14431;
+
+act 74269;
+layer;
+info 64269;
+
+act 74270;
+layer;
+playsound 2;
+sleep 15;
+info 64270;
+talk 54270;
+
+act 74290;
+layer;
+talk 574290;
+play 14311;
+
+act 74293;
+layer;
+talk 574293;
+
+act 74291;
+layer;
+info 64290;
+talk 54290;
+
+act 74292;
+layer;
+talk 54291;
+call 0 84291;
+talk 54292;
+call 0 84292;
+call 2 84293;
+call 0 84299;
+fadeout 16;
+setblack 3;
+fadein 16;
+goscript 742921;
+
+act 742921;
+layer;
+call 3 84294;
+call 3 84295;
+call 3 84296;
+playsound 1;
+call 14311 84311;
+call 3 84297;
+fadeout 16;
+setblack 3;
+fadein 16;
+goscript 742922;
+
+act 742922;
+layer;
+call 0 84298;
+setaction 0 0 0 0;
+talk 54293;
+setaction 0 46 0 4;
+sleep 10;
+talk 54294;
+call 0 842900;
+setaction 0 46 0 2;
+sleep 10;
+goscript 742923;
+
+act 742923;
+layer;
+setaction 0 46 3 5;
+talk 54295;
+remove 14190 -1 -1 -1 -1;
+unremove 11111111 -1 -1 -1 -1;
+removeitem 29003;
+
+act 74310;
+layer;
+call 0 84310;
+talk 54310;
+
+act 74300;
+layer;
+info 64300;
+
+act 74410;
+layer;
+call 0 89999;
+setaction 0 46 0 2;
+playsound 4;
+open 14410;
+talk 54410;
+remove 14180 -1 -1 -1 -1;
+get 24410;
+info 64410;
+goscript 744101;
+
+act 744101;
+layer;
+playsound 4;
+close 14410;
+setaction 0 46 3 5;
+
+act 74420;
+layer;
+get 24420;
+talk 54420;
+remove 14420 -1 -1 -1 -1;
+info 64420;
+
+act 74430;
+layer;
+call 0 89999;
+playsound 0;
+open 14431;
+remove 14430 -1 -1 -1 -1;
+get 24430;
+info 64430;
+playsound 0;
+close 14431;
+
+act 744301;
+layer;
+setaction 0 46 0 2;
+sleep 5;
+setaction 0 46 3 5;
+playsound 0;
+call 144301 844301;
+talk 544301;
+removeitem 20011;
+
+act 744302;
+layer;
+info 644302;
+
+act 74440;
+layer;
+call 0 89999;
+playsound 4;
+open 14441;
+get 24440;
+talk 54440;
+remove 14440 -1 -1 -1 -1;
+info 64440;
+playsound 4;
+close 14441;
+
+act 74140;
+layer;
+playsound 2;
+sleep 15;
+playsound 3;
+call 2 83610;
+call 2 83611;
+call 2 83612;
+goscript 741401;
+
+act 741401;
+layer;
+fadeout 16;
+setblack 6;
+loadmap 17 9174 180;
+fog 0 300 1000 100 200 100;
+fadein 16;
+goscript 17;
+
+act 74150;
+layer;
+playsound 2;
+sleep 15;
+playsound 3;
+call 2 83610;
+call 2 83611;
+call 2 83612;
+goscript 741501;
+
+act 741501;
+layer;
+fadeout 16;
+setblack 6;
+loadmap 11 9114 90;
+fog 1 300 400 0 0 0 1;
+fadein 16;
+goscript 11;
+
+act 74160;
+layer;
+playsound 2;
+sleep 15;
+playsound 3;
+call 2 83610;
+call 2 83611;
+call 2 83612;
+goscript 741601;
+
+act 741601;
+layer;
+fadeout 16;
+setblack 6;
+loadmap 12 9121 270;
+fog 1 500 700 0 0 0 1;
+fadein 16;
+goscript 12;
+
+act 74304;
+layer;
+play 14301;
+
+act 400100;
+layer;
+info 68888;
+
+act 77777711;
+layer;
+talk 57777711;
+
+act 77777721;
+layer;
+talk 57777721;
+
+act 77777731;
+layer;
+talk 57777731;
+
+act 77777741;
+layer;
+talk 57777741;
+
+act 77777751;
+layer;
+talk 57777751;
+
+act 77777761;
+layer;
+talk 57777761;
+
+act 77777771;
+layer;
+talk 57777771;
+
+act 77777811;
+layer;
+talk 57777811;
+
+act 77777821;
+layer;
+talk 57777821;
+
+act 77777831;
+layer;
+talk 57777831;
+
+act 77777841;
+layer;
+talk 57777841;
+
+act 77777851;
+layer;
+talk 57777851;
+
+act 77777861;
+layer;
+talk 57777861;
+
+act 77777871;
+layer;
+talk 57777871;
+
+act 77777881;
+layer;
+talk 57777881;
+
+act 77777891;
+layer;
+talk 57777891;
+
+act 77777900;
+layer;
+talk 57777900;
+
+act 795141;
+layer;
+call 2 895141;
+play 95141 95140 0;
+
+act 795142;
+layer;
+talk 595141;
+
+act 77778000;
+layer;
+info 67778000;

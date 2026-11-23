@@ -1,0 +1,228 @@
+spt 802904;
+toward 10353 512;
+
+spt 80320;
+playsound 3;
+disappear 10320;
+
+spt 80280;
+toward 10212 512;
+
+spt 80281;
+follow 0;
+toward 10211 50 0;
+moveto 10 2 10211 50 -100;
+sleep 5;
+moveto 10 0 0 100 -100;
+follow 1;
+
+spt 80290;
+toward 102210 0 0;
+sleep 5;
+toward 10222 0 0;
+
+spt 802901;
+moveto 10 0 10222 0 0;
+toward 10510 0 0;
+
+spt 802902;
+toward 10480 256;
+sleep 5;
+toward 102210 256;
+
+spt 802903;
+toward 102210 256;
+
+spt 80330;
+playsound 3;
+disappear 10330;
+unremove 10229 -1 -1 -1 -1;
+
+spt 80351;
+toward 10289 300;
+
+spt 80511;
+toward 10352 0 0;
+sleep 5;
+toward 10351 0 0;
+setaction 0 46 0 1;
+sleep 5;
+
+spt 80512;
+moveto 10 0 10357 0 0;
+moveto 10 0 10353 0 0;
+toward 10356 0 0;
+
+spt 80513;
+follow 0;
+toward 10356 0 0;
+moveto 20 0 10356 0 -20;
+toward 10355 0 0;
+sleep 5;
+toward 10354 0 0;
+sleep 5;
+toward 10356 0 0;
+moveto 20 0 0 60 0;
+follow 1;
+
+spt 80514;
+rotate 0 -1 0 100 100 1024;
+setaction 0 47 4 7;
+
+spt 80510;
+follow 0;
+moveto 10 0 0 100;
+toward 30041 20;
+moveto 10 0 30041 30 -150;
+sleep 20;
+follow 1;
+
+spt 80520;
+move 0 1 0 10 5 10;
+sleep 10;
+move 0 -1 0 10 5 10;
+sleep 10;
+goto 0;
+
+spt 10;
+move 0 1 0 5 0 20;
+move 0 -1 0 5 0 20;
+goto 0;
+
+spt 10000;
+rotate 0 -1 0 20 5 1024;
+bound;
+
+spt 10001;
+rotate 0 -1 0 20 5 1024;
+bound;
+
+spt 10002;
+moveto 10 0 10121 0;
+toward 10450 60;
+
+spt 10003;
+move 0 1 0 5 0 96;
+
+spt 10004;
+move 0 -1 0 5 0 48;
+
+spt 80660;
+toward 10620;
+sleep 50;
+moveto 0 10 10620;
+
+spt 80670;
+
+spt 80120;
+move 0 1 0 10 20 40;
+sleep 10;
+move 0 -1 0 10 20 40;
+sleep 10;
+goto 0;
+
+spt 80121;
+toward 10450 0 0;
+
+spt 80532;
+toward 104511 250;
+moveto 10 0 104511 0 0;
+
+spt 89999;
+move 0 0 0 -4 0 -8;
+setaction 0 0 0;
+setstill;
+
+spt 800001;
+remove 110001 110016 -1 -1 -1;
+move 0 1 0 5 0 10;
+disappear 100001;
+active 100002 100006 -1 -1 -1;
+
+spt 800002;
+remove 110002 110016 -1 -1 -1;
+move 0 1 0 5 0 10;
+disappear 100002;
+active 100001 100003 -1 -1 -1;
+
+spt 800003;
+remove 110003 110016 -1 -1 -1;
+move 0 1 0 5 0 10;
+disappear 100003;
+active 100004 -1 -1 -1 -1;
+
+spt 800004;
+remove 110004 110016 -1 -1 -1;
+move 0 1 0 5 0 10;
+disappear 100004;
+active 100003 -1 -1 -1 -1;
+
+spt 800005;
+remove 110005 110016 -1 -1 -1;
+move 0 1 0 5 0 10;
+disappear 100005;
+active 100011 100004 -1 -1 -1;
+
+spt 800006;
+remove 110006 110016 -1 -1 -1;
+move 0 1 0 5 0 10;
+disappear 100006;
+active 100001 -1 -1 -1 -1;
+
+spt 800007;
+remove 110007 110016 -1 -1 -1;
+move 0 1 0 5 0 10;
+disappear 100007;
+active 100002 100013 -1 -1 -1;
+
+spt 800008;
+remove 110008 110016 -1 -1 -1;
+move 0 1 0 5 0 10;
+disappear 100008;
+
+spt 800009;
+remove 110009 110016 -1 -1 -1;
+move 0 1 0 5 0 10;
+disappear 100009;
+
+spt 800010;
+remove 110010 110016 -1 -1 -1;
+move 0 1 0 5 0 10;
+disappear 100010;
+active 100011 -1 -1 -1 -1;
+
+spt 800011;
+remove 110011 110016 -1 -1 -1;
+move 0 1 0 5 0 10;
+disappear 100011;
+active 100005 -1 -1 -1 -1;
+
+spt 800012;
+remove 110012 110016 -1 -1 -1;
+move 0 1 0 5 0 10;
+disappear 100012;
+active 100007 100013 -1 -1 -1;
+
+spt 800013;
+remove 110013 110016 -1 -1 -1;
+move 0 1 0 5 0 10;
+disappear 100013;
+active 100014 -1 -1 -1 -1;
+
+spt 800014;
+remove 110014 110016 -1 -1 -1;
+move 0 1 0 5 0 10;
+disappear 100014;
+active 100015 -1 -1 -1 -1;
+
+spt 800015;
+remove 110015 110016 -1 -1 -1;
+move 0 1 0 5 0 10;
+disappear 100015;
+active 100014 -1 -1 -1 -1;
+
+spt 800100;
+playsound 4;
+sleep 5;
+cgtexture 1;
+setflags 2;

@@ -1,0 +1,428 @@
+{
+  "icons": 70,
+  "models": [
+    {
+      "picpos": 0,
+      "triangles": 120,
+      "skin": "0.bmp",
+      "source_sha256": "a19ec61755eab9b3b2a0c6046c4c536d3b8c4e8c036d4aee71cddb514c25de0c"
+    },
+    {
+      "picpos": 1,
+      "triangles": 130,
+      "skin": "1.bmp",
+      "source_sha256": "80c881b540ef794617db8972c21a395e9ab462bdc65a70a41502f327d06e4f24"
+    },
+    {
+      "picpos": 2,
+      "triangles": 130,
+      "skin": "2.bmp",
+      "source_sha256": "8d0c27cf345f2f114eaa18c3e8a39a45040eca229dec8bdfb08b55673822e82a"
+    },
+    {
+      "picpos": 3,
+      "triangles": 96,
+      "skin": "3.bmp",
+      "source_sha256": "2d5e79b038d89af97c31f6eb23b02f88226029879e8a2b8e40b581968081e68e"
+    },
+    {
+      "picpos": 4,
+      "triangles": 138,
+      "skin": "4.bmp",
+      "source_sha256": "54a0121b832f1dd4c1cdffff8c08ba7affc0853c91a0e209d1c6df579e5947e0"
+    },
+    {
+      "picpos": 5,
+      "triangles": 152,
+      "skin": "5.bmp",
+      "source_sha256": "16de10ab44fd9706fc0013cde4be2a8a90e77e9a624d98f8d5179324a8b4bc24"
+    },
+    {
+      "picpos": 6,
+      "triangles": 130,
+      "skin": "6.bmp",
+      "source_sha256": "fb31e9c0b8698edadcc45cc003564ebcb8e914390e7d47ee172dbf2627efcd90"
+    },
+    {
+      "picpos": 7,
+      "triangles": 130,
+      "skin": "7.bmp",
+      "source_sha256": "46210bbee465a198397b098be49cc3b293a989d9741218f6573f8652cbf82acf"
+    },
+    {
+      "picpos": 8,
+      "triangles": 58,
+      "skin": "8.bmp",
+      "source_sha256": "90edee056662edfd526e50e3cc1c8ebf9fd919d3edb88ce5a28da6baab9f85fb"
+    },
+    {
+      "picpos": 9,
+      "triangles": 116,
+      "skin": "9.bmp",
+      "source_sha256": "0b076c7df191c3c50f768c86a3b2b6899ae6c658b680cdbb3144aad1433ef5ce"
+    },
+    {
+      "picpos": 10,
+      "triangles": 152,
+      "skin": "10.bmp",
+      "source_sha256": "ef3c3957482048b61bd2bd67761e91f92a146075e8e01efb7e3d3e08633ae258"
+    },
+    {
+      "picpos": 11,
+      "triangles": 12,
+      "skin": "11.bmp",
+      "source_sha256": "1521acfe4a0eb5829491264c1d8e5f492c045af7dbc11a75f3480afe345ded28"
+    },
+    {
+      "picpos": 12,
+      "triangles": 42,
+      "skin": "12.bmp",
+      "source_sha256": "bf4476012524a500dc3ae3f5b4cf5252ec35f77e98149c4ae00972f688ebf0e0"
+    },
+    {
+      "picpos": 13,
+      "triangles": 42,
+      "skin": "13.bmp",
+      "source_sha256": "ab54564c2532a1de43a9d1eb6b0fd6243b2ddad828f4eec544d9674da7467b93"
+    },
+    {
+      "picpos": 14,
+      "triangles": 42,
+      "skin": "14.bmp",
+      "source_sha256": "295a09e908cfd8dfb97cf365451836beef1e5a4c895b2047f51bf435cf33855e"
+    },
+    {
+      "picpos": 15,
+      "triangles": 42,
+      "skin": "15.bmp",
+      "source_sha256": "1c2da051fec8dc4998c799419c0c1087107fedb44a78013fb95a9e17e8d8dce3"
+    },
+    {
+      "picpos": 16,
+      "triangles": 152,
+      "skin": "16.bmp",
+      "source_sha256": "4f2bbf6104782e420b44c4d5eb9ba583c67d582a17dbfca8b5e5178e65f4c7ea"
+    },
+    {
+      "picpos": 17,
+      "triangles": 160,
+      "skin": "17.bmp",
+      "source_sha256": "90cfb641430aae50c146d929d126b5f2ca353c4ad659fd192dda0e80282de5fc"
+    },
+    {
+      "picpos": 18,
+      "triangles": 60,
+      "skin": "18.bmp",
+      "source_sha256": "8cd6e06b225c1b2486a23e827a2d78d065d5eb93eec776f0ff8cc49c50c01f38"
+    },
+    {
+      "picpos": 19,
+      "triangles": 60,
+      "skin": "18.bmp",
+      "source_sha256": "6904b760be3506663c1e43b6f14c69fa73f4755b057c27849ccf365cea3170b8"
+    },
+    {
+      "picpos": 20,
+      "triangles": 60,
+      "skin": "18.bmp",
+      "source_sha256": "39963c1978d461700880150d939d7b03d1265318d0a5318f7e16353fa0c34c31"
+    },
+    {
+      "picpos": 21,
+      "triangles": 36,
+      "skin": "21.bmp",
+      "source_sha256": "ea82a778faa8315ed76916ffa1bda8f6e5fbe57dd8f89486f2096b59b719fc3c"
+    },
+    {
+      "picpos": 22,
+      "triangles": 16,
+      "skin": "22.bmp",
+      "source_sha256": "a1ad1b52d9a9b3333c419bf2051cd9a447ce3243a446292eb9cf3efccd52f0fc"
+    },
+    {
+      "picpos": 23,
+      "triangles": 39,
+      "skin": "23.bmp",
+      "source_sha256": "e09ed79fa1cdaf7a69b66b22458a879d33a0d562623e520e172bba55f553b3b6"
+    },
+    {
+      "picpos": 24,
+      "triangles": 130,
+      "skin": "24.bmp",
+      "source_sha256": "dbc041226ce2821794491f5222013bf52620c5781e850e9a2487d675945fd18c"
+    },
+    {
+      "picpos": 25,
+      "triangles": 98,
+      "skin": "25.bmp",
+      "source_sha256": "c324d5cb1c307d25b7fef29df9dafec35b352a25a63765f84fae76f2e1b984e2"
+    },
+    {
+      "picpos": 26,
+      "triangles": 104,
+      "skin": "26.bmp",
+      "source_sha256": "2735074f04598783cb5029967906c6dfd877bc8061d322774c7d4580ab1270fb"
+    },
+    {
+      "picpos": 27,
+      "triangles": 24,
+      "skin": "27.bmp",
+      "source_sha256": "62768d78ef7f3e2d4d6e0f33a74147855f1992bee1cacd21f017a248abaecde6"
+    },
+    {
+      "picpos": 28,
+      "triangles": 30,
+      "skin": "28.bmp",
+      "source_sha256": "2bc7a6a1e34582f028e7cf5437e9a2b1ff4076d759befb3b3019974e46fe5ca1"
+    },
+    {
+      "picpos": 29,
+      "triangles": 32,
+      "skin": "29.bmp",
+      "source_sha256": "dbceb8a98cb556debe92e0b498df60b65a90df2eb6bdf644fbf6bef30d7ce9c9"
+    },
+    {
+      "picpos": 30,
+      "triangles": 234,
+      "skin": "30.bmp",
+      "source_sha256": "eb745f478931735e2ef285e8c8714d2765926687617adb90bf0e8d9650c2b12e"
+    },
+    {
+      "picpos": 31,
+      "triangles": 32,
+      "skin": "31.bmp",
+      "source_sha256": "0d3c92dbd281e8682f5af6832bccf44f12794959f80601c4751b53be713f7a52"
+    },
+    {
+      "picpos": 32,
+      "triangles": 148,
+      "skin": "32.bmp",
+      "source_sha256": "4c27033ee0d3eec9caa066306190f08c4fe82b46ec7bfe3c50bd2cc4c22841b0"
+    },
+    {
+      "picpos": 33,
+      "triangles": 366,
+      "skin": "33.bmp",
+      "source_sha256": "b829bfcee103f0082131034d96a4cd4e4339cd2e9bc9b0be84a5e476aa589006"
+    },
+    {
+      "picpos": 34,
+      "triangles": 150,
+      "skin": "34.bmp",
+      "source_sha256": "32678214ac90d503d0bb87a069d1907fe2eecebcb0f1c173376bf9551c1f9191"
+    },
+    {
+      "picpos": 35,
+      "triangles": 32,
+      "skin": "35.bmp",
+      "source_sha256": "0e2b73048319f4542f3661492d0974f146f1be1ae916f394d026a79ccfb6bfc2"
+    },
+    {
+      "picpos": 36,
+      "triangles": 98,
+      "skin": "25.bmp",
+      "source_sha256": "c324d5cb1c307d25b7fef29df9dafec35b352a25a63765f84fae76f2e1b984e2"
+    },
+    {
+      "picpos": 37,
+      "triangles": 104,
+      "skin": "26.bmp",
+      "source_sha256": "2735074f04598783cb5029967906c6dfd877bc8061d322774c7d4580ab1270fb"
+    },
+    {
+      "picpos": 38,
+      "triangles": 24,
+      "skin": "27.bmp",
+      "source_sha256": "62768d78ef7f3e2d4d6e0f33a74147855f1992bee1cacd21f017a248abaecde6"
+    },
+    {
+      "picpos": 39,
+      "triangles": 30,
+      "skin": "28.bmp",
+      "source_sha256": "2bc7a6a1e34582f028e7cf5437e9a2b1ff4076d759befb3b3019974e46fe5ca1"
+    },
+    {
+      "picpos": 40,
+      "triangles": 98,
+      "skin": "25.bmp",
+      "source_sha256": "c324d5cb1c307d25b7fef29df9dafec35b352a25a63765f84fae76f2e1b984e2"
+    },
+    {
+      "picpos": 41,
+      "triangles": 104,
+      "skin": "26.bmp",
+      "source_sha256": "2735074f04598783cb5029967906c6dfd877bc8061d322774c7d4580ab1270fb"
+    },
+    {
+      "picpos": 42,
+      "triangles": 24,
+      "skin": "27.bmp",
+      "source_sha256": "62768d78ef7f3e2d4d6e0f33a74147855f1992bee1cacd21f017a248abaecde6"
+    },
+    {
+      "picpos": 43,
+      "triangles": 30,
+      "skin": "28.bmp",
+      "source_sha256": "2bc7a6a1e34582f028e7cf5437e9a2b1ff4076d759befb3b3019974e46fe5ca1"
+    },
+    {
+      "picpos": 44,
+      "triangles": 32,
+      "skin": "29.bmp",
+      "source_sha256": "dbceb8a98cb556debe92e0b498df60b65a90df2eb6bdf644fbf6bef30d7ce9c9"
+    },
+    {
+      "picpos": 45,
+      "triangles": 32,
+      "skin": "29.bmp",
+      "source_sha256": "dbceb8a98cb556debe92e0b498df60b65a90df2eb6bdf644fbf6bef30d7ce9c9"
+    },
+    {
+      "picpos": 46,
+      "triangles": 32,
+      "skin": "29.bmp",
+      "source_sha256": "dbceb8a98cb556debe92e0b498df60b65a90df2eb6bdf644fbf6bef30d7ce9c9"
+    },
+    {
+      "picpos": 47,
+      "triangles": 32,
+      "skin": "29.bmp",
+      "source_sha256": "dbceb8a98cb556debe92e0b498df60b65a90df2eb6bdf644fbf6bef30d7ce9c9"
+    },
+    {
+      "picpos": 48,
+      "triangles": 32,
+      "skin": "29.bmp",
+      "source_sha256": "dbceb8a98cb556debe92e0b498df60b65a90df2eb6bdf644fbf6bef30d7ce9c9"
+    },
+    {
+      "picpos": 49,
+      "triangles": 234,
+      "skin": "30.bmp",
+      "source_sha256": "eb745f478931735e2ef285e8c8714d2765926687617adb90bf0e8d9650c2b12e"
+    },
+    {
+      "picpos": 50,
+      "triangles": 234,
+      "skin": "30.bmp",
+      "source_sha256": "eb745f478931735e2ef285e8c8714d2765926687617adb90bf0e8d9650c2b12e"
+    },
+    {
+      "picpos": 51,
+      "triangles": 120,
+      "skin": "18.bmp",
+      "source_sha256": "3275313e85d7c82335e45421982e8ecc72d279bbad1e887772929e1b5c0db8f6"
+    },
+    {
+      "picpos": 52,
+      "triangles": 120,
+      "skin": "18.bmp",
+      "source_sha256": "089e7bce40ab0ffa8486022a3eb9d2c0d01db23767d04b6fb989e65d7c0c8401"
+    },
+    {
+      "picpos": 53,
+      "triangles": 120,
+      "skin": "18.bmp",
+      "source_sha256": "0ca749f59a056a3bb4c6d0145f192227dad340f98453d5f6c5f8e780878386e8"
+    },
+    {
+      "picpos": 54,
+      "triangles": 180,
+      "skin": "18.bmp",
+      "source_sha256": "98676a28ca78e6a6cad63859049fceeaf52762d72b28716d434a39ec775deb00"
+    },
+    {
+      "picpos": 55,
+      "triangles": 12,
+      "skin": "55.bmp",
+      "source_sha256": "3a1f86bbd2fa22bdff79f13e4a3c1ef7bfbc5c70b6271f8e85111a4a91f7fd7d"
+    },
+    {
+      "picpos": 56,
+      "triangles": 160,
+      "skin": "56.bmp",
+      "source_sha256": "26b0e10a6a6b0d3c3acd4891f83565ddb4756c44d46a7d4f92212fb503addb81"
+    },
+    {
+      "picpos": 57,
+      "triangles": 130,
+      "skin": "57.bmp",
+      "source_sha256": "d08372e988bb9ca612f94e8bf8d10adaabadc3655715691996b1813a7ce52577"
+    },
+    {
+      "picpos": 58,
+      "triangles": 18,
+      "skin": "58.bmp",
+      "source_sha256": "846207fda67bb810680af0f0c950bb65130219a430d9bceaaa332f832d0068ef"
+    },
+    {
+      "picpos": 59,
+      "triangles": 58,
+      "skin": "8.bmp",
+      "source_sha256": "90edee056662edfd526e50e3cc1c8ebf9fd919d3edb88ce5a28da6baab9f85fb"
+    },
+    {
+      "picpos": 60,
+      "triangles": 116,
+      "skin": "9.bmp",
+      "source_sha256": "0b076c7df191c3c50f768c86a3b2b6899ae6c658b680cdbb3144aad1433ef5ce"
+    },
+    {
+      "picpos": 61,
+      "triangles": 32,
+      "skin": "61.bmp",
+      "source_sha256": "4cfd74e9f670aeb2b095434b7828345530d40778b51cb75b46351ca537be1b1f"
+    },
+    {
+      "picpos": 62,
+      "triangles": 32,
+      "skin": "62.bmp",
+      "source_sha256": "e34a1b1d3e12a33abdfa0c88fcf10bacac95a44d8f848de31150629132ea9694"
+    },
+    {
+      "picpos": 63,
+      "triangles": 32,
+      "skin": "63.bmp",
+      "source_sha256": "d5d22fc272b92d51e85e7117cac23d5a8147442cfd4d1fd65ebda30e0eb26dc6"
+    },
+    {
+      "picpos": 64,
+      "triangles": 32,
+      "skin": "64.bmp",
+      "source_sha256": "67cd073a9c7f8a80eb67c6755c91f0b7ec0d0ad4e36b169ae22e0418a673e352"
+    },
+    {
+      "picpos": 65,
+      "triangles": 120,
+      "skin": "0.bmp",
+      "source_sha256": "a19ec61755eab9b3b2a0c6046c4c536d3b8c4e8c036d4aee71cddb514c25de0c"
+    },
+    {
+      "picpos": 66,
+      "triangles": 138,
+      "skin": "dangong.bmp",
+      "source_sha256": "fe862bffad765f8e24a4dd290e606881b67dc0ec351f05fef8bb217dea923fab"
+    },
+    {
+      "picpos": 67,
+      "triangles": 138,
+      "skin": "dangong.bmp",
+      "source_sha256": "fe862bffad765f8e24a4dd290e606881b67dc0ec351f05fef8bb217dea923fab"
+    },
+    {
+      "picpos": 68,
+      "triangles": 138,
+      "skin": "dangong.bmp",
+      "source_sha256": "fe862bffad765f8e24a4dd290e606881b67dc0ec351f05fef8bb217dea923fab"
+    },
+    {
+      "picpos": 69,
+      "triangles": 138,
+      "skin": "dangong.bmp",
+      "source_sha256": "fe862bffad765f8e24a4dd290e606881b67dc0ec351f05fef8bb217dea923fab"
+    }
+  ],
+  "transparency": "exact original RGB 255,0,255 before scaling",
+  "reference": "test-evidence/compare-20261121/original-inventory.png",
+  "preview_rotation": "touch adaptation; original rotation rate not calibrated"
+}

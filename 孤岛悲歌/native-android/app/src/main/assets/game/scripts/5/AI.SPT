@@ -1,0 +1,29 @@
+spt 81400;
+active 11380 11390 -1 -1 -1;
+
+spt 81380;
+playsound 0;
+rotate 0 1 0 100 200 1024;
+rotate 0 -1 0 100 100 300;
+playsound 2;
+rotate 0 1 0 100 50 300;
+bound;
+
+spt 81390;
+rotate 0 -1 0 100 200 1024;
+rotate 0 1 0 100 100 300;
+rotate 0 -1 0 100 50 300;
+bound;
+
+spt 800100;
+playsound 1;
+sleep 5;
+cgtexture 1;
+setflags 5;
+
+spt 895111;
+follow 0;
+moveto 15 1 0 60 0;
+toward 95111 0 0;
+moveto 15 2 95111 60 -30;
+toward 95111 0 0;

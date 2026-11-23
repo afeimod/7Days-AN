@@ -1,0 +1,41 @@
+spt 81010;
+toward 110101 0 0;
+
+spt 81020;
+playsound 2;
+disappear 11020;
+unremove 11019 -1 -1 -1 -1;
+
+spt 81040;
+move 1 0 0 10 0 15;
+
+spt 81041;
+move -1 0 0 10 0 15;
+
+spt 81180;
+follow 0;
+toward 11181 0 0;
+moveto 10 0 11181 20 -150; 
+sleep 15;
+follow 1;
+
+spt 81181;
+toward 11181 500;
+
+spt 89999;
+move 0 0 0 -6 0 -12;
+setstill;
+
+spt 810411;
+move 0 0 1 3 0 12;
+
+spt 810412;
+move 0 0 -1 3 0 12;
+
+spt 811101;
+rotate 0 -1 0 300 0 1024;
+
+spt 877031;
+follow 0;
+moveto 10 2 0 60 0;
+toward 11181 0 0;

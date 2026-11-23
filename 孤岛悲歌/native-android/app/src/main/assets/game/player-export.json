@@ -1,0 +1,504 @@
+{
+  "source": "asset-work\\decoded\\SD2\\CS.SD2",
+  "source_sha256": "f6f3445e0df9a4c1a5e525ae2b4ab7ca21704499f70a26f3cf18142613779b2c",
+  "skin": "textures/0359.png",
+  "frame_count": 159,
+  "triangle_count": 499,
+  "actions": [
+    {
+      "id": 0,
+      "name": "daiji",
+      "frames": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        99,
+        99,
+        100,
+        100,
+        101,
+        101,
+        102,
+        102
+      ]
+    },
+    {
+      "id": 1,
+      "name": "dengdai",
+      "frames": [
+        6,
+        6,
+        7,
+        7,
+        8,
+        8,
+        9,
+        9,
+        10,
+        10,
+        11,
+        11,
+        12,
+        12,
+        13,
+        13
+      ]
+    },
+    {
+      "id": 2,
+      "name": "readygo",
+      "frames": [
+        40,
+        14,
+        15
+      ]
+    },
+    {
+      "id": 3,
+      "name": "goahead",
+      "frames": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "id": 4,
+      "name": "endgoleft",
+      "frames": [
+        16,
+        24,
+        25
+      ]
+    },
+    {
+      "id": 5,
+      "name": "endgoright",
+      "frames": [
+        20,
+        26,
+        27
+      ]
+    },
+    {
+      "id": 6,
+      "name": "readyback",
+      "frames": [
+        28,
+        132
+      ]
+    },
+    {
+      "id": 7,
+      "name": "goback",
+      "frames": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        0
+      ]
+    },
+    {
+      "id": 8,
+      "name": "endback",
+      "frames": [
+        132,
+        28
+      ]
+    },
+    {
+      "id": 9,
+      "name": "dun",
+      "frames": [
+        0,
+        37,
+        38,
+        39
+      ]
+    },
+    {
+      "id": 10,
+      "name": "turnleft",
+      "frames": [
+        156,
+        41,
+        108,
+        109,
+        110
+      ]
+    },
+    {
+      "id": 11,
+      "name": "turnright",
+      "frames": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ]
+    },
+    {
+      "id": 12,
+      "name": "aaaa",
+      "frames": [
+        39,
+        38,
+        37,
+        0
+      ]
+    },
+    {
+      "id": 13,
+      "name": "wait2",
+      "frames": [
+        0
+      ]
+    },
+    {
+      "id": 14,
+      "name": "rwait2",
+      "frames": [
+        42
+      ]
+    },
+    {
+      "id": 15,
+      "name": "rpull",
+      "frames": [
+        51,
+        52,
+        53
+      ]
+    },
+    {
+      "id": 16,
+      "name": "push",
+      "frames": [
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    {
+      "id": 17,
+      "name": "pull",
+      "frames": [
+        53,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ]
+    },
+    {
+      "id": 18,
+      "name": "w2tostill",
+      "frames": [
+        0
+      ]
+    },
+    {
+      "id": 19,
+      "name": "dunhit",
+      "frames": [
+        69,
+        68
+      ]
+    },
+    {
+      "id": 20,
+      "name": "zhihit",
+      "frames": [
+        73,
+        74
+      ]
+    },
+    {
+      "id": 21,
+      "name": "hitroad",
+      "frames": [
+        0
+      ]
+    },
+    {
+      "id": 22,
+      "name": "runa",
+      "frames": [
+        0
+      ]
+    },
+    {
+      "id": 23,
+      "name": "runb",
+      "frames": [
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82
+      ]
+    },
+    {
+      "id": 24,
+      "name": "runc",
+      "frames": [
+        0
+      ]
+    },
+    {
+      "id": 25,
+      "name": "rund",
+      "frames": [
+        0
+      ]
+    },
+    {
+      "id": 26,
+      "name": "rjump",
+      "frames": [
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        130
+      ]
+    },
+    {
+      "id": 27,
+      "name": "ljump",
+      "frames": [
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        128
+      ]
+    },
+    {
+      "id": 28,
+      "name": "lijump",
+      "frames": [
+        118,
+        119,
+        120,
+        121,
+        122,
+        124,
+        125
+      ]
+    },
+    {
+      "id": 29,
+      "name": "rlijump",
+      "frames": [
+        116,
+        117
+      ]
+    },
+    {
+      "id": 30,
+      "name": "elijump",
+      "frames": [
+        126,
+        127
+      ]
+    },
+    {
+      "id": 31,
+      "name": "rljump",
+      "frames": [
+        91,
+        92
+      ]
+    },
+    {
+      "id": 32,
+      "name": "eljump",
+      "frames": [
+        129,
+        137,
+        133,
+        134
+      ]
+    },
+    {
+      "id": 33,
+      "name": "rrjump",
+      "frames": [
+        83,
+        84
+      ]
+    },
+    {
+      "id": 34,
+      "name": "erjump",
+      "frames": [
+        131,
+        138,
+        135,
+        136
+      ]
+    },
+    {
+      "id": 35,
+      "name": "ffall",
+      "frames": [
+        0
+      ]
+    },
+    {
+      "id": 36,
+      "name": "bfall",
+      "frames": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155
+      ]
+    },
+    {
+      "id": 37,
+      "name": "getup",
+      "frames": [
+        0
+      ]
+    },
+    {
+      "id": 38,
+      "name": "dunhit2",
+      "frames": [
+        70,
+        71,
+        72
+      ]
+    },
+    {
+      "id": 39,
+      "name": "zhihit2",
+      "frames": [
+        106,
+        107
+      ]
+    },
+    {
+      "id": 40,
+      "name": "cuitiao",
+      "frames": [
+        0
+      ]
+    },
+    {
+      "id": 41,
+      "name": "rshabu",
+      "frames": [
+        0
+      ]
+    },
+    {
+      "id": 42,
+      "name": "lshabu",
+      "frames": [
+        0
+      ]
+    },
+    {
+      "id": 43,
+      "name": "rzhuant",
+      "frames": [
+        0
+      ]
+    },
+    {
+      "id": 44,
+      "name": "zbcuitiao",
+      "frames": [
+        0
+      ]
+    },
+    {
+      "id": 45,
+      "name": "jscuitiao",
+      "frames": [
+        0
+      ]
+    },
+    {
+      "id": 46,
+      "name": "wanyao",
+      "frames": [
+        139,
+        140,
+        157,
+        140,
+        139,
+        0
+      ]
+    },
+    {
+      "id": 47,
+      "name": "naotou",
+      "frames": [
+        141,
+        142,
+        143,
+        144,
+        158,
+        142,
+        141,
+        0
+      ]
+    },
+    {
+      "id": 48,
+      "name": "huanhu",
+      "frames": [
+        145,
+        146,
+        147,
+        148,
+        147,
+        146,
+        145,
+        0
+      ]
+    }
+  ],
+  "output_sha256": "ac23583938119a57f3e3069879abbfe406614eab72ec530cdff9b356bdea29f4",
+  "timing": "Android adaptation; original playback cadence awaits emulator comparison"
+}

@@ -1,0 +1,19 @@
+object 11610;
+type 0;
+HasResult 71610;
+
+object 11620;
+type 0;
+HasResult 71620;
+
+object 11621;
+type 0;
+HasResult 71621;
+
+object 11630;
+type 4;
+HasResult 71630;
+
+object 40060;
+type 0;
+HasResult 400100;

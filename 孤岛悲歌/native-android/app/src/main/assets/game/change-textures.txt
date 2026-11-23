@@ -1,0 +1,10 @@
+game/change/0.png
+game/change/1.png
+game/change/2.png
+game/change/3.png
+game/change/4.png
+game/change/5.png
+game/change/6.png
+game/change/7.png
+game/change/8.png
+game/change/9.png

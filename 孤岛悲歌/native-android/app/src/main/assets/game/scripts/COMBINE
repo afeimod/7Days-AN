@@ -1,0 +1,134 @@
+combine 13;
+
+gfail 组合无效！;
+ginfo 两个道具组合起来使用，没有产生任何效果！;
+
+type 0;
+item1 20031;
+item2 20060;
+item3 20031;
+item5 20070;
+success 组合成功！;
+info 铁钉将钥匙上的铁锈磨得干干净净！;
+icon 1;
+end 1;
+
+type 0;
+item1 23910;
+item2 24410;
+item3 29000;
+item5 -1;
+success 组合成功！;
+info 两张蜡笔画拼在一起，依稀能辨认画上的内容！;
+icon 1;
+end 2;
+
+type 0;
+item1 24410;
+item2 27130;
+item3 29001;
+item5 -1;
+success 组合成功！;
+info 两张蜡笔画拼在一起，依稀能辨认画上的内容！;
+icon 1;
+end 3;
+
+type 0;
+item1 23910;
+item2 27130;
+item3 29002;
+item5 -1;
+success 组合成功！;
+info 两张蜡笔画拼在一起，依稀能辨认画上的内容！;
+icon 1;
+end 4;
+
+type 0;
+item1 27130;
+item2 29000;
+item3 29003;
+item5 -1;
+success 组合成功！;
+info 三张蜡笔画粘合成一张完整的图画！;
+icon 1;
+end 5;
+
+type 0;
+item1 23910;
+item2 29001;
+item3 29003;
+item5 -1;
+success 组合成功！;
+info 三张蜡笔画粘合成一张完整的图画！;
+icon 1;
+end 6;
+
+type 0;
+item1 24410;
+item2 29002;
+item3 29003;
+item5 -1;
+success 组合成功！;
+info 三张蜡笔画粘合成一张完整的图画！;
+icon 1;
+end 7;
+
+type 1;
+item1 20000;
+item2 21260;
+item3 20001;
+item5 21260;
+success 组合成功！;
+info 充电电池成功充满电量！;
+icon 1;
+end 8;
+
+type 0;
+item1 20000;
+item2 21520;
+item3 20000;
+item5 21520;
+success 组合失败！;
+info 电池已经没有电了，录音机使用不了！;
+icon 0;
+end 9;
+
+type 0;
+item1 20001;
+item2 21520;
+item3 21521;
+item5 -1;
+success 组合成功！;
+info 录音机装上充过电的电池，可以播放磁带了！;
+icon 1;
+end 10;
+
+type 0;
+item1 22720;
+item2 23520;
+item3 22720;
+item5 23520;
+success 组合成功！;
+info 放大镜映出戒指内侧刻痕，写着＂剑在井底＂！;
+icon 1;
+end 11;
+
+type 0;
+item1 20001;
+item2 21260;
+item3 20001;
+item5 21260;
+success 组合失败！;
+info 充电电池已充满电量，无需再充电！;
+icon 0;
+end 12;
+
+type 0;
+item1 24720;
+item2 23520;
+item3 24720;
+item5 23520;
+success 组合成功！;
+info 放大镜照在戒指上，显示出戒指上漂亮的玉质纹理。;
+icon 1;
+end 13;

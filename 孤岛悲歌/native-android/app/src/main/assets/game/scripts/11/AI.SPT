@@ -1,0 +1,565 @@
+spt 83311;
+follow 0;
+
+spt 83320;
+toward 13310 250;
+
+spt 83321;
+follow 0;
+toward 13310 0 0;
+move 0 -1 0 15 2 50;
+sleep 10;
+follow 1;
+
+spt 83331;
+toward 13360 250;
+moveto 20 0 13360 0 0;
+toward 13330 250;
+
+spt 83337;
+move 0 0 0 -20 0 -30;
+setstill;
+
+spt 83338;
+move 0 0 0 20 0 30;
+setstill;
+
+spt 83332;
+toward 0 55 0;
+toward 0 60 0;
+toward 0 57 0;
+toward 0 60 0;
+toward 0 59 0;
+toward 0 60 0;
+
+spt 83333;
+unremove 3 -1 -1 -1 -1;
+toward 13332 250;
+moveto 5 0 13332 0 0;
+sleep 5;
+toward 13331 250;
+moveto 5 0 13331 0 0;
+toward 0 0 0;
+
+spt 83334;
+toward 13332 250;
+moveto 5 0 13332 0 0;
+sleep 5;
+toward 133321 250;
+moveto 5 2 133321 0 0;
+remove 3 -1 -1 -1 -1;
+
+spt 83335;
+toward 0 48 0;
+moveto 10 1 0 48 0;
+toward 13330 0 0;
+moveto 10 1 13330 0 -200;
+
+spt 83336;
+toward 13362 250;
+moveto 10 0 13362 0 0;
+toward 13328 250;
+
+spt 83330;
+move 0 -1 0 3 0 50;
+move 0 -1 0 3 1 50;
+
+spt 83400;
+move 0 1 0 20 5 180;
+
+spt 83401;
+move 0 -1 0 10 0 80;
+
+spt 83402;
+move 0 -1 0 10 5 180;
+
+spt 83456;
+playsound 10;
+disappear 13456 -1 -1 -1 -1;
+
+spt 81620;
+follow 0;
+toward 0 58 0;
+toward 0 61 0;
+toward 0 59 0;
+toward 0 62 0;
+toward 0 59 0;
+toward 0 61 0;
+toward 0 58 0;
+toward 0 61 0;
+follow 1;
+
+spt 81622;
+follow 0;
+toward 41643 0 0;
+move 0 -1 0 15 1 50;
+sleep 10;
+toward 0 60 0;
+follow 1;
+
+spt 81641;
+sleep 8;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+playsound 1;
+move 0 1 0 10 20 1000;
+
+spt 81642;
+sleep 18;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81643;
+sleep 13;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81644;
+playsound 1;
+sleep 11;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81645;
+sleep 11;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81646;
+sleep 11;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81647;
+sleep 14;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81648;
+sleep 16;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81649;
+sleep 18;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+playsound 1;
+move 0 1 0 10 20 1000;
+
+spt 81650;
+sleep 22;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81651;
+sleep 26;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81652;
+sleep 28;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81653;
+sleep 29;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81654;
+sleep 32;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+playsound 1;
+move 0 1 0 10 20 1000;
+
+spt 81655;
+sleep 34;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81656;
+sleep 37;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81657;
+sleep 40;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81658;
+sleep 42;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81659;
+sleep 44;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81660;
+sleep 47;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+playsound 1;
+move 0 1 0 10 20 1000;
+
+spt 81661;
+sleep 49;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81662;
+sleep 51;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81663;
+sleep 53;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81664;
+sleep 51;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81665;
+sleep 53;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81666;
+sleep 55;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+playsound 1;
+move 0 1 0 10 20 1000;
+
+spt 81667;
+sleep 57;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81668;
+sleep 60;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 89999;
+move 0 0 0 -6 0 -12;
+
+spt 83711;
+move 0 0 1 5 0 10;
+playsound 5;
+move 0 0 1 60 10 600;
+
+spt 83712;
+sleep 2;
+move 0 0 1 5 0 10;
+playsound 5;
+move 0 0 1 60 10 600;
+
+spt 83713;
+sleep 4;
+move 0 0 1 5 0 10;
+playsound 5;
+move 0 0 1 60 10 600;
+
+spt 83714;
+sleep 6;
+move 0 0 1 5 0 10;
+playsound 5;
+move 0 0 1 60 10 600;
+
+spt 83715;
+sleep 8;
+move 0 0 1 5 0 10;
+playsound 5;
+move 0 0 1 60 10 600;
+
+spt 83716;
+sleep 10;
+move 0 0 1 5 0 10;
+playsound 5;
+move 0 0 1 60 10 600;
+
+spt 83717;
+sleep 12;
+move 0 0 1 5 0 10;
+playsound 5;
+move 0 0 1 60 10 600;
+
+spt 83718;
+sleep 14;
+move 0 0 1 5 0 10;
+playsound 5;
+move 0 0 1 60 10 600;
+
+spt 83719;
+active 13711 13712 13713 13714 -1;
+active 13715 13716 13717 13718 -1;
+
+spt 83380;
+toward 13673 300;
+
+spt 83381;
+move -1 0 0 5 0 10;
+sleep 5;
+playsound 5;
+move -1 0 0 60 10 600;
+remove 13381 -1 -1 -1 -1;
+
+spt 83382;
+sleep 3;
+move -1 0 0 5 0 10;
+sleep 5;
+playsound 5;
+move -1 0 0 60 10 600;
+remove 13382 -1 -1 -1 -1;
+
+spt 83383;
+sleep 6;
+move -1 0 0 5 0 10;
+sleep 5;
+playsound 5;
+move -1 0 0 60 10 600;
+remove 13383 -1 -1 -1 -1;
+
+spt 83384;
+sleep 9;
+move -1 0 0 5 0 10;
+sleep 5;
+playsound 5;
+move -1 0 0 60 10 600;
+remove 13384 -1 -1 -1 -1;
+
+spt 83385;
+move -1 0 0 5 0 10;
+sleep 5;
+playsound 5;
+move -1 0 0 60 10 600;
+remove 13385 -1 -1 -1 -1;
+
+spt 83386;
+sleep 3;
+move -1 0 0 5 0 10;
+sleep 5;
+playsound 5;
+move -1 0 0 60 10 600;
+remove 13386 -1 -1 -1 -1;
+
+spt 83387;
+sleep 6;
+move -1 0 0 5 0 10;
+sleep 5;
+playsound 5;
+move -1 0 0 60 10 600;
+remove 13387 -1 -1 -1 -1;
+
+spt 83388;
+sleep 9;
+move -1 0 0 5 0 10;
+sleep 5;
+playsound 5;
+move -1 0 0 60 10 600;
+remove 13388 -1 -1 -1 -1;
+
+spt 83389;
+active 13381 13382 13383 13384 -1;
+sleep 10;
+active 13385 13386 13387 13388 -1;
+
+spt 83610;
+follow 0;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+
+spt 83611;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+
+spt 83612;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+follow 1;
+
+spt 82222222;
+toward 22222223 150;
+
+spt 836010;
+playsound 8;
+
+spt 800100;
+playsound 3;
+sleep 5;
+cgtexture 1;
+setflags 11;
+
+spt 801700;
+playsound 11;
+
+spt 895131;
+follow 0;
+moveto 15 1 0 60 0;
+toward 95131 0 0;
+moveto 15 2 95131 60 -30;
+toward 95131 0 0;

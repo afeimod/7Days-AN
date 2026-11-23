@@ -1,0 +1,58 @@
+object 16040;
+type 11;
+HasResult 76031;
+NoResult 79999;
+item 24730;
+ObserveResult 76040;
+
+object 16010;
+type 0;
+HasResult 76010;
+
+object 16211;
+type 0;
+HasResult 76211;
+
+object 16212;
+type 0;
+HasResult 76212;
+
+object 16231;
+type 0;
+HasResult 76231;
+
+object 16232;
+type 0;
+HasResult 76212;
+
+object 16050;
+type 1;
+HasResult 76050;
+
+object 16020;
+type 0;
+HasResult 76020;
+
+object 16025;
+type 0;
+HasResult 76025;
+
+object 16030;
+type 0;
+HasResult 76030;
+
+object 16251;
+type 0;
+HasResult 76251;
+
+object 16241;
+type 0;
+HasResult 76251;
+
+object 16310;
+type 0;
+HasResult 76310;
+
+object 16000;
+type 0;
+HasResult 76000;

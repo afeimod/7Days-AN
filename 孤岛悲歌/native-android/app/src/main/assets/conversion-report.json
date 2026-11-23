@@ -1,0 +1,312 @@
+{
+  "status": "native static-scene validation only; original gameplay is not implemented",
+  "textures": 698,
+  "maps": [
+    {
+      "level": 1,
+      "spawn": [
+        -377.0,
+        -368.0,
+        68.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 90.0,
+      "batches": 38,
+      "triangles": 1614,
+      "static_models": 22,
+      "solid_world_brushes": 150,
+      "omitted": {},
+      "file_bytes": 294474
+    },
+    {
+      "level": 2,
+      "spawn": [
+        742.0,
+        -351.0,
+        -130.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 90.0,
+      "batches": 65,
+      "triangles": 3046,
+      "static_models": 30,
+      "solid_world_brushes": 168,
+      "omitted": {},
+      "file_bytes": 417853
+    },
+    {
+      "level": 3,
+      "spawn": [
+        80.0,
+        -16.0,
+        60.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 90.0,
+      "batches": 40,
+      "triangles": 3095,
+      "static_models": 57,
+      "solid_world_brushes": 142,
+      "omitted": {},
+      "file_bytes": 368632
+    },
+    {
+      "level": 4,
+      "spawn": [
+        -192.0,
+        800.0,
+        60.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 90.0,
+      "batches": 36,
+      "triangles": 1302,
+      "static_models": 24,
+      "solid_world_brushes": 86,
+      "omitted": {},
+      "file_bytes": 166168
+    },
+    {
+      "level": 5,
+      "spawn": [
+        -511.0,
+        1388.0,
+        60.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 90.0,
+      "batches": 36,
+      "triangles": 1747,
+      "static_models": 15,
+      "solid_world_brushes": 90,
+      "omitted": {},
+      "file_bytes": 204252
+    },
+    {
+      "level": 6,
+      "spawn": [
+        190.0,
+        1334.0,
+        60.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 90.0,
+      "batches": 26,
+      "triangles": 758,
+      "static_models": 2,
+      "solid_world_brushes": 74,
+      "omitted": {},
+      "file_bytes": 168606
+    },
+    {
+      "level": 7,
+      "spawn": [
+        254.0,
+        1134.0,
+        60.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 90.0,
+      "batches": 39,
+      "triangles": 1863,
+      "static_models": 16,
+      "solid_world_brushes": 140,
+      "omitted": {},
+      "file_bytes": 269623
+    },
+    {
+      "level": 8,
+      "spawn": [
+        -332.0,
+        -240.0,
+        68.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 90.0,
+      "batches": 46,
+      "triangles": 3688,
+      "static_models": 66,
+      "solid_world_brushes": 191,
+      "omitted": {},
+      "file_bytes": 422366
+    },
+    {
+      "level": 9,
+      "spawn": [
+        -144.0,
+        288.0,
+        268.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 90.0,
+      "batches": 58,
+      "triangles": 3230,
+      "static_models": 47,
+      "solid_world_brushes": 165,
+      "omitted": {},
+      "file_bytes": 382602
+    },
+    {
+      "level": 10,
+      "spawn": [
+        1104.0,
+        408.0,
+        68.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 90.0,
+      "batches": 35,
+      "triangles": 1408,
+      "static_models": 22,
+      "solid_world_brushes": 106,
+      "omitted": {},
+      "file_bytes": 225690
+    },
+    {
+      "level": 11,
+      "spawn": [
+        194.0,
+        1800.0,
+        60.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 90.0,
+      "batches": 60,
+      "triangles": 3357,
+      "static_models": 52,
+      "solid_world_brushes": 212,
+      "omitted": {},
+      "file_bytes": 445268
+    },
+    {
+      "level": 12,
+      "spawn": [
+        2672.0,
+        2016.0,
+        252.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 90.0,
+      "batches": 57,
+      "triangles": 4631,
+      "static_models": 63,
+      "solid_world_brushes": 280,
+      "omitted": {},
+      "file_bytes": 565385
+    },
+    {
+      "level": 13,
+      "spawn": [
+        2672.0,
+        2016.0,
+        252.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 90.0,
+      "batches": 43,
+      "triangles": 1618,
+      "static_models": 30,
+      "solid_world_brushes": 93,
+      "omitted": {},
+      "file_bytes": 193063
+    },
+    {
+      "level": 14,
+      "spawn": [
+        384.0,
+        -1200.0,
+        252.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 180.0,
+      "batches": 44,
+      "triangles": 4617,
+      "static_models": 43,
+      "solid_world_brushes": 153,
+      "omitted": {},
+      "file_bytes": 600427
+    },
+    {
+      "level": 15,
+      "spawn": [
+        0.0,
+        1376.0,
+        60.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 90.0,
+      "batches": 19,
+      "triangles": 1070,
+      "static_models": 11,
+      "solid_world_brushes": 53,
+      "omitted": {},
+      "file_bytes": 143915
+    },
+    {
+      "level": 16,
+      "spawn": [
+        -336.0,
+        1496.0,
+        60.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 0.0,
+      "batches": 35,
+      "triangles": 1772,
+      "static_models": 18,
+      "solid_world_brushes": 178,
+      "omitted": {},
+      "file_bytes": 309123
+    },
+    {
+      "level": 17,
+      "spawn": [
+        832.0,
+        48.0,
+        252.0
+      ],
+      "spawn_source": "info_player_start",
+      "yaw": 90.0,
+      "batches": 46,
+      "triangles": 1967,
+      "static_models": 47,
+      "solid_world_brushes": 142,
+      "omitted": {},
+      "file_bytes": 273546
+    },
+    {
+      "level": 18,
+      "spawn": [
+        164.0,
+        -106.0,
+        1240.0
+      ],
+      "spawn_source": "validation_only_entity_fallback",
+      "yaw": 90.0,
+      "batches": 9,
+      "triangles": 654,
+      "static_models": 6,
+      "solid_world_brushes": 146,
+      "omitted": {},
+      "file_bytes": 167205
+    }
+  ],
+  "issues": [
+    {
+      "level": 10,
+      "missing_texture": "pingtukuang"
+    },
+    {
+      "level": 14,
+      "missing_texture": "skin"
+    },
+    {
+      "level": 14,
+      "missing_texture": "skin"
+    },
+    {
+      "level": 14,
+      "missing_texture": "skin"
+    }
+  ]
+}

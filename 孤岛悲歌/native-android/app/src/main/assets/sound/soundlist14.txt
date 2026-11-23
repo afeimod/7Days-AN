@@ -1,0 +1,8 @@
+pickhit.wav
+kaishimen.wav
+diaoxuanya.wav
+hit.wav
+couti.wav
+ada.wav
+adasang.wav
+shui1.wav

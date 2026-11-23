@@ -1,0 +1,190 @@
+spt 86000;
+playsound 5;
+move 0 1 0 10 10 100;
+
+spt 86025;
+toward 16022 200;
+moveto 10 2 16022 0 0;
+toward 16040 200;
+
+spt 86261;
+follow 0;
+toward 0 55 0;
+toward 0 58 0;
+toward 0 60 0;
+toward 0 57 0;
+toward 0 62 0;
+toward 0 55 0;
+toward 0 59 0;
+toward 0 56 0;
+follow 1;
+
+spt 86262;
+toward 16021 200;
+moveto 10 1 16021 0 0;
+setstill;
+
+spt 86263;
+move 0 0 0 -15 0 -30;
+setstill;
+sleep 5;
+
+spt 86264;
+toward 16022 200 0;
+sleep 5;
+
+spt 862641;
+follow 0;
+moveto 10 1 0 60 0;
+toward 162411 200 0;
+sleep 3;
+toward 162511 200 0;
+sleep 3;
+follow 1;
+
+spt 86265;
+toward 16022 0 0;
+sleep 3;
+
+spt 86266;
+follow 0;
+moveto 10 0 0 60 0;
+sleep 3;
+toward 16022 50 0;
+moveto 15 0 16022 50 100;
+sleep 5;
+follow 1;
+
+spt 86210;
+playsound 0;
+move -1 0 0 10 0 140;
+playsound 0;
+move -1 0 0 10 0 140;
+
+spt 86220;
+move 0 0 -1 10 0 280;
+
+spt 86230;
+playsound 0;
+move -1 0 0 10 0 140;
+playsound 0;
+move -1 0 0 10 0 140;
+
+spt 86240;
+move 0 0 -1 2 0 250;
+unremove 16025 -1 -1 -1 -1;
+
+spt 862411;
+playsound 1;
+sleep 10;
+playsound 1;
+sleep 10;
+playsound 1;
+sleep 10;
+playsound 1;
+sleep 10;
+playsound 1;
+
+spt 86250;
+move 0 0 1 2 0 250;
+
+spt 86040;
+move 0 -1 0 5 0 100;
+
+spt 86211;
+follow 0;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+
+spt 86212;
+move 0 1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+follow 1;
+
+spt 86231;
+follow 0;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+
+spt 86232;
+move 0 1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+follow 1;
+
+spt 847010;
+move -1 0 0 5 0 88;
+sleep 5;
+move 1 0 0 5 0 88;
+sleep 20;
+move 1 0 0 5 0 88;
+sleep 5;
+move -1 0 0 5 0 88;
+sleep 20;
+goto 0;
+
+spt 847020;
+move 1 0 0 5 0 88;
+sleep 5;
+move -1 0 0 5 0 88;
+sleep 20;
+move -1 0 0 5 0 88;
+sleep 5;
+move 1 0 0 5 0 88;
+sleep 20;
+goto 0;
+
+spt 847030;
+move -1 0 0 5 0 88;
+sleep 5;
+move 1 0 0 5 0 88;
+sleep 20;
+move 1 0 0 5 0 88;
+sleep 5;
+move -1 0 0 5 0 88;
+sleep 20;
+goto 0;
+
+spt 847040;
+move 1 0 0 5 0 88;
+sleep 5;
+move -1 0 0 5 0 88;
+sleep 20;
+move -1 0 0 5 0 88;
+sleep 5;
+move 1 0 0 5 0 88;
+sleep 20;
+goto 0;
+
+spt 836010;
+playsound 2;
+
+spt 801900;
+playsound 4;

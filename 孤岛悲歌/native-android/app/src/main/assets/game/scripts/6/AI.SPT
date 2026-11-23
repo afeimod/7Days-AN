@@ -1,0 +1,332 @@
+spt 81610;
+rotate 0 1 0 200 100 2048;
+
+spt 81620;
+follow 0;
+playsound 1;
+toward 0 62 0;
+toward 0 55 0;
+toward 0 60 0;
+toward 0 58 0;
+toward 0 62 0;
+toward 0 55 0;
+toward 0 62 0;
+toward 0 58 0;
+
+spt 81621;
+follow 0;
+toward 11642 0 0;
+move 0 -1 0 10 2 50;
+sleep 5;
+follow 1;
+
+spt 81623;
+toward 11621 0 0;
+rotate 0 1 0 200 200 2048;
+
+spt 81624;
+rotate 0 -1 0 200 200 2048;
+
+spt 81622;
+rotate 0 -1 0 200 200 2048;
+
+spt 81625;
+unremove 11620 11621 -1 -1 -1;
+
+spt 81626;
+toward 11621 512;
+
+spt 81641;
+sleep 14;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+playsound 1;
+move 0 1 0 10 20 1000;
+
+spt 81642;
+sleep 24;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81643;
+sleep 19;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 -1 0 2 0 2;
+move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81644;
+playsound 1;
+sleep 11;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81645;
+sleep 11;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81646;
+sleep 11;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81647;
+sleep 14;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81648;
+sleep 16;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81649;
+sleep 18;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+playsound 1;
+move 0 1 0 10 20 1000;
+
+spt 81650;
+sleep 22;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81651;
+sleep 26;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81652;
+sleep 28;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81653;
+sleep 29;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81654;
+sleep 32;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+playsound 1;
+move 0 1 0 10 20 1000;
+
+spt 81655;
+sleep 34;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81656;
+sleep 37;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81657;
+sleep 40;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81658;
+sleep 42;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81659;
+sleep 44;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81660;
+sleep 47;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+playsound 1;
+move 0 1 0 10 20 1000;
+
+spt 81661;
+sleep 49;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81662;
+sleep 51;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81663;
+sleep 53;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81664;
+sleep 51;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81665;
+sleep 53;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81666;
+sleep 55;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+playsound 1;
+move 0 1 0 10 20 1000;
+
+spt 81667;
+sleep 58;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 81668;
+sleep 60;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+//move 0 -1 0 2 0 2;
+//move 0 1 0 2 0 2;
+move 0 1 0 10 20 1000;
+
+spt 836010;
+playsound 2;
+
+spt 800100;
+playsound 4;
+sleep 5;
+cgtexture 1;
+setflags 6;

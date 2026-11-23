@@ -1,0 +1,157 @@
+object 13810;
+type 0;
+HasResult 73810;
+
+object 9121;
+type 0;
+HasResult 79121;
+
+object 13820;
+type 0;
+HasResult 73820;
+
+object 13830;
+type 0;
+HasResult 73830;
+
+object 13840;
+type 0;
+HasResult 73845;
+
+object 13841;
+objnum 1;
+objs 13841;
+type 103;
+item 23540;
+mouse 1009;
+HasResult 73839;
+OverResult 73841;
+NoResult 79999;
+ObserveResult 73840;
+
+object 13850;
+type 0;
+HasResult 73850;
+
+object 13860;
+type 0;
+HasResult 73860;
+
+object 13862;
+type 0;
+HasResult 73862;
+
+object 13870;
+type 0;
+HasResult 73870;
+
+object 138701;
+type 0;
+HasResult 738701;
+
+object 13800;
+type 0;
+HasResult 73800;
+
+object 13802;
+type 0;
+HasResult 73800;
+
+object 13911;
+type 2;
+HasResult 73910;
+NoResult 73911;
+
+object 13921;
+type 2;
+HasResult 73920;
+NoResult 73921;
+
+object 13931;
+type 2;
+HasResult 73930;
+NoResult 73931;
+
+object 13941;
+type 2;
+HasResult 73940;
+NoResult 73941;
+
+object 13951;
+type 2;
+HasResult 73950;
+NoResult 73951;
+
+object 139611;
+type 2;
+HasResult 73960;
+NoResult 73961;
+
+object 13970;
+type 1;
+HasResult 73970;
+
+object 14010;
+type 0;
+HasResult 74011;
+
+object 14020;
+type 0;
+HasResult 74011;
+
+object 14030;
+type 0;
+HasResult 74011;
+
+object 14011;
+type 11;
+HasResult 74010;
+NoResult 79999;
+item 23540;
+ObserveResult 73800;
+
+object 14021;
+type 11;
+HasResult 74020;
+NoResult 79999;
+item 23540;
+ObserveResult 73800;
+
+object 14031;
+type 11;
+HasResult 74030;
+NoResult 79999;
+item 23540;
+ObserveResult 73800;
+
+object 14040;
+type 0;
+HasResult 74040;
+
+object 14091;
+type 0;
+HasResult 74091;
+
+object 40120;
+type 0;
+HasResult 400100;
+
+object 138301;
+type 0;
+HasResult 738301;
+
+object 138201;
+type 0;
+HasResult 738201;
+
+object 138202;
+type 0;
+HasResult 738202;
+
+object 11111111;
+type 0;
+HasResult 71111111;
+
+object 11111113;
+type 0;
+HasResult 71111113;

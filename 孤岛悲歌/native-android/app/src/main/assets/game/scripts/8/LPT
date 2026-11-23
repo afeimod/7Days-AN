@@ -1,0 +1,173 @@
+object 11910;
+type 0;
+HasResult 71911;
+
+object 11920;
+type 0;
+HasResult 71920;
+
+object 11919;
+type 0;
+HasResult 71929;
+
+object 11929;
+type 0;
+HasResult 71929;
+
+object 11930;
+type 0;
+HasResult 71930;
+
+object 11919;
+type 0;
+HasResult 71929;
+
+object 11940;
+type 0;
+HasResult 71940;
+
+object 11950;
+type 0;
+HasResult 71950;
+
+object 11980;
+type 0;
+HasResult 71980;
+
+object 11990;
+type 0;
+HasResult 71990;
+
+object 12000;
+type 0;
+HasResult 71990;
+
+object 12010;
+type 0;
+HasResult 72010;
+
+object 12020;
+type 0;
+HasResult 72020;
+
+object 12070;
+type 0;
+HasResult 72070;
+
+object 12158;
+type 0;
+HasResult 72080;
+
+object 12157;
+type 0;
+HasResult 72080;
+
+object 12118;
+type 0;
+HasResult 72080;
+
+object 12117;
+type 0;
+HasResult 72080;
+
+object 12119;
+type 0;
+HasResult 72159;
+
+object 12120;
+type 0;
+HasResult 72120;
+
+object 12159;
+type 0;
+HasResult 72159;
+
+object 12160;
+type 0;
+HasResult 72160;
+
+object 12170;
+type 0;
+HasResult 72080;
+
+object 12210;
+type 2;
+HasResult 72210;
+NoResult 71970;
+
+object 12220;
+type 1;
+HasResult 72220;
+
+object 12230;
+type 2;
+HasResult 72230;
+NoResult 71960;
+
+object 12240;
+type 1;
+HasResult 72240;
+
+object 12250;
+type 1;
+HasResult 72250;
+
+object 12260;
+type 1;
+HasResult 72260;
+
+object 12270;
+type 1;
+HasResult 72270;
+
+object 12280;
+type 1;
+HasResult 72280;
+
+object 12290;
+type 1;
+HasResult 72290;
+
+object 12360;
+type 0;
+HasResult 72360;
+
+object 12370;
+type 0;
+HasResult 72370;
+
+object 12380;
+type 0;
+HasResult 72380;
+
+object 12390;
+type 0;
+HasResult 72390;
+
+object 12302;
+type 0;
+HasResult 72300;
+
+object 12312;
+type 0;
+HasResult 72300;
+
+object 12322;
+type 0;
+HasResult 72300;
+
+object 12332;
+type 0;
+HasResult 72300;
+
+object 12342;
+type 0;
+HasResult 72300;
+
+object 12352;
+type 0;
+HasResult 72300;
+
+object 40080;
+type 0;
+HasResult 400100;

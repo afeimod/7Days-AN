@@ -1,0 +1,150 @@
+//未充电;
+object 44250;
+type 201;
+item 21260;
+HasResult 74251;
+NoResult 79999;
+OverResult 74252;
+ObserveResult 74250;
+
+//充好电，发A;
+object 44251;
+type 205;
+OverResult 74254;
+FailResult 10000;
+ObserveResult 744254;
+
+//发SOS;
+object 444252;
+type 305;
+OverResult 742252;
+FailResult 10000;
+ObserveResult 744252;
+
+//发经纬度;
+object 444253;
+type 405;
+OverResult 742253;
+FailResult 10000;
+ObserveResult 744253;
+
+//发报完成;
+object 44252;
+type 0;
+HasResult 74255;
+
+object 44240;
+type 0;
+HasResult 77011;
+
+object 14450;
+type 1;
+HasResult 74450;
+
+object 144501;
+type 0;
+HasResult 744501;
+
+object 17010;
+type 0;
+HasResult 77010;
+
+object 17020;
+type 0;
+HasResult 77020;
+
+object 17030;
+type 107;
+HasResult 77031;
+NoResult 77032;
+item 21540;
+ObserveResult 77030;
+
+object 17040;
+type 0;
+HasResult 77040;
+
+object 17041;
+type 0;
+HasResult 77040;
+
+object 17051;
+type 0;
+HasResult 77050;
+
+object 17050;
+type 0;
+HasResult 77050;
+
+object 17071;
+type 0;
+HasResult 77070;
+
+object 17072;
+type 0;
+HasResult 77070;
+
+object 17081;
+type 11;
+HasResult 77081;
+NoResult 79999;
+item 23540;
+ObserveResult 77070;
+
+object 17091;
+type 11;
+HasResult 77091;
+NoResult 79999;
+item 23540;
+ObserveResult 77070;
+
+object 17101;
+type 11;
+HasResult 77101;
+NoResult 79999;
+item 23540;
+ObserveResult 77070;
+
+object 17080;
+type 0;
+HasResult 77080;
+
+object 17090;
+type 0;
+HasResult 77080;
+
+object 17100;
+type 0;
+HasResult 77080;
+
+object 17110;
+type 1;
+HasResult 77110;
+
+object 17120;
+type 1;
+HasResult 77120;
+
+object 17130;
+type 1;
+HasResult 77130;
+
+object 17140;
+type 1;
+HasResult 77140;
+
+object 17150;
+type 1;
+HasResult 77150;
+
+object 17310;
+type 0;
+HasResult 77310;
+
+object 40170;
+type 0;
+HasResult 400100;
+
+object 442401;
+type 0;
+HasResult 7442401;

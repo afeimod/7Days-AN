@@ -1,0 +1,129 @@
+spt 82000;
+move 0 0 1 5 5 60;
+move 0 0 -1 5 5 60;
+goto 0;
+
+spt 82001;
+move 0 0 1 5 5 60;
+move 0 0 -1 5 5 60;
+goto 0;
+
+spt 82421;
+toward 12751 0 0;
+sleep 8;
+toward 12752 0 0;
+sleep 8;
+
+spt 82422;
+toward 12761 0 0;
+sleep 8;
+toward 12762 0 0;
+sleep 8;
+
+spt 82480;
+follow 0;
+moveto 15 2 900022 50 0;
+toward 90002 0 0;
+moveto 3 0 90002 10 -20;
+
+spt 82501;
+disappear 12501;
+unremove 12500 -1 -1 -1 -1;
+
+spt 82510;
+toward 12450 0 0;
+
+spt 82511;
+move 1 0 0 5 0 80;
+move -1 0 0 1 0 2;
+move 1 0 0 1 0 1;
+sleep 10;
+
+spt 82512;
+move -1 0 0 5 0 80;
+move 1 0 0 1 0 2;
+move -1 0 0 1 0 1;
+sleep 10;
+
+spt 82540;
+toward 12630 0 0;
+
+spt 82570;
+playsound 2;
+disappear 12570;
+unremove 12569 -1 -1 -1 -1;
+
+spt 82580;
+playsound 2;
+disappear 12580;
+unremove 12579 -1 -1 -1 -1;
+
+spt 89999;
+move 0 0 0 -6 0 -12;
+
+spt 82770;
+move 0 0 -1 10 0 10;
+sleep 3;
+playsound 3;
+move 0 0 -1 80 10 150;
+
+spt 82771;
+sleep 3;
+move 0 0 -1 10 0 10;
+sleep 3;
+playsound 3;
+move 0 0 -1 80 10 150;
+
+spt 82780;
+move 0 0 1 10 0 10;
+sleep 3;
+playsound 3;
+move 0 0 1 80 10 150;
+
+spt 82781;
+sleep 3;
+move 0 0 1 10 0 10;
+sleep 3;
+playsound 3;
+move 0 0 1 80 10 150;
+
+spt 82791;
+active 12771 -1 -1 -1 -1;
+sleep 3;
+active 12772 12773 -1 -1 -1;
+active 12774 12775 12786 12787 -1;
+active 12776 12777 12784 12785 -1;
+active 12782 12783 -1 -1 -1;
+sleep 3;
+active 12781 -1 -1 -1 -1;
+remove 12792 -1 -1 -1 -1;
+
+spt 82792;
+active 12781 -1 -1 -1 -1;
+sleep 3;
+active 12782 12783 -1 -1 -1;
+active 12776 12777 12784 12785 -1;
+active 12774 12775 12786 12787 -1;
+active 12772 12773 -1 -1 -1;
+sleep 3;
+active 12771 -1 -1 -1 -1;
+remove 12791 -1 -1 -1 -1;
+
+spt 800100;
+playsound 4;
+sleep 5;
+cgtexture 1;
+setflags 9;
+
+spt 812508;
+rotate 0 1 0 50 0 500;
+
+spt 812509;
+rotate 0 -1 0 50 0 500;
+
+spt 895121;
+follow 0;
+moveto 15 1 0 60 0;
+toward 95121 0 0;
+moveto 15 2 95121 60 -30;
+toward 95121 0 0;

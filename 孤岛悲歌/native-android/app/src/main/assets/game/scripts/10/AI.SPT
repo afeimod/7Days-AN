@@ -1,0 +1,82 @@
+spt 83000;
+playsound 1;
+move 0 1 0 20 20 500;
+
+spt 83010;
+toward 13009 250;
+sleep 10;
+
+spt 83011;
+toward 13008 250;
+sleep 10;
+move 0 0 0 6 0 12;
+setstill;
+sleep 10;
+
+spt 83070;
+move 0 1 0 10 5 1000;
+
+spt 83020;
+follow 0;
+toward 13092 100 0;
+move 0 -1 0 10 0 30;
+moveto 15 0 13092 100 -200;
+sleep 5;
+follow 1;
+
+spt 83021;
+move 0 -1 0 5 0 100;
+
+spt 83022;
+toward 13020 0 0;
+moveto 10 0 13020 0 0;
+setstill;
+toward 13080 300;
+
+spt 89999;
+move 0 0 0 -6 0 -24;
+
+spt 83051;
+move 0 0 0 10 1 30;
+toward 13060 250;
+moveto 10 1 9101 0 0;
+setstill;
+sleep 5;
+
+spt 83052;
+moveto 10 1 0 60 0;
+toward 13060 0 0;
+
+spt 8299;
+moveto 10 1 130301 0 0;
+toward 13050 0 0;
+
+spt 8300;
+follow 0;
+moveto 10 2 0 60 0;
+toward 13050 3 0;
+
+spt 8301;
+moveto 10 2 0 60 0;
+follow 1;
+
+spt 8302;
+move 0 0 0 10 1 30;
+
+spt 8303;
+moveto 10 1 130301 0 0;
+toward 13051 0 0;
+
+spt 8304;
+follow 0;
+moveto 10 2 0 60 0;
+toward 13051 3 0;
+
+spt 8401;
+move -1 0 0 1 0 4;
+
+spt 836010;
+playsound 2;
+
+spt 801600;
+playsound 7;

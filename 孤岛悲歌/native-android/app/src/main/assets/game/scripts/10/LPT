@@ -1,0 +1,77 @@
+object 13050;
+type 13;
+mouse 1010;
+objnum 8;
+objs 5001;
+objs 5002;
+objs 5003;
+objs 5004;
+objs 5005;
+objs 5006;
+objs 5007;
+objs 5008;
+ObserveResult 74001;
+OverResult 400;
+
+//改变后的物体;
+object 13051;
+type 102;
+objnum 4;
+objs 1000;
+objs 1001;
+objs 1002;
+objs 1003;
+
+posnum 4;
+poss 0;
+poss 1;
+poss 2;
+poss 3;
+
+mousenum 4;
+//黑珠鼠标;
+mouseitem 22220;
+itemmouse 1005;
+mouseitem 22700;
+itemmouse 1008;
+mouseitem 22680;
+itemmouse 1006;
+mouseitem 22250;
+itemmouse 1007;
+ObserveResult 74000;
+OverResult 300;
+HasResult 299;
+NoResult 301;
+FailResult 302;
+
+object 13052;
+type 0;
+HasResult 73052;
+
+object 13230;
+type 4;
+HasResult 73230;
+
+object 13010;
+type 0;
+HasResult 73010;
+
+object 13020;
+type 0;
+HasResult 73020;
+
+object 13030;
+type 0;
+HasResult 73030;
+
+object 13040;
+type 0;
+HasResult 73040;
+
+object 13061;
+type 0;
+HasResult 73060;
+
+object 13240;
+type 0;
+HasResult 73240;
