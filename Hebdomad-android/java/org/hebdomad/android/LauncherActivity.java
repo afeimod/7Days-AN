@@ -26,7 +26,12 @@ public final class LauncherActivity extends Activity {
     }
     private void prepare(String name,long length,String digest) throws Exception {
         File target=new File(getFilesDir(),name);
-        if(target.length()==length && (digest==null || digest.equals(hash(target))))return;
+        android.content.SharedPreferences verified=getSharedPreferences("verified-assets",0);
+        String identity=digest+":"+length+":"+target.lastModified();
+        if(target.isFile()&&target.length()==length){
+            if(identity.equals(verified.getString(name,"")))return;
+            if(digest==null||digest.equals(hash(target))){verified.edit().putString(name,identity).commit();return;}
+        }
         File temporary=new File(getFilesDir(),name+".tmp");
         try(InputStream in=getAssets().open(name);OutputStream out=new FileOutputStream(temporary)){
             byte[] block=new byte[256*1024];int count;while((count=in.read(block))!=-1)out.write(block,0,count);
@@ -34,6 +39,7 @@ public final class LauncherActivity extends Activity {
         if(temporary.length()!=length || (digest!=null && !digest.equals(hash(temporary))))throw new IOException(name+" 校验失败");
         if(target.exists()&&!target.delete())throw new IOException("无法更新 "+name);
         if(!temporary.renameTo(target))throw new IOException("无法保存 "+name);
+        verified.edit().putString(name,digest+":"+length+":"+target.lastModified()).commit();
     }
     private String hash(File file) throws Exception {
         MessageDigest sha=MessageDigest.getInstance("SHA-256");

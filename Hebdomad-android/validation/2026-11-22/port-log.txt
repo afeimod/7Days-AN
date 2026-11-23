@@ -1,0 +1,285 @@
+Mapped engine 00012000..003cb000
+Mapped engine 003cb000..0046d000
+Unimplemented interface (will fail if called): __libc_start_main
+Unimplemented interface (will fail if called): pthread_setcanceltype
+SDL dispatch and Android graphics hooks installed
+Static initializer 0: 0001d208
+Static initializer 1: 0001a828
+Static initializer 2: 0001a8e4
+Static initializer 3: 0001a9c4
+Static initializer 4: 0001aa84
+Static initializer 5: 0001aaec
+Static initializer 6: 0001abe8
+Static initializer 7: 0001ac48
+Static initializer 8: 0001ac8c
+Static initializer 9: 0001ada0
+Static initializer 10: 0001aec4
+Static initializer 11: 0001af1c
+Static initializer 12: 0001af44
+Static initializer 13: 0001af6c
+Static initializer 14: 0001c418
+Static initializer 15: 0001c470
+Static initializer 16: 0001c53c
+Static initializer 17: 0001c5d0
+Static initializer 18: 0001ca70
+Static initializer 19: 0001cc58
+Static initializer 20: 0001cd48
+Static initializer 21: 0001ceac
+Static initializer 22: 0001d00c
+Entering original ARM game main at 0001afe8
+Create Android window: Hebdomad: Seven Vigils, 800x480, flags=9
+Android GLES context: created
+Loaded 25 redraw signatures
+Texture image 1x1 format=1907 data=0xd43a4720 caller=0x107ee4
+Original low-resolution render mode disabled; using native drawable dimensions
+Bitmap font: 1 additional glyphs preserved
+Bitmap font: 256 additional glyphs preserved
+Bitmap font: 512 additional glyphs preserved
+Bitmap font: 768 additional glyphs preserved
+Bitmap font: 1024 additional glyphs preserved
+Bitmap font: 1280 additional glyphs preserved
+Bitmap font: 1536 additional glyphs preserved
+Bitmap font: 1792 additional glyphs preserved
+Texture image 256x2048 format=1908 data=0xcec80000 caller=0x107ac4
+Text reconstruction 256x2048 scale=5 85 ms
+Native text 256x2048 -> 1280x10240
+High-resolution text surface texture=2 1280x10240 scale=5
+Audio requested format=3 rate=12000 channels=1
+Audio driver=AAudio output=44100 Hz / 2 channels / format=8010 frames=882 gain=1.000000
+Texture image 256x128 format=1907 data=0xc5d831c0 caller=0x107ee4
+Texture image 256x128 format=1909 data=0xc5ef6900 caller=0x107ac4
+Texture image 32x56 format=1907 data=0xcee9ae00 caller=0x107ee4
+Texture image 128x128 format=1907 data=0xc5ef6900 caller=0x107ee4
+Texture image 128x128 format=1909 data=0xc5ec1880 caller=0x107ac4
+Texture image 32x63 format=1907 data=0xcee96000 caller=0x107ee4
+Texture image 128x128 format=1907 data=0xc5ef6900 caller=0x107ee4
+Texture image 128x128 format=1909 data=0xc5ec1880 caller=0x107ac4
+Texture image 32x63 format=1907 data=0xceea4000 caller=0x107ee4
+Texture image 64x64 format=1907 data=0xcef45000 caller=0x107ee4
+Texture image 64x64 format=1909 data=0xcee96000 caller=0x107ac4
+Texture image 32x1 format=1907 data=0xec3eab40 caller=0x107ee4
+Texture image 64x128 format=1907 data=0xc5ec1880 caller=0x107ee4
+Texture image 64x128 format=1909 data=0xcef45000 caller=0x107ac4
+Texture image 32x56 format=1907 data=0xcee9ae00 caller=0x107ee4
+Texture image 64x128 format=1907 data=0xc5ec1880 caller=0x107ee4
+Texture image 64x128 format=1909 data=0xceeaa000 caller=0x107ac4
+Texture image 32x63 format=1907 data=0xcee96000 caller=0x107ee4
+Texture image 64x128 format=1907 data=0xc5ec1880 caller=0x107ee4
+Texture image 64x128 format=1909 data=0xceeaa000 caller=0x107ac4
+Texture image 32x63 format=1907 data=0xcee96000 caller=0x107ee4
+Texture image 64x128 format=1907 data=0xc5ec1880 caller=0x107ee4
+Texture image 64x128 format=1909 data=0xcef45000 caller=0x107ac4
+Texture image 32x56 format=1907 data=0xcee9ae00 caller=0x107ee4
+Texture image 64x64 format=1907 data=0xcef45000 caller=0x107ee4
+Texture image 64x64 format=1909 data=0xcee96000 caller=0x107ac4
+Texture image 32x39 format=1907 data=0xc5f0ce00 caller=0x107ee4
+Texture image 256x128 format=1909 data=0x0 caller=0x107ac4
+Texture image 256x128 format=1909 data=0xc5ef6900 caller=0x107ac4
+Texture image 64x64 format=1907 data=0xce2cd000 caller=0x107ee4
+Texture image 64x64 format=1909 data=0xcee96000 caller=0x107ac4
+Texture image 32x63 format=1907 data=0xceea4000 caller=0x107ee4
+Texture image 64x64 format=1908 data=0xc5e836c0 caller=0x107ac4
+Bitmap text texture=34 64x64: nearest sampling
+Texture image 64x64 format=1909 data=0xcee96000 caller=0x107ac4
+Texture image 32x63 format=1907 data=0xceea4000 caller=0x107ee4
+Texture image 64x128 format=1907 data=0xc5e836c0 caller=0x107ee4
+Texture image 64x128 format=1909 data=0xce2cd000 caller=0x107ac4
+Texture image 32x63 format=1907 data=0xcee96000 caller=0x107ee4
+Native widescreen scene 2400x1080 projection-x=1.086396
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Texture image 2400x1080 format=1907 data=0x0 caller=0x102c18
+Game GL viewport 0,0 2400x1080 framebuffer=1
+Draw count=489 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=138 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=834 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=18 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=99 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=51 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=96 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=36 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=528 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=36 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=36 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=36 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=36 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=36 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Texture image 40x40 format=1907 data=0xd41a6600 caller=0x107ee4
+Texture image 40x40 format=1907 data=0xd41a6600 caller=0x107ee4
+Texture image 88x88 format=1907 data=0xc5ec1880 caller=0x107ee4
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Redraw applied text-source-1-54x15.png 54x15 -> 864x240
+Redraw applied text-source-2-41x15.png 41x15 -> 656x240
+Redraw applied text-source-3-28x15.png 28x15 -> 448x240
+Redraw applied fengmian_kuang.png 105x106 -> 420x424
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Filter 1 drawable=2400x1080 input=960x432 intermediate=3840x1728 output=2400x1080 GLES error=0; game viewport=0,0 2400x1080
+Texture image 2400x1080 format=1907 data=0x0 caller=0x102c18
+Scene target rebuilt 2400x1080 scale=1 after transition=0
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Game GL viewport 0,0 2400x1080 framebuffer=1
+Draw count=489 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=138 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=834 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=18 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=99 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=51 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Audio PCM bytes=48128 peak=1 mean-square=0.1 queued=2528 paused=0
+Redraw applied text-source-8-41x15.png 41x15 -> 656x240
+Redraw applied text-source-6-54x15.png 54x15 -> 864x240
+Redraw applied text-source-10-54x15.png 54x15 -> 864x240
+Audio PCM bytes=96256 peak=26329 mean-square=5457702.4 queued=2656 paused=0
+Texture image 27x15 format=1908 data=0xc5f03700 caller=0x107ac4
+Text reconstruction 27x15 scale=5 0 ms
+Native text 27x15 -> 135x75
+High-resolution text surface texture=341 135x75 scale=5
+Bitmap text texture=341 135x75: nearest sampling
+Texture image 54x15 format=1908 data=0xd41a6600 caller=0x107ac4
+Text reconstruction 54x15 scale=5 1 ms
+Native text 54x15 -> 270x75
+High-resolution text surface texture=342 270x75 scale=5
+Bitmap text texture=342 270x75: nearest sampling
+Audio PCM bytes=144384 peak=31031 mean-square=7534129.3 queued=2784 paused=0
+Audio PCM bytes=192512 peak=31031 mean-square=5669905.2 queued=2912 paused=0
+Audio PCM bytes=240640 peak=31031 mean-square=8284562.4 queued=2560 paused=0
+Audio PCM bytes=288768 peak=31031 mean-square=7355189.9 queued=2688 paused=0
+Audio PCM bytes=336896 peak=31031 mean-square=7976755.6 queued=2816 paused=0
+Audio PCM bytes=384000 peak=31031 mean-square=9854319.8 queued=2880 paused=0
+Audio PCM bytes=432128 peak=31031 mean-square=10310473.4 queued=2528 paused=0
+Texture image 256x256 format=1907 data=0xc5c21c00 caller=0x107ee4
+Texture image 256x256 format=1909 data=0xc5c66a40 caller=0x107ac4
+Texture image 32x57 format=1907 data=0xceeb4000 caller=0x107ee4
+Texture image 99x119 format=1907 data=0xc5c4b000 caller=0x107ee4
+Texture image 50x30 format=1908 data=0xcee87000 caller=0x107ac4
+Bitmap text texture=1071 50x30: nearest sampling
+Audio PCM bytes=480256 peak=31031 mean-square=9322624.9 queued=2656 paused=0
+Texture image 128x128 format=1907 data=0xce2c2140 caller=0x107ee4
+Texture image 128x128 format=1909 data=0xc5f19380 caller=0x107ac4
+Texture image 32x63 format=1907 data=0xceeae000 caller=0x107ee4
+Texture image 128x128 format=1907 data=0xce2c2140 caller=0x107ee4
+Texture image 128x128 format=1909 data=0xc5f19380 caller=0x107ac4
+Texture image 32x55 format=1907 data=0xd41a6600 caller=0x107ee4
+Texture image 64x128 format=1907 data=0xc5f19380 caller=0x107ee4
+Texture image 64x128 format=1909 data=0xec3eb000 caller=0x107ac4
+Bitmap text texture=1325 64x128: nearest sampling
+Bitmap text texture=1338 64x64: nearest sampling
+Bitmap text texture=1347 64x256: nearest sampling
+Bitmap text texture=1350 64x64: nearest sampling
+Bitmap text texture=1353 128x128: nearest sampling
+Bitmap text texture=1356 64x64: nearest sampling
+Bitmap text texture=1365 128x128: nearest sampling
+Bitmap text texture=1368 128x128: nearest sampling
+Audio PCM bytes=528384 peak=31031 mean-square=8473471.1 queued=2784 paused=0
+Bitmap text texture=1454 100x25: nearest sampling
+Bitmap text texture=1462 100x25: nearest sampling
+Text reconstruction 320x42 scale=8 10 ms
+Native text 320x42 -> 2560x336
+High-resolution text surface texture=1490 2560x336 scale=8
+Bitmap text texture=1491 35x39: nearest sampling
+Audio PCM bytes=576512 peak=31031 mean-square=7963992.7 queued=2912 paused=0
+Text reconstruction 320x42 scale=8 10 ms
+Native text 320x42 -> 2560x336
+High-resolution text surface texture=1557 2560x336 scale=8
+Text reconstruction 320x42 scale=8 9 ms
+Native text 320x42 -> 2560x336
+High-resolution text surface texture=1575 2560x336 scale=8
+Text reconstruction 96x15 scale=5 0 ms
+Native text 96x15 -> 480x75
+High-resolution text surface texture=1587 480x75 scale=5
+Bitmap text texture=1587 480x75: nearest sampling
+Bitmap text texture=1589 25x13: nearest sampling
+Bitmap text texture=1590 78x11: nearest sampling
+Bitmap text texture=1591 8x11: nearest sampling
+Bitmap text texture=1592 8x11: nearest sampling
+Audio PCM bytes=624640 peak=32768 mean-square=9011449.1 queued=2560 paused=0
+Audio PCM bytes=672768 peak=32768 mean-square=8731766.8 queued=2688 paused=0
+Audio PCM bytes=720896 peak=32768 mean-square=8148822.1 queued=2816 paused=0
+Audio PCM bytes=768000 peak=32768 mean-square=7649027.7 queued=2880 paused=0
+Audio PCM bytes=816128 peak=32768 mean-square=7197955.8 queued=2528 paused=0
+Unlocked weapon equipped: 4
+Audio PCM bytes=864256 peak=32768 mean-square=6797121.8 queued=2656 paused=0
+Audio PCM bytes=912384 peak=32768 mean-square=6479382.6 queued=2784 paused=0
+Audio PCM bytes=960512 peak=32768 mean-square=7086471.2 queued=2912 paused=0
+Audio PCM bytes=1008640 peak=32768 mean-square=6748335.0 queued=2560 paused=0
+Audio PCM bytes=1056768 peak=32768 mean-square=6440998.1 queued=2688 paused=0
+Audio PCM bytes=1104896 peak=32768 mean-square=6160435.6 queued=2816 paused=0
+Audio PCM bytes=1152000 peak=32768 mean-square=5908542.2 queued=2880 paused=0
+Audio PCM bytes=1200128 peak=32768 mean-square=5671595.6 queued=2528 paused=0
+Audio PCM bytes=1248256 peak=32768 mean-square=5452920.4 queued=2656 paused=0
+Audio PCM bytes=1296384 peak=32768 mean-square=5250481.8 queued=2784 paused=0
+Audio PCM bytes=1344512 peak=32768 mean-square=5062536.2 queued=2912 paused=0
+Audio PCM bytes=1392640 peak=32768 mean-square=4887580.9 queued=2560 paused=0
+Audio PCM bytes=1440768 peak=32768 mean-square=4724314.1 queued=2688 paused=0
+Audio PCM bytes=1488896 peak=32768 mean-square=4571602.5 queued=2816 paused=0
+Audio PCM bytes=1536000 peak=32768 mean-square=4431406.7 queued=2880 paused=0
+Audio PCM bytes=1584128 peak=32768 mean-square=4296774.4 queued=2528 paused=0
+Audio PCM bytes=1632256 peak=32768 mean-square=4170081.6 queued=2656 paused=0
+Audio PCM bytes=1680384 peak=32768 mean-square=4050645.9 queued=2784 paused=0
+Audio PCM bytes=1728512 peak=32768 mean-square=3937861.4 queued=2912 paused=0
+Audio PCM bytes=1776640 peak=32768 mean-square=3831187.3 queued=2560 paused=0
+Audio PCM bytes=1824768 peak=32768 mean-square=3730140.3 queued=2688 paused=0
+Audio PCM bytes=1872896 peak=32768 mean-square=3634286.5 queued=2816 paused=0
+Audio PCM bytes=1920000 peak=32768 mean-square=3545125.3 queued=2880 paused=0
+Audio PCM bytes=1968128 peak=32768 mean-square=3458433.9 queued=2528 paused=0
+Audio PCM bytes=2016256 peak=32768 mean-square=3375881.2 queued=2656 paused=0
+Audio PCM bytes=2064384 peak=32768 mean-square=3297177.6 queued=2784 paused=0
+Audio PCM bytes=2112512 peak=32768 mean-square=3222060.1 queued=2912 paused=0
+Audio PCM bytes=2160640 peak=32768 mean-square=3150289.1 queued=2560 paused=0
+Audio PCM bytes=2208768 peak=32768 mean-square=3081645.8 queued=2688 paused=0
+Audio PCM bytes=2256896 peak=32768 mean-square=3015930.1 queued=2816 paused=0
+Audio PCM bytes=2304000 peak=32768 mean-square=2954271.1 queued=2880 paused=0
+Audio PCM bytes=2352128 peak=32768 mean-square=2893822.4 queued=2528 paused=0
+Audio PCM bytes=2400256 peak=32768 mean-square=2835797.8 queued=2656 paused=0
+Audio PCM bytes=2448384 peak=32768 mean-square=2780054.4 queued=2784 paused=0
+Audio PCM bytes=2496512 peak=32768 mean-square=2726460.2 queued=2912 paused=0
+Audio PCM bytes=2544640 peak=32768 mean-square=2674893.4 queued=2560 paused=0
+Audio PCM bytes=2592768 peak=32768 mean-square=2625240.9 queued=2688 paused=0
+Audio PCM bytes=2640896 peak=32768 mean-square=2577398.2 queued=2816 paused=0
+Audio PCM bytes=2688000 peak=32768 mean-square=2532232.4 queued=2880 paused=0
+Audio PCM bytes=2736128 peak=32768 mean-square=2487690.9 queued=2528 paused=0
+Audio PCM bytes=2784256 peak=32768 mean-square=2444689.2 queued=2656 paused=0
+Audio PCM bytes=2832384 peak=32768 mean-square=2403149.0 queued=2784 paused=0
+Audio PCM bytes=2880512 peak=32768 mean-square=2362996.8 queued=2912 paused=0
+Audio PCM bytes=2928640 peak=32768 mean-square=2324164.3 queued=2080 paused=0
+Audio PCM bytes=2976768 peak=32768 mean-square=2286587.5 queued=2688 paused=0
+Audio PCM bytes=3024896 peak=32768 mean-square=2250206.5 queued=2816 paused=0
+Audio PCM bytes=3072000 peak=32768 mean-square=2215703.3 queued=2880 paused=0
+Audio PCM bytes=3120128 peak=32768 mean-square=2181526.1 queued=2528 paused=0
+Audio PCM bytes=3168256 peak=32768 mean-square=2148387.2 queued=2656 paused=0
+Audio PCM bytes=3216384 peak=32768 mean-square=2116240.0 queued=2784 paused=0
+Audio PCM bytes=3264512 peak=32768 mean-square=2085040.8 queued=2912 paused=0
+Audio PCM bytes=3312640 peak=32768 mean-square=2054748.1 queued=2560 paused=0
+Audio PCM bytes=3360768 peak=32768 mean-square=2025323.0 queued=2688 paused=0
+Audio PCM bytes=3408896 peak=32768 mean-square=1996728.7 queued=2816 paused=0
+Audio PCM bytes=3456000 peak=32768 mean-square=1969514.1 queued=2880 paused=0
+Audio PCM bytes=3504128 peak=32768 mean-square=1942463.5 queued=2528 paused=0
+Audio PCM bytes=3552256 peak=32768 mean-square=1916145.9 queued=2656 paused=0
+Audio PCM bytes=3600384 peak=32768 mean-square=1890531.9 queued=2784 paused=0
+Audio PCM bytes=3648512 peak=32768 mean-square=1865593.6 queued=2912 paused=0
+Audio PCM bytes=3696640 peak=32768 mean-square=1841304.7 queued=2560 paused=0
+Audio PCM bytes=3744768 peak=32768 mean-square=1817640.1 queued=2688 paused=0

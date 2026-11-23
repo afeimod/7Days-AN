@@ -1,0 +1,506 @@
+[
+  {
+    "file": "caidan_bj_02.png",
+    "original": [
+      110,
+      226
+    ],
+    "replacement": [
+      440,
+      904
+    ],
+    "status": "imported"
+  },
+  {
+    "file": "caution.png",
+    "original": [
+      90,
+      45
+    ],
+    "replacement": [
+      360,
+      180
+    ],
+    "status": "imported"
+  },
+  {
+    "file": "danger.png",
+    "original": [
+      110,
+      116
+    ],
+    "replacement": [
+      440,
+      464
+    ],
+    "status": "imported"
+  },
+  {
+    "file": "fengmian_kuang.png",
+    "original": [
+      105,
+      106
+    ],
+    "replacement": [
+      420,
+      424
+    ],
+    "status": "imported"
+  },
+  {
+    "file": "fine.png",
+    "original": [
+      110,
+      31
+    ],
+    "replacement": [
+      440,
+      124
+    ],
+    "status": "imported"
+  },
+  {
+    "file": "touxiang_02.png",
+    "original": [
+      35,
+      39
+    ],
+    "replacement": [
+      140,
+      156
+    ],
+    "status": "imported"
+  },
+  {
+    "file": "text-source-0-256x2048.png",
+    "original": [
+      256,
+      2048
+    ],
+    "replacement": [
+      256,
+      2048
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-1-54x15.png",
+    "original": [
+      54,
+      15
+    ],
+    "replacement": [
+      864,
+      240
+    ],
+    "status": "imported"
+  },
+  {
+    "file": "text-source-10-54x15.png",
+    "original": [
+      54,
+      15
+    ],
+    "replacement": [
+      864,
+      240
+    ],
+    "status": "imported"
+  },
+  {
+    "file": "text-source-10-8x11.png",
+    "original": [
+      8,
+      11
+    ],
+    "replacement": [
+      8,
+      11
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-11-25x13.png",
+    "original": [
+      25,
+      13
+    ],
+    "replacement": [
+      25,
+      13
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-11-50x30.png",
+    "original": [
+      50,
+      30
+    ],
+    "replacement": [
+      50,
+      30
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-11-8x11.png",
+    "original": [
+      8,
+      11
+    ],
+    "replacement": [
+      8,
+      11
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-12-100x25.png",
+    "original": [
+      100,
+      25
+    ],
+    "replacement": [
+      100,
+      25
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-12-14x13.png",
+    "original": [
+      14,
+      13
+    ],
+    "replacement": [
+      14,
+      13
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-12-78x11.png",
+    "original": [
+      78,
+      11
+    ],
+    "replacement": [
+      78,
+      11
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-13-100x25.png",
+    "original": [
+      100,
+      25
+    ],
+    "replacement": [
+      100,
+      25
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-13-60x4.png",
+    "original": [
+      60,
+      4
+    ],
+    "replacement": [
+      60,
+      4
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-14-14x13.png",
+    "original": [
+      14,
+      13
+    ],
+    "replacement": [
+      14,
+      13
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-14-25x13.png",
+    "original": [
+      25,
+      13
+    ],
+    "replacement": [
+      25,
+      13
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-15-59x12.png",
+    "original": [
+      59,
+      12
+    ],
+    "replacement": [
+      59,
+      12
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-15-8x11.png",
+    "original": [
+      8,
+      11
+    ],
+    "replacement": [
+      8,
+      11
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-16-8x11.png",
+    "original": [
+      8,
+      11
+    ],
+    "replacement": [
+      8,
+      11
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-17-60x4.png",
+    "original": [
+      60,
+      4
+    ],
+    "replacement": [
+      60,
+      4
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-2-41x15.png",
+    "original": [
+      41,
+      15
+    ],
+    "replacement": [
+      656,
+      240
+    ],
+    "status": "imported"
+  },
+  {
+    "file": "text-source-3-28x15.png",
+    "original": [
+      28,
+      15
+    ],
+    "replacement": [
+      448,
+      240
+    ],
+    "status": "imported"
+  },
+  {
+    "file": "text-source-4-28x15.png",
+    "original": [
+      28,
+      15
+    ],
+    "replacement": [
+      448,
+      240
+    ],
+    "status": "imported"
+  },
+  {
+    "file": "text-source-4-78x11.png",
+    "original": [
+      78,
+      11
+    ],
+    "replacement": [
+      78,
+      11
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-4-96x15.png",
+    "original": [
+      96,
+      15
+    ],
+    "replacement": [
+      96,
+      15
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-5-41x15.png",
+    "original": [
+      41,
+      15
+    ],
+    "replacement": [
+      656,
+      240
+    ],
+    "status": "imported"
+  },
+  {
+    "file": "text-source-5-60x4.png",
+    "original": [
+      60,
+      4
+    ],
+    "replacement": [
+      60,
+      4
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-5-78x11.png",
+    "original": [
+      78,
+      11
+    ],
+    "replacement": [
+      78,
+      11
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-6-49x13.png",
+    "original": [
+      49,
+      13
+    ],
+    "replacement": [
+      784,
+      208
+    ],
+    "status": "imported"
+  },
+  {
+    "file": "text-source-6-54x15.png",
+    "original": [
+      54,
+      15
+    ],
+    "replacement": [
+      864,
+      240
+    ],
+    "status": "imported"
+  },
+  {
+    "file": "text-source-6-99x8.png",
+    "original": [
+      99,
+      8
+    ],
+    "replacement": [
+      99,
+      8
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-7-47x12.png",
+    "original": [
+      47,
+      12
+    ],
+    "replacement": [
+      47,
+      12
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-7-96x15.png",
+    "original": [
+      96,
+      15
+    ],
+    "replacement": [
+      96,
+      15
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-8-23x12.png",
+    "original": [
+      23,
+      12
+    ],
+    "replacement": [
+      23,
+      12
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-8-41x15.png",
+    "original": [
+      41,
+      15
+    ],
+    "replacement": [
+      656,
+      240
+    ],
+    "status": "imported"
+  },
+  {
+    "file": "text-source-9-25x13.png",
+    "original": [
+      25,
+      13
+    ],
+    "replacement": [
+      25,
+      13
+    ],
+    "status": "unchanged"
+  },
+  {
+    "file": "text-source-9-54x15.png",
+    "original": [
+      54,
+      15
+    ],
+    "replacement": [
+      864,
+      240
+    ],
+    "status": "imported"
+  },
+  {
+    "file": "text-source-9-8x11.png",
+    "original": [
+      8,
+      11
+    ],
+    "replacement": [
+      8,
+      11
+    ],
+    "status": "unchanged"
+  }
+]

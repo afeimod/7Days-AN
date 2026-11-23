@@ -1,0 +1,156 @@
+Mapped engine 00012000..003cb000
+Mapped engine 003cb000..0046d000
+Unimplemented interface (will fail if called): __libc_start_main
+Unimplemented interface (will fail if called): pthread_setcanceltype
+SDL dispatch and Android graphics hooks installed
+Static initializer 0: 0001d208
+Static initializer 1: 0001a828
+Static initializer 2: 0001a8e4
+Static initializer 3: 0001a9c4
+Static initializer 4: 0001aa84
+Static initializer 5: 0001aaec
+Static initializer 6: 0001abe8
+Static initializer 7: 0001ac48
+Static initializer 8: 0001ac8c
+Static initializer 9: 0001ada0
+Static initializer 10: 0001aec4
+Static initializer 11: 0001af1c
+Static initializer 12: 0001af44
+Static initializer 13: 0001af6c
+Static initializer 14: 0001c418
+Static initializer 15: 0001c470
+Static initializer 16: 0001c53c
+Static initializer 17: 0001c5d0
+Static initializer 18: 0001ca70
+Static initializer 19: 0001cc58
+Static initializer 20: 0001cd48
+Static initializer 21: 0001ceac
+Static initializer 22: 0001d00c
+Entering original ARM game main at 0001afe8
+Create Android window: Hebdomad: Seven Vigils, 800x480, flags=9
+Android GLES context: created
+Loaded 25 redraw signatures
+Texture image 1x1 format=1907 data=0xd493e720 caller=0x107ee4
+Original low-resolution render mode disabled; using native drawable dimensions
+Bitmap font: 1 additional glyphs preserved
+Bitmap font: 256 additional glyphs preserved
+Bitmap font: 512 additional glyphs preserved
+Bitmap font: 768 additional glyphs preserved
+Bitmap font: 1024 additional glyphs preserved
+Bitmap font: 1280 additional glyphs preserved
+Bitmap font: 1536 additional glyphs preserved
+Bitmap font: 1792 additional glyphs preserved
+Texture image 256x2048 format=1908 data=0xd3a00000 caller=0x107ac4
+Text reconstruction 256x2048 scale=5 95 ms
+Native text 256x2048 -> 1280x10240
+High-resolution text surface texture=2 1280x10240 scale=5
+Audio requested format=3 rate=12000 channels=1
+Audio driver=AAudio output=44100 Hz / 2 channels / format=8010 frames=882 gain=1.000000
+Texture image 256x128 format=1907 data=0xc5d058c0 caller=0x107ee4
+Texture image 256x128 format=1909 data=0xd4913dc0 caller=0x107ac4
+Texture image 32x56 format=1907 data=0xc5df2e00 caller=0x107ee4
+Texture image 128x128 format=1907 data=0xd4913dc0 caller=0x107ee4
+Texture image 128x128 format=1909 data=0xd491c7c0 caller=0x107ac4
+Texture image 32x63 format=1907 data=0xd3ca9000 caller=0x107ee4
+Texture image 128x128 format=1907 data=0xd4913dc0 caller=0x107ee4
+Texture image 128x128 format=1909 data=0xd491c7c0 caller=0x107ac4
+Texture image 32x63 format=1907 data=0xc5dc0000 caller=0x107ee4
+Texture image 64x64 format=1907 data=0xce17c000 caller=0x107ee4
+Texture image 64x64 format=1909 data=0xd3ca9000 caller=0x107ac4
+Texture image 32x1 format=1907 data=0xd3ca8bc0 caller=0x107ee4
+Texture image 64x128 format=1907 data=0xd491c7c0 caller=0x107ee4
+Texture image 64x128 format=1909 data=0xce17c000 caller=0x107ac4
+Texture image 32x56 format=1907 data=0xc5df2e00 caller=0x107ee4
+Texture image 64x128 format=1907 data=0xd491c7c0 caller=0x107ee4
+Texture image 64x128 format=1909 data=0xd3ca3000 caller=0x107ac4
+Texture image 32x63 format=1907 data=0xd3ca9000 caller=0x107ee4
+Texture image 64x128 format=1907 data=0xd491c7c0 caller=0x107ee4
+Texture image 64x128 format=1909 data=0xd3ca3000 caller=0x107ac4
+Texture image 32x63 format=1907 data=0xd3ca9000 caller=0x107ee4
+Texture image 64x128 format=1907 data=0xd491c7c0 caller=0x107ee4
+Texture image 64x128 format=1909 data=0xce17c000 caller=0x107ac4
+Texture image 32x56 format=1907 data=0xc5df2e00 caller=0x107ee4
+Texture image 64x64 format=1907 data=0xce17c000 caller=0x107ee4
+Texture image 64x64 format=1909 data=0xd3ca9000 caller=0x107ac4
+Texture image 32x39 format=1907 data=0xc5dafe00 caller=0x107ee4
+Texture image 256x128 format=1909 data=0x0 caller=0x107ac4
+Texture image 256x128 format=1909 data=0xd4913dc0 caller=0x107ac4
+Texture image 64x64 format=1907 data=0xc5cbd000 caller=0x107ee4
+Texture image 64x64 format=1909 data=0xd3ca9000 caller=0x107ac4
+Texture image 32x63 format=1907 data=0xc5dc0000 caller=0x107ee4
+Texture image 64x64 format=1908 data=0xc5d76140 caller=0x107ac4
+Bitmap text texture=34 64x64: nearest sampling
+Texture image 64x64 format=1909 data=0xd3ca9000 caller=0x107ac4
+Texture image 32x63 format=1907 data=0xc5dc0000 caller=0x107ee4
+Texture image 64x128 format=1907 data=0xc5d76140 caller=0x107ee4
+Texture image 64x128 format=1909 data=0xc5cbd000 caller=0x107ac4
+Texture image 32x63 format=1907 data=0xd3ca9000 caller=0x107ee4
+Native widescreen scene 2400x1080 projection-x=1.086396
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Texture image 2400x1080 format=1907 data=0x0 caller=0x102c18
+Game GL viewport 0,0 2400x1080 framebuffer=1
+Draw count=489 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=138 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=834 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=18 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=99 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=51 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=96 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=36 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=528 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Soft glow scene=2400x1080 blur=512x230
+Draw count=36 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=36 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=36 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=36 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=36 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=12 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Draw count=6 framebuffer=1 viewport=2400x1080 caller=0x10c10c
+Texture image 40x40 format=1907 data=0xd3c61600 caller=0x107ee4
+Texture image 40x40 format=1907 data=0xd3c61600 caller=0x107ee4
+Texture image 88x88 format=1907 data=0xd491c7c0 caller=0x107ee4
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Redraw applied text-source-1-54x15.png 54x15 -> 864x240
+Redraw applied text-source-2-41x15.png 41x15 -> 656x240
+Redraw applied text-source-3-28x15.png 28x15 -> 448x240
+Redraw applied fengmian_kuang.png 105x106 -> 420x424
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Filter 1 drawable=2400x1080 input=960x432 intermediate=3840x1728 output=2400x1080 GLES error=0; game viewport=0,0 2400x1080
+Texture image 2400x1080 format=1907 data=0x0 caller=0x102c18
+Scene target rebuilt 2400x1080 scale=1 after transition=0
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Game GL viewport 0,0 2400x1080 framebuffer=1
+Draw count=489 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=138 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=834 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=18 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=99 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Draw count=51 framebuffer=1 viewport=2400x1080 caller=0x10b0f4
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Game GL viewport 0,0 2400x1080 framebuffer=0
+Audio PCM bytes=48128 peak=1 mean-square=0.1 queued=2528 paused=0
+Audio PCM bytes=96256 peak=26329 mean-square=4256240.9 queued=2656 paused=0
+Audio PCM bytes=144384 peak=26329 mean-square=5933463.0 queued=2784 paused=0
+Audio PCM bytes=192512 peak=26329 mean-square=4469405.5 queued=2912 paused=0

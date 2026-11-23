@@ -15,6 +15,7 @@ struct Glyph {uint32_t width,height;char *begin,*end,*capacity;};
 static uint32_t glyph_code(const Glyph *g) {
     GameString hash;
     reinterpret_cast<void(*)(GameString*,const Glyph*)>(0x49740)(&hash,g);
+    struct ReleaseHash{GameString *value;~ReleaseHash(){reinterpret_cast<void(*)(GameString*)>(0x210c8)(value);}}release{&hash};
     // Keep the engine's punctuation and whitespace semantics.
     const uint32_t *table=reinterpret_cast<const uint32_t*>(0x3cb4b8);
     for(int i=0;i<24;i++)if(!strcmp(hash.data,reinterpret_cast<const char*>(table[2*i])))return table[2*i+1];

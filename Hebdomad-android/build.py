@@ -7,6 +7,7 @@ import pathlib
 import subprocess
 import zipfile
 import shutil
+import tempfile
 
 ROOT=pathlib.Path(__file__).resolve().parent
 SDK=pathlib.Path(os.environ['ANDROID_SDK_ROOT'])
@@ -33,7 +34,7 @@ def main():
          '-static-libstdc++','-Wl,-z,max-page-size=16384','-Wl,-soname,libmain.so',
          '-I',ROOT/'third_party/SDL-include',
          *sorted((ROOT/'native').glob('*.cpp')),
-         '-L',dest,'-lSDL3','-ldl','-llog','-landroid','-lGLESv2','-lm','-latomic',
+         '-L',dest,'-lSDL3','-ldl','-llog','-landroid','-lGLESv2','-lm','-latomic','-lz',
          '-o',dest/'libmain.so'])
     sources=sorted((ROOT/'java').rglob('*.java'))
     run([JDK/'bin/javac.exe','-encoding','UTF-8','-source','8','-target','8','-bootclasspath',ANDROID,
@@ -49,16 +50,19 @@ def main():
     with zipfile.ZipFile(unsigned,'a',zipfile.ZIP_STORED) as archive:
         archive.write(BUILD/'dex/classes.dex','classes.dex')
         for file in (ROOT/'libs').rglob('*.so'):archive.write(file,'lib/'+file.relative_to(ROOT/'libs').as_posix())
-    aligned=BUILD/'aligned.apk'
-    run([TOOLS/'zipalign.exe','-f','-P','16','4',unsigned,aligned])
     key=BUILD/'development-key.p12'
     if not key.exists():
         run([JDK/'bin/keytool.exe','-genkeypair','-keystore',key,'-storepass','android','-keypass','android',
              '-alias','hebdomad-development','-dname','CN=Hebdomad experimental adapter','-keyalg','RSA','-keysize','2048','-validity','3650'])
     apk=BUILD/'Hebdomad-experimental.apk'
-    run([JDK/'bin/java.exe','-jar',TOOLS/'lib/apksigner.jar','sign','--ks',key,'--ks-pass','pass:android',
-         '--out',apk,aligned])
-    run([JDK/'bin/java.exe','-jar',TOOLS/'lib/apksigner.jar','verify','--verbose',apk])
+    with tempfile.TemporaryDirectory(dir=BUILD) as staging:
+        aligned=pathlib.Path(staging)/'aligned.apk'
+        signed=pathlib.Path(staging)/apk.name
+        run([TOOLS/'zipalign.exe','-P','16','4',unsigned,aligned])
+        run([JDK/'bin/java.exe','-jar',TOOLS/'lib/apksigner.jar','sign','--ks',key,'--ks-pass','pass:android',
+             '--v4-signing-enabled','false','--out',signed,aligned])
+        run([JDK/'bin/java.exe','-jar',TOOLS/'lib/apksigner.jar','verify','--verbose',signed])
+        signed.replace(apk)
     print('Built:',apk,flush=True)
 
 if __name__=='__main__':main()

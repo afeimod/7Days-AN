@@ -1,0 +1,13 @@
+[info] Data root: /data/data/org.hebdomad.android/files/
+[info] Resource pack: res.spk
+[info] Save dir: /data/data/org.hebdomad.android/files/
+pixel format wanted SDL_PIXELFORMAT_RGBA8888 (1), got SDL_PIXELFORMAT_RGBA8888 (1)
+[info] GL: OpenGL ES 3.1 v1 / Adreno (TM) 640
+[info] GLES2: depth24 1, uint indices 1, rgba8 targets 1, fragment highp 23 / mediump 10 bits
+[info] GL: 1024 vertex uniform vectors, 63 bones per model in the shader
+[info] Pack res.spk: 3322 files
+Low latency audio enabled
+[info] Audio: PulseAudio, 12000 Hz, 1 channels
+[info] Loaded 67 items, 65 documents, 581 system strings
+[info] Res: flushed tier 2 (0 textures, 0 models/animations, 0 sounds), textures 2730 -> 2730 KB
+[info] Room common/menu: 1 cameras, 5 props, 46 brushes, 9 draws

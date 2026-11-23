@@ -1,0 +1,26 @@
+[
+  {
+    "name": "load-1",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9666341145833334
+  },
+  {
+    "name": "load-2",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9666341145833334
+  },
+  {
+    "name": "load-3",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9666341145833334
+  }
+]

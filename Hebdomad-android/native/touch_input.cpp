@@ -7,6 +7,13 @@ static bool physical[SDL_SCANCODE_COUNT],sampled[SDL_SCANCODE_COUNT];
 static unsigned pending[SDL_SCANCODE_COUNT];
 static bool snapshot_ready;
 static bool merged[SDL_SCANCODE_COUNT];
+static bool controller[SDL_SCANCODE_COUNT];
+extern "C" JNIEXPORT void JNICALL Java_org_hebdomad_android_GameActivity_controllerKey(JNIEnv*,jclass,jint scan,jboolean down){
+    if(scan<=0||scan>=SDL_SCANCODE_COUNT)return;
+    std::lock_guard<std::mutex> lock(input_mutex);
+    if(down&&!controller[scan]&&pending[scan]<8)++pending[scan];
+    controller[scan]=down;
+}
 extern "C" JNIEXPORT void JNICALL Java_org_hebdomad_android_GameActivity_touchKey(JNIEnv*,jclass,jint scan,jboolean down){
     if(scan<=0 || scan>=SDL_SCANCODE_COUNT)return;
     std::lock_guard<std::mutex> lock(input_mutex);
@@ -25,7 +32,7 @@ const bool *touch_keyboard(int *count){
     if(!snapshot_ready){
         for(int i=0;i<SDL_SCANCODE_COUNT;i++){
             bool previous=sampled[i];
-            sampled[i]=physical[i] || (pending[i] && !previous);
+            sampled[i]=physical[i] || controller[i] || (pending[i] && !previous);
             if(sampled[i] && pending[i])--pending[i];
         }
         snapshot_ready=true;

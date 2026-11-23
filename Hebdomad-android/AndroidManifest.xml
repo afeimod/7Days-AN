@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.hebdomad.android" android:versionCode="6" android:versionName="0.6-sharp-filters">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.hebdomad.android" android:versionCode="10" android:versionName="1.0-widescreen-controls">
   <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
   <uses-feature android:glEsVersion="0x00020000" android:required="true" />
   <application android:label="七夜HD复刻" android:icon="@drawable/icon" android:theme="@android:style/Theme.Material.NoActionBar" android:allowBackup="false" android:debuggable="true" android:extractNativeLibs="true" android:hardwareAccelerated="true">

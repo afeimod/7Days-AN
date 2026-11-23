@@ -1,0 +1,26 @@
+[
+  {
+    "name": "home-1",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9322916666666666
+  },
+  {
+    "name": "home-2",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9314778645833334
+  },
+  {
+    "name": "home-3",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9319661458333334
+  }
+]

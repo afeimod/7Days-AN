@@ -1,0 +1,258 @@
+{
+  "capture_scope": "Runtime texture captures collected from Android emulator; not a complete enumeration of every texture in the game asset archive.",
+  "count": 36,
+  "textures": [
+    {
+      "file": "text-source-0-256x2048.tga",
+      "width": 256,
+      "height": 2048,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-0-256x2048.png"
+    },
+    {
+      "file": "text-source-1-54x15.tga",
+      "width": 54,
+      "height": 15,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-1-54x15.png"
+    },
+    {
+      "file": "text-source-10-54x15.tga",
+      "width": 54,
+      "height": 15,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-10-54x15.png"
+    },
+    {
+      "file": "text-source-10-8x11.tga",
+      "width": 8,
+      "height": 11,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-10-8x11.png"
+    },
+    {
+      "file": "text-source-11-25x13.tga",
+      "width": 25,
+      "height": 13,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-11-25x13.png"
+    },
+    {
+      "file": "text-source-11-50x30.tga",
+      "width": 50,
+      "height": 30,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-11-50x30.png"
+    },
+    {
+      "file": "text-source-11-8x11.tga",
+      "width": 8,
+      "height": 11,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-11-8x11.png"
+    },
+    {
+      "file": "text-source-12-100x25.tga",
+      "width": 100,
+      "height": 25,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-12-100x25.png"
+    },
+    {
+      "file": "text-source-12-14x13.tga",
+      "width": 14,
+      "height": 13,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-12-14x13.png"
+    },
+    {
+      "file": "text-source-12-78x11.tga",
+      "width": 78,
+      "height": 11,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-12-78x11.png"
+    },
+    {
+      "file": "text-source-13-100x25.tga",
+      "width": 100,
+      "height": 25,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-13-100x25.png"
+    },
+    {
+      "file": "text-source-13-60x4.tga",
+      "width": 60,
+      "height": 4,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-13-60x4.png"
+    },
+    {
+      "file": "text-source-14-14x13.tga",
+      "width": 14,
+      "height": 13,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-14-14x13.png"
+    },
+    {
+      "file": "text-source-14-25x13.tga",
+      "width": 25,
+      "height": 13,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-14-25x13.png"
+    },
+    {
+      "file": "text-source-15-59x12.tga",
+      "width": 59,
+      "height": 12,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-15-59x12.png"
+    },
+    {
+      "file": "text-source-15-8x11.tga",
+      "width": 8,
+      "height": 11,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-15-8x11.png"
+    },
+    {
+      "file": "text-source-16-8x11.tga",
+      "width": 8,
+      "height": 11,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-16-8x11.png"
+    },
+    {
+      "file": "text-source-17-60x4.tga",
+      "width": 60,
+      "height": 4,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-17-60x4.png"
+    },
+    {
+      "file": "text-source-2-41x15.tga",
+      "width": 41,
+      "height": 15,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-2-41x15.png"
+    },
+    {
+      "file": "text-source-3-28x15.tga",
+      "width": 28,
+      "height": 15,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-3-28x15.png"
+    },
+    {
+      "file": "text-source-4-28x15.tga",
+      "width": 28,
+      "height": 15,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-4-28x15.png"
+    },
+    {
+      "file": "text-source-4-78x11.tga",
+      "width": 78,
+      "height": 11,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-4-78x11.png"
+    },
+    {
+      "file": "text-source-4-96x15.tga",
+      "width": 96,
+      "height": 15,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-4-96x15.png"
+    },
+    {
+      "file": "text-source-5-41x15.tga",
+      "width": 41,
+      "height": 15,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-5-41x15.png"
+    },
+    {
+      "file": "text-source-5-60x4.tga",
+      "width": 60,
+      "height": 4,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-5-60x4.png"
+    },
+    {
+      "file": "text-source-5-78x11.tga",
+      "width": 78,
+      "height": 11,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-5-78x11.png"
+    },
+    {
+      "file": "text-source-6-49x13.tga",
+      "width": 49,
+      "height": 13,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-6-49x13.png"
+    },
+    {
+      "file": "text-source-6-54x15.tga",
+      "width": 54,
+      "height": 15,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-6-54x15.png"
+    },
+    {
+      "file": "text-source-6-99x8.tga",
+      "width": 99,
+      "height": 8,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-6-99x8.png"
+    },
+    {
+      "file": "text-source-7-47x12.tga",
+      "width": 47,
+      "height": 12,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-7-47x12.png"
+    },
+    {
+      "file": "text-source-7-96x15.tga",
+      "width": 96,
+      "height": 15,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-7-96x15.png"
+    },
+    {
+      "file": "text-source-8-23x12.tga",
+      "width": 23,
+      "height": 12,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-8-23x12.png"
+    },
+    {
+      "file": "text-source-8-41x15.tga",
+      "width": 41,
+      "height": 15,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-8-41x15.png"
+    },
+    {
+      "file": "text-source-9-25x13.tga",
+      "width": 25,
+      "height": 13,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-9-25x13.png"
+    },
+    {
+      "file": "text-source-9-54x15.tga",
+      "width": 54,
+      "height": 15,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-9-54x15.png"
+    },
+    {
+      "file": "text-source-9-8x11.tga",
+      "width": 8,
+      "height": 11,
+      "format": "TGA RGBA",
+      "preview": "preview-png/text-source-9-8x11.png"
+    }
+  ]
+}

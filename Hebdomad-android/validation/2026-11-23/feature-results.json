@@ -1,0 +1,128 @@
+[
+  {
+    "name": "verified-costume-0",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.984375,
+    "costume": "普通服装"
+  },
+  {
+    "name": "verified-costume-1",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9514973958333334,
+    "costume": "黑色服装"
+  },
+  {
+    "name": "verified-costume-2",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9840494791666666,
+    "costume": "白色面具服装"
+  },
+  {
+    "name": "verified-costume-3",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9822591145833334,
+    "costume": "普通服装（B 款）"
+  },
+  {
+    "name": "verified-costume-4",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9542643229166666,
+    "costume": "黑色服装（B 款）"
+  },
+  {
+    "name": "verified-costume-5",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9825846354166666,
+    "costume": "白色面具服装（B 款）"
+  },
+  {
+    "name": "verified-costume-6",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9246419270833334,
+    "costume": "邪恶 Ken"
+  },
+  {
+    "name": "verified-costume-7",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9669596354166666,
+    "costume": "邪恶 Ken（黑白）"
+  },
+  {
+    "name": "verified-weapon-0",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9676106770833334,
+    "weapon": "空手"
+  },
+  {
+    "name": "verified-weapon-1",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9680989583333334,
+    "weapon": "小刀"
+  },
+  {
+    "name": "verified-weapon-2",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.96826171875,
+    "weapon": "西洋剑"
+  },
+  {
+    "name": "verified-weapon-3",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9617513020833334,
+    "weapon": "手枪"
+  },
+  {
+    "name": "verified-weapon-4",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.9676106770833334,
+    "weapon": "沙鹰"
+  },
+  {
+    "name": "verified-weapon-5",
+    "size": [
+      2400,
+      1080
+    ],
+    "nonblack_fraction": 0.96826171875,
+    "weapon": "黄金沙鹰（新增）"
+  }
+]
