@@ -2,7 +2,7 @@
 
 ![Android 5.0+](https://img.shields.io/badge/Android-5.0%2B-3DDC84?logo=android&logoColor=white)
 ![ARMv7](https://img.shields.io/badge/ABI-armeabi--v7a-blue)
-![Release](https://img.shields.io/badge/release-v0.8-orange)
+![Release](https://img.shields.io/badge/release-v1.0-orange)
 
 塞班时代 3D 冒险名作《七夜》的安卓原生复刻。不是模拟器，不是 CPU 转译——通过逆向分析重写平台接口，让原版 ARM 引擎二进制直接运行在 Android 上。
 
