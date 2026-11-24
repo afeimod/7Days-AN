@@ -7,7 +7,7 @@
 塞班时代 3D 冒险名作《七夜》的安卓原生复刻。不是模拟器，不是 CPU 转译——通过逆向分析重写平台接口，让原版 ARM 引擎二进制直接运行在 Android 上。
 
 ![v0.8 运行画面](https://github.com/afeimod/7Days-AN/blob/main/Screenshot_2026-11-18-12-26-21-991_org.hebdomad.android.jpg)
-
+![v1.0 运行画面](https://github.com/afeimod/7Days-AN/blob/main/Screenshot_2026-11-24-18-18-34-259_org.hebdomad.android.jpg)
 ## 这是什么
 
 《七夜》（7Days）是丁果科技 2009 年发布于 Symbian 平台的 3D 冒险游戏，被誉为塞班时代的"3A 大作"。本项目将其移植为可独立安装的安卓 APK：
@@ -22,8 +22,8 @@
 
 | | |
 |---|---|
-| 当前版本 | v0.8（2026-11-18） |
-| 安装包 | `Qiye-HD-v0.8-clean.apk`，约 37.6 MB |
+| 当前版本 | v1.0（2026-11-22） |
+| 安装包 | `Qiye-HD-1.0.apk`，约 37.6 MB |
 | 系统要求 | Android 5.0+，且支持 32 位 ARM 应用 |
 | 注意 | 仅含 `armeabi-v7a`，**仅 arm64 的设备无法安装**；应用为横屏 |
 
