@@ -30,7 +30,7 @@ if ($Debuggable -or $PackageId -ne 'org.island.nativevalidation') {
     [System.IO.File]::WriteAllText($debugManifest, $manifestText, [System.Text.UTF8Encoding]::new($false))
     $manifest = $debugManifest
 }
-& "$buildTools/aapt.exe" package -f -M $manifest -I $androidJar -S "$project/app/src/main/res" -A "$project/app/src/main/assets" -F "$build/unsigned.apk" --min-sdk-version 26 --target-sdk-version 34 --version-code 4 --version-name '0.4.0'
+& "$buildTools/aapt.exe" package -f -M $manifest -I $androidJar -S "$project/app/src/main/res" -A "$project/app/src/main/assets" -F "$build/unsigned.apk" --min-sdk-version 26 --target-sdk-version 34 --version-code 5 --version-name '0.5.0'
 if ($LASTEXITCODE -ne 0) { throw 'aapt package failed.' }
 Push-Location "$build/dex"
 try {

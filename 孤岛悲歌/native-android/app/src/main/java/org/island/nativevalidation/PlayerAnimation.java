@@ -36,9 +36,14 @@ public final class PlayerAnimation {
         return scriptLeft;
     }
     public int frame(float dt,int locomotion,boolean busy){
+        return frame(dt,locomotion,busy,false);
+    }
+    public int frame(float dt,int locomotion,boolean busy,boolean holdAction){
         if(script>=0){
             int[] seq=sequences[script];int frame=seq[Math.min(end,start+(int)(clock*10))];
-            clock+=dt;scriptLeft-=dt;if(scriptLeft<=0){script=-1;action=-1;}
+            // Keep an authored pickup/reach pose visible while its original
+            // acquisition message is waiting for confirmation.
+            if(!holdAction){clock+=dt;scriptLeft-=dt;if(scriptLeft<=0){script=-1;action=-1;}}
             return frame;
         }
         if(sequences.length==0)return 0;

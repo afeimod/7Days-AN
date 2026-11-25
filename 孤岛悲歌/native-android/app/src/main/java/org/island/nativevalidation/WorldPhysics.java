@@ -139,11 +139,12 @@ public final class WorldPhysics {
         return new float[]{Math.max(b[0]+target.dx,Math.min(x,b[3]+target.dx)),Math.max(b[1]+target.dy,Math.min(y,b[4]+target.dy)),Math.max(b[2]+target.dz,Math.min(z,b[5]+target.dz))};
     }
     public boolean visibleTo(float x,float y,float z,GameEngine.Entity target){
-        float tx=target.x+target.dx,ty=target.y+target.dy,tz=target.z+target.dz;
-        float cx=tx,cy=ty,cz=tz;
         // Test the near surface, rather than a model's buried origin. A door
         // frame's origin can sit behind its own movable door panels.
-        float[] point=surfacePoint(x,y,z,target);tx=point[0];ty=point[1];tz=point[2];
+        float[] point=surfacePoint(x,y,z,target);
+        return visibleToPoint(x,y,z,point[0],point[1],point[2],target);
+    }
+    public boolean visibleToPoint(float x,float y,float z,float tx,float ty,float tz,GameEngine.Entity target){
         if(!visible(x,y,z,tx,ty,tz))return false;
         if(objects!=null)for(GameEngine.Entity e:objects){
             if(e==target||e.removed||!e.solid||e.bounds==null||(!e.virtual&&!e.furniture)||(e.door&&(e.open>.5f||Math.abs(e.rotation)>35)))continue;
@@ -161,6 +162,7 @@ public final class WorldPhysics {
                 for(int i=0;i<3;i++)if(tb[i]+offset[i]<lo[i]-.01f||tb[i+3]+offset[i]>hi[i]+.01f)enclosed=false;
                 if(enclosed)continue;
             }
+            float cx=target.x+target.dx,cy=target.y+target.dy,cz=target.z+target.dz;
             if(!target.virtual&&!target.furniture&&tb!=null&&tb[3]-tb[0]<=32&&tb[4]-tb[1]<=32&&tb[5]-tb[2]<=32
                 &&cx>=lo[0]&&cx<=hi[0]&&cy>=lo[1]&&cy<=hi[1]&&cz>=lo[2]&&cz<=hi[2])continue;
             float enter=0,exit=1;boolean miss=false;

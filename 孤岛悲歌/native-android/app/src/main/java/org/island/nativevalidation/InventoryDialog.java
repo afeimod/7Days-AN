@@ -76,7 +76,7 @@ public final class InventoryDialog extends Dialog {
         private int popupAction = ACTION_USE;
         private boolean showActions;
         private boolean tabsFocused;
-        private int combiningFirst=-1,previewId=-1;private MeshPreview preview;private Bitmap previewImage;private long previewTime;
+        private int combiningFirst=-1,previewId=-1;private ItemMeshPreview preview;private Bitmap previewImage;private long previewTime;
 
         InventoryView() {
             super(activity);
@@ -157,10 +157,9 @@ public final class InventoryDialog extends Dialog {
             drawText(canvas, title, x + 5, y + 6, width - 10, 20, 11, Gravity.CENTER);
             try {
                 long now=android.os.SystemClock.uptimeMillis();
-                if(previewId!=selected.picpos){previewId=selected.picpos;Bitmap skin=OriginalUi.bitmap(activity,"preview-"+previewId);int[] texels=new int[skin.getWidth()*skin.getHeight()];skin.getPixels(texels,0,skin.getWidth(),0,0,skin.getWidth(),skin.getHeight());
-                    java.io.InputStream stream=activity.getAssets().open("ui/preview-"+previewId+".mesh");java.io.ByteArrayOutputStream data=new java.io.ByteArrayOutputStream();byte[] buffer=new byte[4096];int n;while((n=stream.read(buffer))!=-1)data.write(buffer,0,n);stream.close();java.nio.ByteBuffer mesh=java.nio.ByteBuffer.wrap(data.toByteArray()).order(java.nio.ByteOrder.LITTLE_ENDIAN);int count=mesh.getInt();float[] values=new float[count*5];mesh.asFloatBuffer().get(values);preview=new MeshPreview(values,texels,skin.getWidth(),skin.getHeight());previewTime=0;previewImage=Bitmap.createBitmap(192,192,Bitmap.Config.ARGB_8888);
-                }
-                if(now-previewTime>=80){previewImage.setPixels(preview.render(192,192,now*.00055f),0,192,0,0,192,192);previewTime=now;}
+                if(previewId!=selected.picpos){previewId=selected.picpos;preview=ItemMeshPreview.load(activity,previewId);previewTime=0;}
+                if(previewImage==null)previewImage=Bitmap.createBitmap(192,192,Bitmap.Config.ARGB_8888);
+                if(now-previewTime>=80){preview.render(previewImage,now);previewTime=now;}
                 drawAsset(canvas,previewImage,x+8,y+29,width-16,88);postInvalidateDelayed(80);
             } catch (Exception error) {android.util.Log.e("IslandInventory","preview "+selected.picpos,error);}
         }

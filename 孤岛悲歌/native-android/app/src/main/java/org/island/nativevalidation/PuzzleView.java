@@ -11,7 +11,7 @@ public final class PuzzleView extends View implements MenuControls.Handler {
     public final PuzzleState state;
     private final GameEngine game;
     private final Paint paint=new Paint(3);
-    private final Bitmap art,painting,board;
+    private final Bitmap art,painting,board,dust;
     private final Set<Integer> cleared=new HashSet<>();
     private final RectF square=new RectF();
     private float previousAngle;
@@ -23,13 +23,13 @@ public final class PuzzleView extends View implements MenuControls.Handler {
     public PuzzleView(Context context,PuzzleState state,GameEngine game){
         super(context);this.state=state;this.game=game;
         String name=state.type==13?"pintu":state.type==101?"longmen":state.type==104?"basebmp":state.type==108?symbol(state.id):"pintu";
-        art=bitmap(context,name);painting=state.type==104?bitmap(context,"youhua"):null;
+        art=bitmap(context,state.type==108?"textures/0332.png":name);dust=state.type==108?bitmap(context,"textures/0235.png"):null;painting=state.type==104?bitmap(context,"youhua"):null;
         board=OriginalUi.bitmap(context,"book");
         for(int i=0;i<state.progress&&i<100;i++)cleared.add(i);
         setContentDescription("机关操作区，方向键选择、OK操作，向下移到确认按钮");setFocusable(true);setFocusableInTouchMode(true);setMinimumHeight(240);
     }
     private static String symbol(int id){return id==95111?"keheng3":id==95121?"keheng2":id==95131?"keheng1":id==95141?"keheng4":"jiaocontent3";}
-    static Bitmap bitmap(Context c,String name){try(InputStream in=c.getAssets().open("puzzles/"+name+".png")){Bitmap b=BitmapFactory.decodeStream(in);int[] pixels=new int[b.getWidth()*b.getHeight()];b.getPixels(pixels,0,b.getWidth(),0,0,b.getWidth(),b.getHeight());for(int i=0;i<pixels.length;i++)if(Color.red(pixels[i])>240&&Color.blue(pixels[i])>240&&Color.green(pixels[i])<20)pixels[i]=Color.TRANSPARENT;return Bitmap.createBitmap(pixels,b.getWidth(),b.getHeight(),Bitmap.Config.ARGB_8888);}catch(Exception e){return null;}}
+    static Bitmap bitmap(Context c,String name){String path=name.contains("/")?name:"puzzles/"+name+".png";try(InputStream in=c.getAssets().open(path)){Bitmap b=BitmapFactory.decodeStream(in);if(b==null)return null;int[] pixels=new int[b.getWidth()*b.getHeight()];b.getPixels(pixels,0,b.getWidth(),0,0,b.getWidth(),b.getHeight());for(int i=0;i<pixels.length;i++)if(Color.red(pixels[i])>240&&Color.blue(pixels[i])>240&&Color.green(pixels[i])<20)pixels[i]=Color.TRANSPARENT;return Bitmap.createBitmap(pixels,b.getWidth(),b.getHeight(),Bitmap.Config.ARGB_8888);}catch(Exception e){return null;}}
     private void text(Canvas c,String s,float x,float y,float size,int color){OriginalFont.draw(getContext(),c,s,x-size*5,y-size*.65f,size*10,size*1.4f,size,Gravity.CENTER);}
     @Override protected void onDraw(Canvas c){
         float w=getWidth(),top=16,extra=(state.type==101||state.type==102||state.type==104)?130:16;
@@ -60,8 +60,14 @@ public final class PuzzleView extends View implements MenuControls.Handler {
             double angle=Math.toRadians(state.progress%360);paint.setColor(0xFFD3B475);c.drawCircle(cx+(float)Math.cos(angle)*r,cy+(float)Math.sin(angle)*r,22,paint);
         }else if(state.type==108){
             if(art!=null)c.drawBitmap(art,null,square,paint);
-            paint.setColor(0xFF786C52);float cell=side/10;
-            for(int i=0;i<100;i++)if(!cleared.contains(i))c.drawRect(left+i%10*cell,top+i/10*cell,left+(i%10+1)*cell+1,top+(i/10+1)*cell+1,paint);
+            if(dust!=null){
+                float cell=side/10;paint.setColor(Color.WHITE);paint.setFilterBitmap(true);
+                for(int i=0;i<100;i++)if(!cleared.contains(i)){
+                    int save=c.save();c.clipRect(left+i%10*cell,top+i/10*cell,left+(i%10+1)*cell,top+(i/10+1)*cell);
+                    c.drawBitmap(dust,null,square,paint);c.restoreToCount(save);
+                }
+                paint.setFilterBitmap(false);
+            }
         }else if(state.type==104){
             if(art!=null){paint.setColorFilter(new ColorMatrixColorFilter(new float[]{.3f,.59f,.11f,0,0,.3f,.59f,.11f,0,0,.3f,.59f,.11f,0,0,0,0,0,1,0}));c.drawBitmap(art,null,square,paint);paint.setColorFilter(null);}
             for(int i=0;i<4;i++)if(state.slots[i]!=0){RectF r=paintRegion(i);int save=c.save();c.clipRect(r);if(art!=null){if(state.slots[i]!=i+1)paint.setColorFilter(new PorterDuffColorFilter(palette(state.slots[i]),PorterDuff.Mode.SRC_ATOP));c.drawBitmap(art,null,square,paint);paint.setColorFilter(null);}c.restoreToCount(save);}

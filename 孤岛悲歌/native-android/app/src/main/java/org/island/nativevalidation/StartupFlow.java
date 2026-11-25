@@ -48,8 +48,13 @@ public final class StartupFlow {
         dialog=new Dialog(activity,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
         root=new FrameLayout(activity);root.setBackgroundColor(Color.BLACK);dialog.setContentView(root);dialog.setCancelable(false);dialog.show();
         dialog.setOnKeyListener((d,key,event)->{
+            if(page==2&&(key==KeyEvent.KEYCODE_DPAD_UP||key==KeyEvent.KEYCODE_DPAD_DOWN)&&event.getAction()==KeyEvent.ACTION_DOWN){
+                View focused=dialog.getWindow().getDecorView().findFocus();
+                View next=focused==null?null:focused.focusSearch(key==KeyEvent.KEYCODE_DPAD_UP?View.FOCUS_UP:View.FOCUS_DOWN);
+                if(next!=null){next.requestFocus();return true;}
+            }
             if(key!=KeyEvent.KEYCODE_BUTTON_A&&key!=KeyEvent.KEYCODE_DPAD_CENTER&&key!=KeyEvent.KEYCODE_ENTER&&key!=KeyEvent.KEYCODE_BUTTON_START)return false;
-            boolean handled=page<2;if(event.getAction()==KeyEvent.ACTION_UP){if(page==0&&introSkippable)completeIntro();else if(page==1)menu();}return handled;
+            boolean handled=page<2;if(event.getAction()==KeyEvent.ACTION_UP){if(page==0&&introSkippable)completeIntro();else if(page==1)menu();else if(page==2){View focused=dialog.getWindow().getDecorView().findFocus();if(focused!=null)focused.performClick();}}return handled||page==2;
         });
         dialog.getWindow().setLayout(-1,-1);dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         dialog.getWindow().getDecorView().setSystemUiVisibility(immersiveFlags());
@@ -83,20 +88,48 @@ public final class StartupFlow {
     private void menu(){
         page=2;
         background();root.setOnClickListener(null);
-        LinearLayout menu=new LinearLayout(activity);menu.setOrientation(LinearLayout.VERTICAL);menu.setGravity(Gravity.CENTER);
+        LinearLayout menu=new LinearLayout(activity){
+            float swipeStart;boolean tracking;
+            @Override public boolean onInterceptTouchEvent(android.view.MotionEvent event){
+                if(event.getActionMasked()==android.view.MotionEvent.ACTION_DOWN){swipeStart=event.getY();tracking=true;return false;}
+                if(event.getActionMasked()==android.view.MotionEvent.ACTION_MOVE&&tracking&&Math.abs(event.getY()-swipeStart)>24*activity.getResources().getDisplayMetrics().density)return true;
+                if(event.getActionMasked()==android.view.MotionEvent.ACTION_CANCEL)tracking=false;
+                return false;
+            }
+            @Override public boolean onTouchEvent(android.view.MotionEvent event){
+                if(event.getActionMasked()==android.view.MotionEvent.ACTION_UP&&tracking){
+                    tracking=false;int direction=event.getY()<swipeStart?1:-1;
+                    View focused=findFocus();int index=indexOfChild(focused);
+                    for(int step=1;step<=getChildCount();step++){
+                        int candidate=(Math.max(0,index)+direction*step+getChildCount()*2)%getChildCount();
+                        View child=getChildAt(candidate);
+                        if(child.isEnabled()){child.requestFocus();child.setSelected(true);break;}
+                    }
+                }
+                return true;
+            }
+        };menu.setOrientation(LinearLayout.VERTICAL);menu.setGravity(Gravity.CENTER);
         int width=activity.getResources().getDisplayMetrics().widthPixels,height=activity.getResources().getDisplayMetrics().heightPixels;float scale=Math.min(width/240f,height/320f);
         FrameLayout.LayoutParams lp=new FrameLayout.LayoutParams(Math.round(scale*104),-2,Gravity.TOP|Gravity.CENTER_HORIZONTAL);lp.topMargin=Math.round((height-scale*320)/2+scale*60);root.addView(menu,lp);
         originalButton(menu,"新的开始","new",()->movie("head",()->{finish();start.run();}));
-        Button resume=originalButton(menu,"读取存档","load",()->{finish();load.run();});resume.setEnabled(hasSave);resume.setAlpha(hasSave?1:.45f);
+        // Keep the animated sea/menu window alive behind the translucent slot list.
+        Button resume=originalButton(menu,"读取存档","load",()->{hideMenuForLoad();load.run();});resume.setEnabled(hasSave);resume.setAlpha(hasSave?1:.45f);
         originalButton(menu,"游戏设置","settings",settings);
         originalButton(menu,"游戏帮助","help",this::help);
         originalButton(menu,"开发团队","credits",this::credits);
         originalButton(menu,"正版激活","activate",()->optionalEntry("正版激活","此原生移植版无需联网激活。"));
         originalButton(menu,"访问官网","website",()->optionalEntry("访问官网","原版网站服务已停止，游戏内容已包含在本地安装包中。"));
         originalButton(menu,"退出游戏","exit",activity::finish);
-        MenuControls.install(dialog,true);
-        View pad=dialog.findViewById(android.R.id.content).findViewWithTag("virtual-menu-pad");if(pad!=null)pad.setVisibility(View.VISIBLE);
+        menu.setFocusable(true);
+        menu.post(()->{if(menu.getChildCount()>0)menu.getChildAt(0).requestFocus();});
     }
+    private void hideMenuForLoad(){
+        if(root==null)return;
+        // Keep the running sea video as the background; remove the title/menu
+        // sprites so they cannot show through the save-slot overlay.
+        for(int i=root.getChildCount()-1;i>=0;i--){View child=root.getChildAt(i);if(child!=sea)root.removeViewAt(i);}
+    }
+    public void restoreMenu(){if(!released&&page==2)menu();}
     private Button originalButton(LinearLayout parent,String label,String sprite,Runnable task){Button b=OriginalUi.button(activity,label,sprite,()->{audio.effect("ok.wav");task.run();});float scale=Math.min(activity.getResources().getDisplayMetrics().widthPixels/240f,activity.getResources().getDisplayMetrics().heightPixels/320f);parent.addView(b,new LinearLayout.LayoutParams(-1,Math.round(scale*22)));return b;}
     private void help(){
         HelpDialog d=new HelpDialog(activity);d.show();GameWindow.apply(d.getWindow());MenuControls.install(d,true);
@@ -141,7 +174,8 @@ public final class StartupFlow {
     }
     private void completeIntro(){if(released||page!=0)return;activity.getPreferences(0).edit().putBoolean("intro-completed",true).apply();stopVideo();title();}
     private void stopVideo(){stopPulse();if(studioLogoAnimation!=null){AnimatorSet old=studioLogoAnimation;studioLogoAnimation=null;old.cancel();}if(video!=null){video.stop();video=null;}if(sea!=null){sea.release();sea=null;}}
-    private void finish(){stopVideo();audio.close();dialog.dismiss();releaseGamePause.run();released=true;}
+    private void finish(){if(released)return;stopVideo();audio.close();dialog.dismiss();releaseGamePause.run();released=true;}
+    public void closeForLoad(){finish();}
     public void pause(){paused=true;pulseHandler.removeCallbacks(pulse);if(studioLogoAnimation!=null&&studioLogoAnimation.isStarted())studioLogoAnimation.pause();if(video!=null)video.pause();if(sea!=null)sea.pause();}
     public void resume(){paused=false;if(titlePrompt!=null){pulseHandler.removeCallbacks(pulse);pulseHandler.postDelayed(pulse,650);}if(studioLogoAnimation!=null&&studioLogoAnimation.isPaused())studioLogoAnimation.resume();if(video!=null)video.resume();if(sea!=null)sea.resume();}
     public void destroy(){released=true;stopVideo();if(dialog!=null)dialog.dismiss();releaseGamePause.run();}

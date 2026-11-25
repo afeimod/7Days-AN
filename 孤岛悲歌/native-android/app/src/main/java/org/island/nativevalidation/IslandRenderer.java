@@ -32,7 +32,7 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
     private static final String VERTEX = "uniform mat4 mvp; attribute vec3 position; attribute vec2 uv; attribute vec2 luv; varying vec2 vuv; varying vec2 vl; void main(){gl_Position=mvp*vec4(position,1.0);vuv=uv;vl=luv;}";
     private static final String FRAGMENT = "precision mediump float; uniform sampler2D diffuse; uniform sampler2D lightmap; uniform float lit; uniform float softLight; varying vec2 vuv; varying vec2 vl; void main(){vec4 c=texture2D(diffuse,vuv);if(c.a<0.5)discard;vec3 rgb=c.rgb/max(c.a,0.001);vec3 l=texture2D(lightmap,vl).rgb;vec3 light=mix(vec3(0.86),min(l*1.8+0.40,vec3(1.0)),lit);rgb=rgb*light;rgb+=vec3(clamp(softLight,0.0,1.0)*0.16);gl_FragColor=vec4(min(rgb,vec3(1.0)),1.0);} ";
     private static final String SOFT_VERTEX = "attribute vec2 position; attribute vec2 texcoord; varying vec2 uv; void main(){gl_Position=vec4(position,0.0,1.0);uv=texcoord;}";
-    private static final String SOFT_FRAGMENT = "precision mediump float; uniform sampler2D scene; uniform vec2 texel; uniform float amount; varying vec2 uv; void main(){vec4 center=texture2D(scene,uv);vec4 blur=center*0.40;blur+=(texture2D(scene,uv+vec2(texel.x,0.0))+texture2D(scene,uv-vec2(texel.x,0.0))+texture2D(scene,uv+vec2(0.0,texel.y))+texture2D(scene,uv-vec2(0.0,texel.y)))*0.15;gl_FragColor=mix(center,blur,amount);} ";
+    private static final String SOFT_FRAGMENT = "precision mediump float; uniform sampler2D scene; uniform vec2 texel; uniform float amount; uniform float fade; varying vec2 uv; void main(){vec4 center=texture2D(scene,uv);vec4 blur=center*0.40;blur+=(texture2D(scene,uv+vec2(texel.x,0.0))+texture2D(scene,uv-vec2(texel.x,0.0))+texture2D(scene,uv+vec2(0.0,texel.y))+texture2D(scene,uv-vec2(0.0,texel.y)))*0.15;vec4 color=mix(center,blur,amount);gl_FragColor=vec4(mix(color.rgb,vec3(0.0),clamp(fade,0.0,1.0)),1.0);} ";
     private final AssetManager assets;
     private final boolean[] keys = new boolean[8];
     private volatile float analogForward,analogRight;
@@ -44,6 +44,8 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
     private final CinematicCamera cinematic=new CinematicCamera();
     private final PlayerAnimation playerAnimation=new PlayerAnimation();
     private Batch player;
+    private Batch firstPersonArms;
+    private final int[][] firstPersonArmIndices={new int[0],new int[0]};
     private Batch slingRubber;
     private float[][] handWeights;
     private int[] handMarkers;
@@ -68,7 +70,10 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
     private float lastSafeX,lastSafeY,lastSafeZ;
     private final ArrayList<Tween> tweens=new ArrayList<>();
     private final ArrayList<SlingshotFlight> pellets=new ArrayList<>();
+    private static final class Spark {float x,y,z,vx,vy,vz,life=.52f;Spark(float x,float y,float z,float vx,float vy,float vz){this.x=x;this.y=y;this.z=z;this.vx=vx;this.vy=vy;this.vz=vz;}}
+    private final ArrayList<Spark> sparks=new ArrayList<>();
     private Batch pelletMesh;
+    private int sparkTexture;
     private GameEngine.Entity held;
     public volatile boolean aiming;
     public volatile boolean pickMode;
@@ -84,11 +89,14 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
     private float[][] planes=new float[0][];
     private int[][] brushes=new int[0][];
     private int program, white, placeholder, mvpLocation, positionLocation, uvLocation, lightUvLocation, litLocation, softLightLocation;
-    private int softProgram,softPosition,softTexcoord,softScene,softTexel,softAmount,sceneFramebuffer,sceneTexture,sceneDepth,sceneWidth,sceneHeight;
+    private int softProgram,softPosition,softTexcoord,softScene,softTexel,softAmount,softFade,sceneFramebuffer,sceneTexture,sceneDepth,sceneWidth,sceneHeight;
     private FloatBuffer softQuad;
     public volatile float softLight=.28f;
+    private float fadeAlpha,fadeTarget,fadeDuration=.1f;
     private int width=1,height=1;
     private long previous, statusTime;
+    private double simulationRemainder;
+    private static final float SIMULATION_STEP=1f/60f;
     private int frames;
     private volatile int pending;
     private float[] restore;
@@ -107,6 +115,8 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
     public synchronized void look(float dx,float dy){yaw-=dx;pitch=Math.max(-80,Math.min(80,pitch-dy));}
     public synchronized void requestLevel(int n){restore=null;pending=Math.max(1,Math.min(18,n));releaseKeys();}
     public synchronized void requestRestore(int n,float[] state){restore=state;pending=n;releaseKeys();}
+    boolean firstPersonView(){return aiming||pickMode;}
+    float weaponViewZ(){return firstPersonView()?z:z-(physics.crouched?36:60);}
     public void action(){releaseKeys();if(game==null)return;if(!game.dialog.isEmpty()){game.advance();return;}if(game.busy())return;if(held!=null){held=null;physics.held=null;playerAnimation.play(18,0,0);return;}if(aiming){attack();return;}GameEngine.Entity e=game.find(targetId);if(e!=null&&"1".equals(e.data.get("pull"))){if(physics.crouched)return;held=e;physics.held=e;playerAnimation.play(15,0,2);return;}if(shouldSwingPickaxe(e)){attack();return;}if(targetId!=0)game.interact(targetId,false);}
     private boolean shouldSwingPickaxe(GameEngine.Entity target){
         if(game.selected!=20030||!game.inventory.contains(20030))return false;
@@ -118,9 +128,18 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
         // Its nearer face must not hide the individual destructible pieces.
         return target.ai!=0&&target.auto>=3||attackTarget(false)!=0;
     }
-    public void equipPickaxe(){if(game==null||game.busy()||held!=null)return;aiming=false;if(game.inventory.contains(20030)){game.selected=20030;pickMode=true;}}
-    public void toggleSlingshot(){if(game==null||game.busy()||held!=null||!game.inventory.contains(20100))return;pickMode=false;aiming=!aiming;if(aiming)game.selected=20100;}
-    public void selectItem(int id){if(game==null)return;game.selected=id;aiming=false;pickMode=id==20030;}
+    public void equipPickaxe(){
+        if(game==null||game.busy()||held!=null)return;
+        if(pickMode&&game.selected==20030){pickMode=false;game.selected=-1;weaponTime=-1;playerAnimation.reset();return;}
+        aiming=false;
+        if(game.inventory.contains(20030)){game.selected=20030;pickMode=true;weaponTime=-1;}
+    }
+    public void toggleSlingshot(){
+        if(game==null||game.busy()||held!=null||!game.inventory.contains(20100))return;
+        if(aiming){aiming=false;game.selected=-1;weaponTime=-1;playerAnimation.reset();return;}
+        pickMode=false;game.selected=20100;aiming=true;weaponTime=-1;
+    }
+    public void selectItem(int id){if(game==null)return;GameEngine.Item item=game.items.get(id);game.selected=item!=null&&item.tab==3?-1:id;aiming=false;pickMode=game.selected==20030;}
     public void jump(){if(game!=null&&!game.busy()&&held==null&&!aiming&&physics.grounded&&!physics.crouched){physics.jump();jumpForward=.82f;sounds.jump();}}
     public void crouch(){if(game==null||game.busy()||held!=null||aiming)return;if(physics.crouched){if(physics.canStand(x,y,z+24)){z+=24;physics.crouched=false;}}else{z-=24;physics.crouched=true;}}
     public void attack(){
@@ -141,7 +160,12 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
             else{WorldPhysics.Hit wall=physics.cameraTrace(x,y,z,tx,ty,tz,.5f);impact=wall.fraction<1;tx=x+(tx-x)*wall.fraction;ty=y+(ty-y)*wall.fraction;tz=z+(tz-z)*wall.fraction;}
             pellets.add(new SlingshotFlight(x+c*(cp*23+sp*13),y+s*(cp*23+sp*13),z+sp*23-cp*13,tx,ty,tz,impact));
         }
-        boolean hit=id!=0&&game.attack(id);if(id==0&&ranged)game.fireSlingshot();if(!ranged)sounds.weapon(false,hit);
+        boolean hit=id!=0&&game.attack(id);if(hit){GameEngine.Entity target=game.find(id);if(target!=null){float[] point=WorldPhysics.surfacePoint(x,y,z,target);spawnSparks(point[0],point[1],point[2]);}}
+        if(id==0&&ranged)game.fireSlingshot();if(!ranged)sounds.weapon(false,hit);
+    }
+    private void spawnSparks(float x,float y,float z){
+        for(int i=0;i<16;i++){double a=Math.PI*2*i/16;float speed=34+(i%4)*14;sparks.add(new Spark(x,y,z,(float)Math.cos(a)*speed,(float)Math.sin(a)*speed,30+(i%5)*12));}
+        while(sparks.size()>144)sparks.remove(0);
     }
     private int attackTarget(boolean ranged){
         float a=(float)Math.toRadians(yaw),c=(float)Math.cos(a),s=(float)Math.sin(a),p=(float)Math.toRadians(pitch),cp=(float)Math.cos(p),sp=(float)Math.sin(p);
@@ -161,7 +185,7 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
         }
         return id;
     }
-    public void scene(int map,int entry,float angle){pending=map;entryId=entry;entryAngle=angle;releaseKeys();tweens.clear();pellets.clear();cinematic.active=false;held=null;aiming=pickMode=false;attackCooldown=0;weaponTime=-1;physics.held=null;physics.support=null;physics.crouched=false;jumpForward=0;}
+    public void scene(int map,int entry,float angle){pending=map;entryId=entry;entryAngle=angle;releaseKeys();tweens.clear();pellets.clear();sparks.clear();cinematic.active=false;held=null;aiming=pickMode=false;attackCooldown=0;weaponTime=-1;physics.held=null;physics.support=null;physics.crouched=false;jumpForward=0;}
     public void report(String message){Log.i("IslandGame",message);}
     public String motionState(){
         StringBuilder out=new StringBuilder("camview,"+cinematic.snapshot()+";");for(Tween t:tweens)out.append(t.kind==3?"camera":t.actor==null?"player":""+t.actor.originalId).append(',').append(t.sx).append(',').append(t.sy).append(',').append(t.sz).append(',').append(t.tx).append(',').append(t.ty).append(',').append(t.tz).append(',').append(t.time).append(',').append(t.duration).append(',').append(t.kind).append(',').append(t.pivotX).append(',').append(t.pivotY).append(',').append(t.sweep).append(';');return out.toString();
@@ -172,6 +196,8 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
     }
     public void effect(String command,String[] args){
         if(command.equals("follow")&&args.length>0){if(GameEngine.num(args[0],1)==0)cinematic.begin(camera,x,y,z,yaw,pitch);else{cinematic.active=false;tweens.removeIf(t->t.kind==3);camera.reset();}}
+        if(command.equals("fadeout")||command.equals("fadein")){fadeTarget=command.equals("fadeout")?1:0;if(args.length>0)fadeDuration=Math.max(.1f,GameEngine.flt(args[0])/10f);}
+        if(command.equals("setblack")||command.equals("allblack"))fadeAlpha=fadeTarget=1;
         if(command.equals("gameplay-sound")&&args.length>0&&audio!=null)audio.effect(args[0]);
         if(command.equals("playback")&&args.length>0&&audio!=null)audio.music(GameEngine.num(args[0],0));
         if(command.equals("playsound")&&args.length>0&&audio!=null)audio.effect(GameEngine.num(args[0],-1));
@@ -206,7 +232,8 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
         }
         if(command.equals("rotate")&&actor!=null&&a.length>=6){
             Tween t=new Tween();t.actor=actor;t.kind=1;t.sx=actor.rotationX;t.sy=actor.rotationY;t.sz=actor.rotation;
-            float sweep=a[5]*360/4096*(actor.reverse?-1:1);
+            float sweep=doorSweep(actor.door,a[5]*360/4096,actor.reverse);
+            if(actor.door)spawnSparks(actor.x+actor.dx,actor.y+actor.dy,actor.z+actor.dz+24);
             t.tx=t.sx+a[0]*sweep;t.ty=t.sy+a[2]*sweep;t.tz=t.sz-a[1]*sweep;
             t.duration=Math.max(.05f,Math.abs(a[5])/Math.max(1,Math.abs(a[3])*10));
             tweens.add(t);return t.duration;
@@ -233,6 +260,10 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
         for(Iterator<Tween> it=tweens.iterator();it.hasNext();){Tween old=it.next();if(old.kind==0&&old.actor==actor)it.remove();}
         tweens.add(t);return t.duration;
     }
+    static float doorSweep(boolean door,float requested,boolean explicitlyReversed){
+        return requested*((door&&!explicitlyReversed||!door&&explicitlyReversed)?-1:1);
+    }
+    static float crouchedMove(float input){return 0;}
     private void updateTween(float dt){
         scriptedPlayerMoving=false;
         for(Iterator<Tween> it=tweens.iterator();it.hasNext();){Tween t=it.next();if(t.actor!=null&&t.actor.frozen)continue;t.time+=dt;float u=Math.min(1,t.time/t.duration);
@@ -282,10 +313,11 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
         litLocation=GLES20.glGetUniformLocation(program,"lit");
         softLightLocation=GLES20.glGetUniformLocation(program,"softLight");
         softProgram=GLES20.glCreateProgram();GLES20.glAttachShader(softProgram,shader(GLES20.GL_VERTEX_SHADER,SOFT_VERTEX));GLES20.glAttachShader(softProgram,shader(GLES20.GL_FRAGMENT_SHADER,SOFT_FRAGMENT));GLES20.glLinkProgram(softProgram);GLES20.glGetProgramiv(softProgram,GLES20.GL_LINK_STATUS,result,0);if(result[0]==0)throw new IllegalStateException(GLES20.glGetProgramInfoLog(softProgram));
-        softPosition=GLES20.glGetAttribLocation(softProgram,"position");softTexcoord=GLES20.glGetAttribLocation(softProgram,"texcoord");softScene=GLES20.glGetUniformLocation(softProgram,"scene");softTexel=GLES20.glGetUniformLocation(softProgram,"texel");softAmount=GLES20.glGetUniformLocation(softProgram,"amount");
+        softPosition=GLES20.glGetAttribLocation(softProgram,"position");softTexcoord=GLES20.glGetAttribLocation(softProgram,"texcoord");softScene=GLES20.glGetUniformLocation(softProgram,"scene");softTexel=GLES20.glGetUniformLocation(softProgram,"texel");softAmount=GLES20.glGetUniformLocation(softProgram,"amount");softFade=GLES20.glGetUniformLocation(softProgram,"fade");
         softQuad=ByteBuffer.allocateDirect(6*4*4).order(ByteOrder.nativeOrder()).asFloatBuffer();softQuad.put(new float[]{-1,-1,0,0,1,-1,1,0,1,1,1,1,-1,-1,0,0,1,1,1,1,-1,1,0,1}).position(0);
         textures.clear();lightmaps.clear();batches.clear();
         white=rgbTexture(new byte[]{-1,-1,-1},1,1);
+        sparkTexture=rgbTexture(new byte[]{(byte)255,(byte)244,(byte)175},1,1);
         pelletMesh=new Batch();pelletMesh.count=360;pelletMesh.diffuse=rgbTexture(new byte[]{110,112,115,-40,-38,-35,-20,-18,-15,80,83,87},2,2);pelletMesh.light=white;
         pelletMesh.vertices=ByteBuffer.allocateDirect(pelletMesh.count*28).order(ByteOrder.nativeOrder()).asFloatBuffer();
         for(int row=0;row<6;row++)for(int column=0;column<10;column++)for(int k:new int[]{0,1,2,0,2,3}){float u=(column+(k==1||k==2?1:0))/10f,v=(row+(k>=2?1:0))/6f;double longitude=u*Math.PI*2,latitude=v*Math.PI;pelletMesh.vertices.put((float)(Math.sin(latitude)*Math.cos(longitude))).put((float)(Math.sin(latitude)*Math.sin(longitude))).put((float)Math.cos(latitude)).put(u).put(v).put(.5f).put(.5f);}pelletMesh.vertices.position(0);
@@ -308,7 +340,7 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
                 },this);
             }else pending=level;
         }catch(Exception e){error=e.toString();Log.e("IslandGame","engine init",e);}
-        previous=System.nanoTime();
+        previous=System.nanoTime();simulationRemainder=0;
     }
     @Override public void onSurfaceChanged(GL10 unused,int w,int h){
         width=w;height=h;GLES20.glViewport(0,0,w,h);
@@ -327,11 +359,20 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
             previous=System.nanoTime();
         }
         long now=System.nanoTime();float dt=Math.min(0.05f,(now-previous)/1e9f);previous=now;
-            if(uiDepth==0){updateTween(dt);if(game!=null)game.tick(dt);update(dt);playerFrame=playerAnimation.frame(dt,locomotion,game!=null&&game.busy()&&!scriptedPlayerMoving);}
+        float fadeStep=dt/Math.max(.1f,fadeDuration);fadeAlpha=fadeTarget>fadeAlpha?Math.min(fadeTarget,fadeAlpha+fadeStep):Math.max(fadeTarget,fadeAlpha-fadeStep);
+        if(uiDepth==0){
+            simulationRemainder=Math.min(simulationRemainder+dt,SIMULATION_STEP*5);
+            int steps=0;
+            while(simulationRemainder>=SIMULATION_STEP&&steps<5){
+                updateTween(SIMULATION_STEP);if(game!=null)game.tick(SIMULATION_STEP);update(SIMULATION_STEP);
+                playerFrame=playerAnimation.frame(SIMULATION_STEP,locomotion,game!=null&&game.busy()&&!scriptedPlayerMoving,game!=null&&!game.dialog.isEmpty());
+                simulationRemainder-=SIMULATION_STEP;steps++;
+            }
+        }else simulationRemainder=0;
         if(sceneFramebuffer!=0){GLES20.glBindFramebuffer(GLES20.GL_FRAMEBUFFER,sceneFramebuffer);GLES20.glViewport(0,0,sceneWidth,sceneHeight);}else GLES20.glBindFramebuffer(GLES20.GL_FRAMEBUFFER,0);
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT|GLES20.GL_DEPTH_BUFFER_BIT);
         float a=(float)Math.toRadians(yaw), p=(float)Math.toRadians(pitch), cp=(float)Math.cos(p);
-        if(aiming)camera.firstPerson(x,y,z);else camera.update(physics,x,y,z,yaw,pitch,uiDepth==0?dt:0);
+        if(firstPersonView())camera.firstPerson(x,y,z);else camera.update(physics,x,y,z,yaw,pitch,uiDepth==0?dt:0);
         if(cinematic.active&&game!=null&&game.busy())Matrix.setLookAtM(view,0,cinematic.x,cinematic.y,cinematic.z,cinematic.tx,cinematic.ty,cinematic.tz,0,0,1);
         else Matrix.setLookAtM(view,0,camera.x,camera.y,camera.z,camera.x+(float)Math.cos(a)*cp,camera.y+(float)Math.sin(a)*cp,camera.z+(float)Math.sin(p),0,0,1);
         Matrix.multiplyMM(mvp,0,projection,0,view,0);
@@ -342,34 +383,47 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
         GLES20.glUniform1f(softLightLocation,softLight);
         GLES20.glEnableVertexAttribArray(positionLocation);GLES20.glEnableVertexAttribArray(uvLocation);GLES20.glEnableVertexAttribArray(lightUvLocation);
         Batch item=null;
-        if(game!=null&&held==null&&game.inventory.contains(game.selected)&&(camera.distance>=15||aiming)){try{item=handItem(game.selected);}catch(Exception failure){error=failure.toString();}}
+        if(game!=null&&held==null&&game.selected>=0&&game.selected!=20080&&game.inventory.contains(game.selected)
+                &&game.items.containsKey(game.selected)&&game.items.get(game.selected).tab!=3
+                &&game.selected!=20000&&game.selected!=20001
+                &&((game.selected==20030||game.selected==20100)&&(camera.distance>=15||aiming||pickMode)||game.selected!=20030&&game.selected!=20100)){
+            try{item=handItem(game.selected);}catch(Exception failure){error=failure.toString();}
+        }
         FloatBuffer playerVertices=player==null?null:player.frames[Math.max(0,Math.min(player.frames.length-1,playerFrame))];
-        boolean posing=handWeights!=null&&(weaponTime>=0||aiming);
+        boolean posing=handWeights!=null&&(weaponTime>=0||aiming||pickMode);
         if(posing&&player!=null){HandPose.apply(player.frames[physics.crouched?39:0],posedPlayer,handWeights,weaponTime>=0?weaponRanged:true,weaponTime);playerVertices=posedPlayer;}
         if(aiming&&slingRubber!=null)updateRubber(HandPose.draw(weaponTime));
         float[] grip=playerVertices==null||handMarkers==null?null:HandPose.grip(playerVertices,handMarkers);
-        for(int bi=0;bi<batches.size()+3;bi++){
-            boolean isPlayer=bi==batches.size(),isHand=bi==batches.size()+1,isRubber=bi==batches.size()+2;Batch b=isRubber?(aiming?slingRubber:null):isHand?item:isPlayer?player:batches.get(bi);
-            if(isPlayer){drawPellets();if(aiming)GLES20.glClear(GLES20.GL_DEPTH_BUFFER_BIT);}
+        for(int bi=0;bi<batches.size()+4;bi++){
+            boolean isPlayer=bi==batches.size(),isArms=bi==batches.size()+1,isHand=bi==batches.size()+2,isRubber=bi==batches.size()+3;
+            Batch b=isRubber?(aiming?slingRubber:null):isHand?item:isArms?(firstPersonView()?firstPersonArms:null):isPlayer?player:batches.get(bi);
+            if(isPlayer){drawPellets();if(aiming||pickMode)GLES20.glClear(GLES20.GL_DEPTH_BUFFER_BIT);}
             if(b==null||(isPlayer&&camera.distance<15))continue;
+            // Draw first-person hands as a foreground layer after the player mesh.
+            // The pickaxe view is weapon-only. Showing clipped player geometry here
+            // duplicates the body texture over the tool; only the slingshot uses arms.
+            if(isArms&&(!aiming||pickMode))continue;
+            if(isArms)updateFirstPersonArms();
             GameEngine.Entity entity=game==null?null:game.entities.get(b.owner);
             if(entity!=null&&entity.removed)continue;
             int diffuse = b.diffuse;
             Matrix.setIdentityM(modelMatrix,0);
-            if(isPlayer||isHand||isRubber){
-                Matrix.translateM(modelMatrix,0,x,y,aiming?z:z-(physics.crouched?36:60));
+            if(isPlayer||isArms||isHand||isRubber){
+                Matrix.translateM(modelMatrix,0,x,y,weaponViewZ());
                 Matrix.rotateM(modelMatrix,0,yaw-90,0,0,1);
-                if(aiming){Matrix.rotateM(modelMatrix,0,pitch,1,0,0);Matrix.translateM(modelMatrix,0,0,35,-22);}
+                if(aiming||pickMode){Matrix.rotateM(modelMatrix,0,pitch,1,0,0);Matrix.translateM(modelMatrix,0,0,35,-22);}
                 if(isPlayer)b.vertices=playerVertices;
-                else if(isHand&&grip!=null){if(!aiming)Matrix.translateM(modelMatrix,0,grip[0],grip[1],grip[2]);if(game.selected==20030){if(weaponTime>=0)Matrix.rotateM(modelMatrix,0,HandPose.pickAngle(weaponTime),1,0,0);Matrix.rotateM(modelMatrix,0,90,0,1,0);}else if(game.selected==20100)Matrix.rotateM(modelMatrix,0,-90,1,0,0);}
+                else if(isHand&&grip!=null){if(!aiming&&!pickMode)Matrix.translateM(modelMatrix,0,grip[0],grip[1],grip[2]);if(game.selected==20030){if(weaponTime>=0)Matrix.rotateM(modelMatrix,0,HandPose.pickAngle(weaponTime),1,0,0);Matrix.rotateM(modelMatrix,0,180,0,0,1);Matrix.rotateM(modelMatrix,0,90,0,1,0);}else if(game.selected==20100)Matrix.rotateM(modelMatrix,0,-90,1,0,0);}
             }
             if(entity!=null){
-                Matrix.translateM(modelMatrix,0,entity.dx,entity.dy,entity.dz);
+                Matrix.translateM(modelMatrix,0,entity.dx,entity.dy,entity.dz+NailVisualPlacement.verticalLift(entity));
                 if(entity.rotation!=0||entity.rotationX!=0||entity.rotationY!=0){
                     Matrix.translateM(modelMatrix,0,entity.x,entity.y,entity.z);
                     Matrix.rotateM(modelMatrix,0,entity.rotation,0,0,1);Matrix.rotateM(modelMatrix,0,entity.rotationY,0,1,0);Matrix.rotateM(modelMatrix,0,entity.rotationX,1,0,0);
                     Matrix.translateM(modelMatrix,0,-entity.x,-entity.y,-entity.z);
                 }
+                float visualScale=NailVisualPlacement.visualScale(entity);
+                if(visualScale!=1f){Matrix.translateM(modelMatrix,0,entity.x,entity.y,entity.z);Matrix.scaleM(modelMatrix,0,visualScale,visualScale,visualScale);Matrix.translateM(modelMatrix,0,-entity.x,-entity.y,-entity.z);}
                 int frame=Math.max(entity.frame,Math.round(entity.visualOpen*(b.frames.length-1)));b.vertices=b.frames[Math.max(0,Math.min(b.frames.length-1,frame))];
                 if (entity.skin >= 0 && entity.skin < entity.skins.length) {
                     String override = entity.skins[entity.skin];
@@ -394,11 +448,12 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
             b.vertices.position(0);GLES20.glVertexAttribPointer(positionLocation,3,GLES20.GL_FLOAT,false,28,b.vertices);
             b.vertices.position(3);GLES20.glVertexAttribPointer(uvLocation,2,GLES20.GL_FLOAT,false,28,b.vertices);
             b.vertices.position(5);GLES20.glVertexAttribPointer(lightUvLocation,2,GLES20.GL_FLOAT,false,28,b.vertices);
-            if(isRubber)GLES20.glDisable(GLES20.GL_CULL_FACE);
+            boolean nailFace=entity!=null&&entity.data.getOrDefault("model","").toLowerCase(Locale.ROOT).endsWith("/tiedingd.sd2");
+            if(isRubber||isArms||nailFace)GLES20.glDisable(GLES20.GL_CULL_FACE);
             GLES20.glDrawArrays(GLES20.GL_TRIANGLES,0,b.count);
-            if(isRubber)GLES20.glEnable(GLES20.GL_CULL_FACE);
+            if(isRubber||isArms||nailFace)GLES20.glEnable(GLES20.GL_CULL_FACE);
         }
-        if(sceneFramebuffer!=0){GLES20.glBindFramebuffer(GLES20.GL_FRAMEBUFFER,0);GLES20.glViewport(0,0,width,height);GLES20.glDisable(GLES20.GL_DEPTH_TEST);GLES20.glDisable(GLES20.GL_CULL_FACE);GLES20.glUseProgram(softProgram);GLES20.glActiveTexture(GLES20.GL_TEXTURE0);GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,sceneTexture);GLES20.glUniform1i(softScene,0);GLES20.glUniform2f(softTexel,8.0f/sceneWidth,8.0f/sceneHeight);GLES20.glUniform1f(softAmount,Math.max(0f,Math.min(1f,softLight))*.90f);softQuad.position(0);GLES20.glEnableVertexAttribArray(softPosition);GLES20.glVertexAttribPointer(softPosition,2,GLES20.GL_FLOAT,false,16,softQuad);softQuad.position(2);GLES20.glEnableVertexAttribArray(softTexcoord);GLES20.glVertexAttribPointer(softTexcoord,2,GLES20.GL_FLOAT,false,16,softQuad);GLES20.glDrawArrays(GLES20.GL_TRIANGLES,0,6);GLES20.glEnable(GLES20.GL_DEPTH_TEST);GLES20.glEnable(GLES20.GL_CULL_FACE);}
+        if(sceneFramebuffer!=0){GLES20.glBindFramebuffer(GLES20.GL_FRAMEBUFFER,0);GLES20.glViewport(0,0,width,height);GLES20.glDisable(GLES20.GL_DEPTH_TEST);GLES20.glDisable(GLES20.GL_CULL_FACE);GLES20.glUseProgram(softProgram);GLES20.glActiveTexture(GLES20.GL_TEXTURE0);GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,sceneTexture);GLES20.glUniform1i(softScene,0);GLES20.glUniform2f(softTexel,8.0f/sceneWidth,8.0f/sceneHeight);GLES20.glUniform1f(softAmount,Math.max(0f,Math.min(1f,softLight))*.90f);GLES20.glUniform1f(softFade,fadeAlpha);softQuad.position(0);GLES20.glEnableVertexAttribArray(softPosition);GLES20.glVertexAttribPointer(softPosition,2,GLES20.GL_FLOAT,false,16,softQuad);softQuad.position(2);GLES20.glEnableVertexAttribArray(softTexcoord);GLES20.glVertexAttribPointer(softTexcoord,2,GLES20.GL_FLOAT,false,16,softQuad);GLES20.glDrawArrays(GLES20.GL_TRIANGLES,0,6);GLES20.glEnable(GLES20.GL_DEPTH_TEST);GLES20.glEnable(GLES20.GL_CULL_FACE);}
         frames++;
         if(now-statusTime>1_000_000_000L){
             float fps=statusTime==0?0:frames*1e9f/(now-statusTime);frames=0;statusTime=now;
@@ -419,9 +474,9 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
     }
     private static void rubberQuad(FloatBuffer v,float[][] p){for(int i:new int[]{0,1,2,0,2,3}){for(float value:p[i])v.put(value);v.put(i==1||i==2?1:0).put(i>=2?1:0).put(.5f).put(.5f);}}
     private void drawPellets(){
-        if(pelletMesh==null||pellets.isEmpty())return;
+        if(pelletMesh==null||pellets.isEmpty()&&sparks.isEmpty())return;
         GLES20.glDisable(GLES20.GL_CULL_FACE);
-        GLES20.glActiveTexture(GLES20.GL_TEXTURE0);GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,pelletMesh.diffuse);
+        GLES20.glActiveTexture(GLES20.GL_TEXTURE0);GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,white);
         GLES20.glActiveTexture(GLES20.GL_TEXTURE1);GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,white);GLES20.glUniform1f(litLocation,0);
         for(SlingshotFlight shot:pellets){if(shot.time<0)continue;float u=shot.progress(),px=shot.sx+(shot.tx-shot.sx)*u,py=shot.sy+(shot.ty-shot.sy)*u,pz=shot.sz+(shot.tz-shot.sz)*u;
             int pieces=shot.time>=shot.duration?4:1;
@@ -432,33 +487,42 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
                 pelletMesh.vertices.position(0);GLES20.glVertexAttribPointer(positionLocation,3,GLES20.GL_FLOAT,false,28,pelletMesh.vertices);pelletMesh.vertices.position(3);GLES20.glVertexAttribPointer(uvLocation,2,GLES20.GL_FLOAT,false,28,pelletMesh.vertices);pelletMesh.vertices.position(5);GLES20.glVertexAttribPointer(lightUvLocation,2,GLES20.GL_FLOAT,false,28,pelletMesh.vertices);GLES20.glDrawArrays(GLES20.GL_TRIANGLES,0,pelletMesh.count);
             }
         }
+        GLES20.glActiveTexture(GLES20.GL_TEXTURE0);GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,sparkTexture);
+        for(Spark spark:sparks){float size=Math.max(.8f,4.5f*spark.life/.52f);Matrix.setIdentityM(modelMatrix,0);Matrix.translateM(modelMatrix,0,spark.x,spark.y,spark.z);Matrix.scaleM(modelMatrix,0,size,size,size);Matrix.multiplyMM(drawMatrix,0,mvp,0,modelMatrix,0);GLES20.glUniformMatrix4fv(mvpLocation,1,false,drawMatrix,0);
+            pelletMesh.vertices.position(0);GLES20.glVertexAttribPointer(positionLocation,3,GLES20.GL_FLOAT,false,28,pelletMesh.vertices);pelletMesh.vertices.position(3);GLES20.glVertexAttribPointer(uvLocation,2,GLES20.GL_FLOAT,false,28,pelletMesh.vertices);pelletMesh.vertices.position(5);GLES20.glVertexAttribPointer(lightUvLocation,2,GLES20.GL_FLOAT,false,28,pelletMesh.vertices);GLES20.glDrawArrays(GLES20.GL_TRIANGLES,0,pelletMesh.count);
+        }
         GLES20.glEnable(GLES20.GL_CULL_FACE);
     }
     private synchronized void update(float dt){
+        for(Iterator<Spark> it=sparks.iterator();it.hasNext();){Spark spark=it.next();spark.life-=dt;spark.x+=spark.vx*dt;spark.y+=spark.vy*dt;spark.z+=spark.vz*dt;spark.vz-=110*dt;if(spark.life<=0)it.remove();}
         for(Iterator<SlingshotFlight> it=pellets.iterator();it.hasNext();){SlingshotFlight shot=it.next();float before=shot.time;shot.time+=dt;
             if(before<0&&shot.time>=0&&audio!=null)audio.effect("catapultsend.wav");
-            if(shot.impact&&!shot.sounded&&shot.time>=shot.duration){shot.sounded=true;if(audio!=null)audio.effect("bullethit.wav");}
+            if(shot.impact&&!shot.sounded&&shot.time>=shot.duration){shot.sounded=true;spawnSparks(shot.tx,shot.ty,shot.tz);if(audio!=null)audio.effect("bullethit.wav");}
             if(shot.finished())it.remove();}
         attackCooldown=Math.max(0,attackCooldown-dt);
         if(weaponTime>=0){weaponTime+=dt;if(weaponTime>=.55f)weaponTime=-1;}
         if(game==null||game.selected!=20100||!game.inventory.contains(20100))aiming=false;
         if(game==null||game.selected!=20030||!game.inventory.contains(20030))pickMode=false;
         if(game==null)return;
-        if(game.busy()){targetId=0;actionHint=game.dialog.isEmpty()?"等待":"确认 / 继续";interaction=game.dialog.isEmpty()?"剧情动作进行中…":"按「确认」继续对话";return;}
+        if(game.busy()&&game.picture<0){targetId=0;actionHint=game.dialog.isEmpty()?"等待":"确认 / 继续";interaction=game.dialog.isEmpty()?"剧情动作进行中…":"按「确认」继续对话";return;}
         updateEnemies(dt);
         yaw-=controllerYaw*90*dt;pitch=Math.max(-80,Math.min(80,pitch-controllerPitch*70*dt));
         if(keys[0])yaw+=85*dt;if(keys[2])yaw-=85*dt;
         float forward=analogForward+(keys[1]?1:0)-(keys[4]?1:0),strafe=analogRight+(keys[5]?1:0)-(keys[3]?1:0);
+        if(physics.crouched)strafe=0;
         if(jumpForward>0){jumpForward=Math.max(0,jumpForward-dt);if(!keys[4]&&analogForward>=-.1f)forward=1;}
         float norm=(float)Math.sqrt(forward*forward+strafe*strafe);if(norm>1){forward/=norm;strafe/=norm;}
         float a=(float)Math.toRadians(yaw),c=(float)Math.cos(a),s=(float)Math.sin(a);
-        float dx=(forward*c+strafe*s)*115*dt,dy=(forward*s-strafe*c)*115*dt;
+        if(physics.crouched){forward=crouchedMove(forward);strafe=crouchedMove(strafe);}
+        float moveSpeed=physics.crouched?24:115;
+        float dx=(forward*c+strafe*s)*moveSpeed*dt,dy=(forward*s-strafe*c)*moveSpeed*dt;
         if(held!=null){
             float[] b=held.bounds;float cx=(b[0]+b[3])*.5f+held.dx,cy=(b[1]+b[4])*.5f+held.dy,cz=(b[2]+b[5])*.5f+held.dz;
             WorldPhysics.Hit h=physics.trace(cx,cy,cz,cx+dx,cy+dy,cz,(b[3]-b[0])*.5f,(b[4]-b[1])*.5f,(b[5]-b[2])*.5f);
             dx*=h.fraction;dy*=h.fraction;held.dx+=dx;held.dy+=dy;
         }
         boolean wasGrounded=physics.grounded;float fallingSpeed=physics.verticalSpeed;
+        if(physics.crouched){dx=crouchedMove(dx);dy=crouchedMove(dy);}
         float[] position = physics.move(x, y, z, dx, dy, dt);
         if(!wasGrounded&&physics.grounded)sounds.land(fallingSpeed);
         sounds.movement(position[0]-x,position[1]-y,physics.grounded,physics.crouched,held!=null);
@@ -469,7 +533,7 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
         z = position[2];
         if(physics.grounded){lastSafeX=x;lastSafeY=y;lastSafeZ=z;}
         if(z<-4000){x=lastSafeX;y=lastSafeY;z=lastSafeZ;physics.verticalSpeed=0;game.say("前方无法通行，已返回最近的落脚点。");}
-        targetId=0;float best=Float.MAX_VALUE;
+        targetId=0;ArrayList<InteractionTargeting.Candidate> candidates=new ArrayList<>();
         for(GameEngine.Entity e:game.entities.values()){
             if(!e.removed&&e.ai!=0&&e.auto==1&&!e.triggered&&e.overlapsPlayer(x,y,z,physics.crouched))game.touchAi(e);
             if(e.removed||(game.interaction(e.id)==null&&!"1".equals(e.data.get("pull"))&&!(e.ai!=0&&e.auto>=3)))continue;
@@ -479,25 +543,20 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
             if(e.virtual&&e.auto==1)continue;
             if(distance>INTERACTION_REACH)continue;
             float vx=e.x+e.dx-x,vy=e.y+e.dy-y,vz=e.z+e.dz-z,length=(float)Math.sqrt(vx*vx+vy*vy+vz*vz),p=(float)Math.toRadians(pitch),cp=(float)Math.cos(p),sp=(float)Math.sin(p);
-            float dot=length<20?1:(vx*c*cp+vy*s*cp+vz*sp)/length;if(dot<.45f)continue;
-            if(!physics.visibleTo(x,y,z,e))continue;
-            float score=distance+(1-dot)*240;
-            if(aimedAt(e,c*cp,s*cp,sp)){
-                score-=200;
-                // Prefer aimed loose items, including tiny manual BSP pickup
-                // volumes, over the furniture hotspot enclosing them.
-                if(game.prioritizesAimedPickup(e))score-=75;
-            }
-            if(score<best){best=score;targetId=e.id;}
+            float dot=length<20?1:(vx*c*cp+vy*s*cp+vz*sp)/length;
+            float rayEntry=InteractionTargeting.rayEntry(e,x,y,z,c*cp,s*cp,sp,INTERACTION_REACH,2f);
+            boolean onRay=rayEntry>=0;
+            if(!InteractionTargeting.acceptsAim(game,e,dot,onRay))continue;
+            boolean visible=onRay
+                ?physics.visibleToPoint(x,y,z,x+c*cp*rayEntry,y+s*cp*rayEntry,z+sp*rayEntry,e)
+                :physics.visibleTo(x,y,z,e);
+            if(!visible)continue;
+            candidates.add(new InteractionTargeting.Candidate(e,rayEntry,distance+(1-dot)*240,onRay,dot));
         }
-        targetId=game.resolveInteraction(targetId);
+        GameEngine.Entity aimed=InteractionTargeting.choose(game,candidates);
+        targetId=game.resolveInteraction(aimed==null?0:aimed.id);
         GameEngine.Entity actionTarget=game.find(targetId);GameEngine.Rule actionRule=game.interaction(targetId);actionHint=held!=null?"放开箱子":aiming?"弹弓射击":actionTarget!=null&&"1".equals(actionTarget.data.get("pull"))?"抓住箱子":shouldSwingPickaxe(actionTarget)?"攻击":actionRule!=null&&game.selected>=0&&actionRule.n("item",-1)==game.selected?"使用":"调查";
         interaction=held!=null?"正在拖动箱子 · 再按调查放开":targetId==0?"拖动画面转向 · 探索场景寻找线索":"发现可交互物体 · 按「调查 / 使用」";
-    }
-    private boolean aimedAt(GameEngine.Entity e,float dx,float dy,float dz){
-        if(e.bounds==null)return false;float[] b=e.bounds,origin={x,y,z},direction={dx,dy,dz},offset={e.dx,e.dy,e.dz};float enter=0,exit=125;
-        for(int i=0;i<3;i++){float lo=b[i]+offset[i]-2,hi=b[i+3]+offset[i]+2;if(Math.abs(direction[i])<.00001f){if(origin[i]<lo||origin[i]>hi)return false;}else{float a=(lo-origin[i])/direction[i],c=(hi-origin[i])/direction[i];enter=Math.max(enter,Math.min(a,c));exit=Math.min(exit,Math.max(a,c));if(enter>exit)return false;}}
-        return exit>=0&&enter<=125;
     }
     private void updateEnemies(float dt){
         for(GameEngine.Entity e:game.entities.values()){
@@ -573,9 +632,66 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
         handWeights=new float[weights.length()][2];for(int i=0;i<weights.length();i++){handWeights[i][0]=(float)weights.getJSONArray(i).getDouble(0);handWeights[i][1]=(float)weights.getJSONArray(i).getDouble(1);}
         if(handWeights.length!=vertices)throw new IllegalArgumentException("Player hand topology mismatch");
         handMarkers=new int[markers.length()];for(int i=0;i<markers.length();i++)handMarkers[i]=markers.getInt(i);
+        int armCapacity=0;
+        for(int side=0;side<2;side++){
+            ArrayList<Integer> armVertices=new ArrayList<>();
+            for(int i=0;i+2<handWeights.length;i+=3){
+                // A triangle touching the arm can still span the chest. Keep only arm faces.
+                // The original 0359 atlas uses this UV island for the reddish shirt.
+                // It overlaps the old positional arm mask, so exclude it from the
+                // first-person batch while leaving the full third-person model intact.
+                if(handWeights[i][side]>.05f&&handWeights[i+1][side]>.05f&&handWeights[i+2][side]>.05f
+                        &&!isFirstPersonShirtFace(b.frames[0],i)){
+                    armVertices.add(i);armVertices.add(i+1);armVertices.add(i+2);
+                }
+            }
+            firstPersonArmIndices[side]=new int[armVertices.size()];
+            for(int i=0;i<armVertices.size();i++)firstPersonArmIndices[side][i]=armVertices.get(i);
+            armCapacity+=armVertices.size();
+        }
+        firstPersonArms=new Batch();firstPersonArms.owner=Integer.MIN_VALUE+3;
+        firstPersonArms.diffuse=b.diffuse;firstPersonArms.light=white;
+        firstPersonArms.vertices=ByteBuffer.allocateDirect(armCapacity*28).order(ByteOrder.nativeOrder()).asFloatBuffer();
         JSONObject weapons=hands.getJSONObject("weapons");weaponTextures.put("pick",weapons.getString("pick"));weaponTextures.put("sling",weapons.getString("sling"));
         posedPlayer=ByteBuffer.allocateDirect(vertices*28).order(ByteOrder.nativeOrder()).asFloatBuffer();handItems.clear();
         slingRubber=new Batch();slingRubber.owner=Integer.MIN_VALUE+2;slingRubber.count=18;slingRubber.diffuse=rgbTexture(new byte[]{65,47,30,95,68,41,75,54,33,55,39,25},2,2);slingRubber.light=white;slingRubber.vertices=ByteBuffer.allocateDirect(18*28).order(ByteOrder.nativeOrder()).asFloatBuffer();
+    }
+    private static boolean isFirstPersonShirtFace(FloatBuffer source,int firstVertex){
+        float u=0,v=0;
+        for(int corner=0;corner<3;corner++){
+            int offset=(firstVertex+corner)*7;
+            u+=source.get(offset+3);v+=source.get(offset+4);
+        }
+        u/=3;v/=3;
+        return u>.29f&&u<.57f&&v>.35f&&v<.49f;
+    }
+    private void updateFirstPersonArms(){
+        FloatBuffer source=player.frames[0];
+        FloatBuffer target=firstPersonArms.vertices;
+        target.clear();
+        // Use camera-local anchors in the same space as the weapon and the rubber pouch.
+        float pull=aiming?HandPose.draw(weaponTime):0;
+        for(int side=0;side<2;side++){
+            boolean right=side==0;
+            float shoulder=right?8:-8;
+            float angle=(aiming?31:24)*(float)Math.PI/180;
+            float c=(float)Math.cos(angle),s=(float)Math.sin(angle);
+            float handX=right?3:-3;
+            float handY=right?0:-1.3f-12*pull;
+            float handZ=right?3.5f:8.0f;
+            for(int index:firstPersonArmIndices[side]){
+                int n=index*7;
+                float sx=source.get(n)-shoulder,sy=source.get(n+1)+1,sz=source.get(n+2)-47;
+                // Retain the original mesh cross section and sleeve shape; rotate the
+                // whole limb from its shoulder instead of collapsing it into a line.
+                target.put(handX+.82f*sx);
+                target.put(handY+.82f*(sy*c-sz*s));
+                target.put(handZ+.82f*(sy*s+sz*c));
+                for(int component=3;component<7;component++)target.put(source.get(n+component));
+            }
+        }
+        firstPersonArms.count=target.position()/7;
+        target.rewind();
     }
     private Batch handItem(int id)throws Exception{
         Batch cached=handItems.get(id);if(cached!=null)return cached;
@@ -584,7 +700,9 @@ public final class IslandRenderer implements GLSurfaceView.Renderer,GameEngine.H
         ByteBuffer mesh=ByteBuffer.wrap(read("ui/"+name+".mesh")).order(ByteOrder.LITTLE_ENDIAN);int count=mesh.getInt();
         float[] v=new float[count*5];mesh.asFloatBuffer().get(v);float[] low={Float.MAX_VALUE,Float.MAX_VALUE,Float.MAX_VALUE},high={-Float.MAX_VALUE,-Float.MAX_VALUE,-Float.MAX_VALUE};
         for(int i=0;i<count;i++)for(int j=0;j<3;j++){low[j]=Math.min(low[j],v[i*5+j]);high[j]=Math.max(high[j],v[i*5+j]);}
-        float extent=Math.max(high[0]-low[0],Math.max(high[1]-low[1],high[2]-low[2]));float scale=id==20030?1.3f:id==20100?.8f:(definition.name.contains("剑")?36:18)/Math.max(1,extent);
+        float extent=Math.max(high[0]-low[0],Math.max(high[1]-low[1],high[2]-low[2]));
+        float targetSize=definition.name.contains("钥匙")?24:definition.name.contains("剑")?38:definition.name.contains("钉")?18:20;
+        float scale=id==20030?1.3f:id==20100?.8f:targetSize/Math.max(1,extent);
         Batch result=new Batch();result.owner=Integer.MIN_VALUE+1;result.count=count;result.light=white;result.vertices=ByteBuffer.allocateDirect(count*28).order(ByteOrder.nativeOrder()).asFloatBuffer();
         float[] anchor=id==20030?new float[]{10,-.5f,-1}:id==20100?new float[]{0,5,0}:new float[]{(low[0]+high[0])*.5f,(low[1]+high[1])*.5f,(low[2]+high[2])*.5f};
         for(int i=0;i<count;i++){for(int j=0;j<3;j++)result.vertices.put((v[i*5+j]-anchor[j])*scale);result.vertices.put(v[i*5+3]);result.vertices.put(v[i*5+4]);result.vertices.put(.5f);result.vertices.put(.5f);}result.vertices.position(0);

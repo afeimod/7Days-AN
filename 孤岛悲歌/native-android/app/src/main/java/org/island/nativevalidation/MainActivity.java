@@ -1,12 +1,17 @@
 package org.island.nativevalidation;
 
 import android.app.*;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.opengl.GLSurfaceView;
 import android.os.*;
 import android.view.*;
 import android.widget.*;
+import android.util.Base64;
 import java.util.ArrayList;
+import java.io.ByteArrayOutputStream;
+import android.view.PixelCopy;
 
 public final class MainActivity extends Activity {
     public GLSurfaceView surface;
@@ -63,6 +68,7 @@ public final class MainActivity extends Activity {
         getWindow().setStatusBarColor(0xFF12171B);getWindow().setNavigationBarColor(0xFF12171B);
         FrameLayout root=new FrameLayout(this);root.setBackgroundColor(0xFF12171B);
         audio=new GameAudio(this);renderer=new IslandRenderer(getAssets());renderer.audio=audio;renderer.setSoftLight(getSharedPreferences("visual-settings",0).getFloat("global-soft-light",.28f));surface=new GLSurfaceView(this);surface.setEGLContextClientVersion(2);surface.setPreserveEGLContextOnPause(true);surface.setRenderer(renderer);
+        applyFrameRateLimit(getPreferences(0).getInt("fps-cap",60));
         surface.setContentDescription("孤岛悲歌游戏场景，拖动画面转动视角");
         root.addView(surface,new FrameLayout.LayoutParams(-1,-1));
         cross=OriginalUi.picture(this,"player-allow0");cross.setVisibility(View.GONE);cross.setAlpha(.85f);root.addView(cross,new FrameLayout.LayoutParams(dp(25),dp(25),Gravity.CENTER));
@@ -81,7 +87,6 @@ public final class MainActivity extends Activity {
     private void jumpOrConfirm(){surface.queueEvent(()->{if(renderer.game!=null&&!renderer.game.dialog.isEmpty())renderer.action();else renderer.jump();});}
     @Override public boolean dispatchKeyEvent(KeyEvent event){
         if(renderer!=null&&renderer.uiDepth==0){int code=event.getKeyCode();boolean down=event.getAction()==KeyEvent.ACTION_DOWN;
-            if(code==KeyEvent.KEYCODE_F5||code==KeyEvent.KEYCODE_F9){if(down&&event.getRepeatCount()==0){if(code==KeyEvent.KEYCODE_F5)writeSlot(SaveSlots.QUICK,true);else readSlot(SaveSlots.QUICK);}return true;}
             if(code==KeyEvent.KEYCODE_2||code==KeyEvent.KEYCODE_8||code==KeyEvent.KEYCODE_4||code==KeyEvent.KEYCODE_6){renderer.key(code==KeyEvent.KEYCODE_2?1:code==KeyEvent.KEYCODE_8?4:code==KeyEvent.KEYCODE_4?0:2,down);return true;}
             if(code==KeyEvent.KEYCODE_1||code==KeyEvent.KEYCODE_3||code==KeyEvent.KEYCODE_7||code==KeyEvent.KEYCODE_9||code==KeyEvent.KEYCODE_5||code==KeyEvent.KEYCODE_STAR||code==KeyEvent.KEYCODE_POUND||code==KeyEvent.KEYCODE_0){
                 if(down&&event.getRepeatCount()==0){if(code==KeyEvent.KEYCODE_1||code==KeyEvent.KEYCODE_3)jumpOrConfirm();else if(code==KeyEvent.KEYCODE_7||code==KeyEvent.KEYCODE_9)surface.queueEvent(()->renderer.crouch());else if(code==KeyEvent.KEYCODE_5)surface.queueEvent(()->renderer.action());else if(code==KeyEvent.KEYCODE_STAR)surface.queueEvent(()->renderer.toggleSlingshot());else if(code==KeyEvent.KEYCODE_POUND)surface.queueEvent(()->renderer.equipPickaxe());else showMap();}return true;
@@ -107,11 +112,11 @@ public final class MainActivity extends Activity {
         handler.postDelayed(()->{root.removeView(message);if(notice==message)notice=null;},2200);
     });}
     private void menu(){
-        Dialog dialog=OriginalUi.menu(this,new String[]{"继续游戏","保存游戏","读取游戏","即时存档","即时读档","游戏设置","游戏帮助","退出游戏"},new String[]{"resume","save","loadgame",null,null,"gamesettings","help","quitgame"},new Runnable[]{()->{},this::saveGame,this::loadGame,()->writeSlot(SaveSlots.QUICK,true),()->readSlot(SaveSlots.QUICK),this::settings,this::showHelp,this::finish});
+        Dialog dialog=OriginalUi.menu(this,new String[]{"继续游戏","保存游戏","读取游戏","游戏设置","游戏帮助","退出游戏"},new String[]{"resume","save","loadgame","gamesettings","help","quitgame"},new Runnable[]{()->{},this::saveGame,this::loadGame,this::settings,this::showHelp,this::finish});
         showModal(dialog);MenuControls.install(dialog,false);
     }
     private void settings(){
-        Dialog dialog=OriginalUi.menu(this,new String[]{"屏幕按键布局","声音设置","全局柔光","对话大小","手柄操作","摄像头与麦克风"},new String[]{null,null,null,null,null,null},new Runnable[]{this::editControls,()->{SettingsDialog d=new SettingsDialog(this,audio);showModal(d);d.fitWindow();},this::softLightSettings,this::dialogueSettings,()->show(new AlertDialog.Builder(this).setTitle("手柄操作").setMessage("左摇杆 / 方向键：移动\n右摇杆：转向\nA：跳跃 / 对话确认\nB：下蹲\nX / RT：使用当前武器\nY：调查 / 继续\nLB / Select：物品栏\nRB：弹弓模式\nStart：暂停菜单\n菜单中方向键选择，A 确认，B 返回。").setPositiveButton("返回",null).create()),this::sensors});
+        Dialog dialog=OriginalUi.menu(this,new String[]{"屏幕按键布局","声音设置","全局柔光","帧数限制","对话大小","手柄操作","摄像头与麦克风"},new String[]{null,null,null,null,null,null,null},new Runnable[]{this::editControls,()->{SettingsDialog d=new SettingsDialog(this,audio);showModal(d);d.fitWindow();},this::softLightSettings,this::frameRateSettings,this::dialogueSettings,()->show(new AlertDialog.Builder(this).setTitle("手柄操作").setMessage("左摇杆 / 方向键：移动\n右摇杆：转向\nA：跳跃 / 对话确认\nB：下蹲\nX / RT：使用当前武器\nY：调查 / 继续\nLB / Select：物品栏\nRB：弹弓模式\nStart：暂停菜单\n菜单中方向键选择，A 确认，B 返回。").setPositiveButton("返回",null).create()),this::sensors});
         showModal(dialog);MenuControls.install(dialog,false);
     }
     private void softLightSettings(){
@@ -125,6 +130,21 @@ public final class MainActivity extends Activity {
         });
         show(new AlertDialog.Builder(this).setTitle("全局柔光").setView(panel).setPositiveButton("完成",null).create());
     }
+    private void frameRateSettings(){
+        int[] rates={30,45,60,90,120};int selected=getPreferences(0).getInt("fps-cap",60),index=2;
+        for(int i=0;i<rates.length;i++)if(rates[i]==selected)index=i;
+        String[] labels=new String[rates.length];for(int i=0;i<rates.length;i++)labels[i]=rates[i]+" FPS";
+        AlertDialog dialog=new AlertDialog.Builder(this).setTitle("帧数限制")
+                .setSingleChoiceItems(labels,index,(d,which)->{int rate=rates[which];getPreferences(0).edit().putInt("fps-cap",rate).apply();applyFrameRateLimit(rate);d.dismiss();})
+                .setNegativeButton("返回",null).create();
+        show(dialog);
+    }
+    private void applyFrameRateLimit(int rate){
+        if(Build.VERSION.SDK_INT>=30&&surface!=null){
+            try{surface.getHolder().getSurface().setFrameRate(rate,android.view.Surface.FRAME_RATE_COMPATIBILITY_DEFAULT);}
+            catch(RuntimeException e){android.util.Log.w("IslandNative","frame-rate hint unavailable",e);}
+        }
+    }
     private void editControls(){ControlEditorDialog d=new ControlEditorDialog(this,()->controls.reloadLayout());showModal(d);d.getWindow().setLayout(-1,-1);}
     private void dialogueSettings(){
         LinearLayout panel=new LinearLayout(this);panel.setOrientation(LinearLayout.VERTICAL);panel.setPadding(dp(24),dp(12),dp(24),dp(12));
@@ -135,7 +155,9 @@ public final class MainActivity extends Activity {
         show(new AlertDialog.Builder(this).setTitle("对话大小").setView(panel).setPositiveButton("完成",null).create());
     }
     private void showHelp(){
-        HelpDialog d=new HelpDialog(this);showModal(d);MenuControls.install(d,true);
+        HelpDialog d=new HelpDialog(this);controls.release();if(gamepad!=null)gamepad.release();renderer.releaseKeys();
+        d.show();d.getWindow().setLayout(-1,-1);d.getWindow().getDecorView().setSystemUiVisibility(immersiveFlags());
+        d.setOnDismissListener(v->{});
     }
     private void showMap(){
         if(renderer.game==null||renderer.game.busy())return;
@@ -145,19 +167,65 @@ public final class MainActivity extends Activity {
     private void saveGame(){slotDialog(true);}
     private void loadGame(){slotDialog(false);}
     private void slotDialog(boolean saving){
-        String[] labels=new String[SaveSlots.COUNT+(saving?0:1)];for(int i=0;i<labels.length;i++)labels[i]=saves.label(saving?i+1:i);
-        AlertDialog d=new AlertDialog.Builder(this).setTitle(saving?"选择存档槽位":"选择读取槽位").setItems(labels,(dialog,index)->{int slot=saving?index+1:index;
-            if(!saving){readSlot(slot);return;}
-            if(saves.read(slot)==null)writeSlot(slot,false);else show(new AlertDialog.Builder(this).setTitle("覆盖这个槽位？").setMessage(saves.label(slot)).setPositiveButton("保存",(v,w)->writeSlot(slot,false)).setNegativeButton("返回",null).create());
-        }).setNegativeButton("返回",null).create();show(d);
-        ListView list=d.getListView();list.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,labels){@Override public View getView(int position,View convert,ViewGroup parent){OriginalFont.Text row=convert instanceof OriginalFont.Text?(OriginalFont.Text)convert:new OriginalFont.Text(MainActivity.this);row.setText(getItem(position));row.setTextSize(13);row.setPadding(dp(18),0,dp(18),0);row.setGravity(Gravity.CENTER_VERTICAL);row.setMinHeight(dp(48));return row;}});list.setFocusableInTouchMode(true);list.requestFocus();list.setSelection(0);
+        Dialog d=new Dialog(this,android.R.style.Theme_Translucent_NoTitleBar_Fullscreen);
+        FrameLayout root=new FrameLayout(this);root.setBackgroundColor(Color.TRANSPARENT);
+        FrameLayout panelFrame=new FrameLayout(this);android.graphics.drawable.Drawable originalFrame=OriginalUi.background(this,"loadframemid");originalFrame.setAlpha(145);panelFrame.setBackground(originalFrame);
+        int panelWidth=Math.min(dp(680),getResources().getDisplayMetrics().widthPixels-dp(20));
+        int panelHeight=Math.min(Math.round(panelWidth*344f/680f),getResources().getDisplayMetrics().heightPixels-dp(48));
+        FrameLayout.LayoutParams panelBox=new FrameLayout.LayoutParams(panelWidth,panelHeight,Gravity.CENTER);root.addView(panelFrame,panelBox);
+        LinearLayout panel=new LinearLayout(this);panel.setOrientation(LinearLayout.VERTICAL);panel.setPadding(dp(18),dp(3),dp(18),dp(3));panelFrame.addView(panel,new FrameLayout.LayoutParams(-1,-1));
+        ScrollView scroll=new ScrollView(this);LinearLayout rows=new LinearLayout(this);rows.setOrientation(LinearLayout.VERTICAL);scroll.addView(rows);panel.addView(scroll,new LinearLayout.LayoutParams(-1,0,1));
+        int count=SaveSlots.COUNT;
+        for(int index=0;index<count;index++){
+            final int slot=index+1;
+            LinearLayout row=new LinearLayout(this);row.setGravity(Gravity.CENTER_VERTICAL);row.setPadding(dp(8),dp(2),dp(8),dp(2));
+            row.setBackgroundColor(Color.TRANSPARENT);
+            ImageView preview=new ImageView(this);preview.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            String encoded=getPreferences(0).getString("save-slot-"+slot+"-preview",null);
+            if(encoded!=null)try{byte[] bytes=Base64.decode(encoded,Base64.DEFAULT);preview.setImageBitmap(BitmapFactory.decodeByteArray(bytes,0,bytes.length));}
+            catch(Exception ignored){preview.setVisibility(View.GONE);}
+            else preview.setVisibility(View.GONE);
+            int rowHeight=Math.max(dp(24),(panelHeight-dp(8))/5);
+            // The original frame reserves its translucent left column for the
+            // thumbnail; slot text belongs in the open row to its right.
+            row.addView(preview,new LinearLayout.LayoutParams(Math.round(panelWidth*.36f),Math.max(dp(20),rowHeight-dp(4))));
+            OriginalFont.Text label=new OriginalFont.Text(this);label.setText(saves.label(slot));label.setTextSize(11);label.setGravity(Gravity.CENTER_VERTICAL);label.setPadding(dp(8),0,0,0);row.addView(label,new LinearLayout.LayoutParams(0,rowHeight,1));
+            row.setFocusable(true);row.setClickable(true);row.setOnClickListener(v->{
+                if(!saving){if(saves.read(slot)!=null){d.dismiss();readSlot(slot);}else toast("这个槽位没有存档");return;}
+                if(saves.read(slot)==null){d.dismiss();writeSlot(slot,false);}
+                else{
+                    Dialog replace=OriginalUi.menu(this,new String[]{"覆盖 "+saves.label(slot),"返回"},new String[]{"save","loadgame"},new Runnable[]{
+                        ()->{d.dismiss();writeSlot(slot,false);},()->{}
+                    });
+                    showModal(replace);MenuControls.install(replace,false);
+                }
+            });rows.addView(row,new LinearLayout.LayoutParams(-1,rowHeight));
+        }
+        d.setCancelable(true);
+        d.setContentView(root);showModal(d);d.getWindow().setLayout(-1,-1);
+        d.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(Color.TRANSPARENT));d.getWindow().setDimAmount(0f);
+        MenuControls.install(d,false);
+        d.setOnCancelListener(v->{if(startup!=null)startup.restoreMenu();});
     }
     private void writeSlot(int slot,boolean instant){surface.queueEvent(()->{try{
         if(renderer.game==null||renderer.game.loading)throw new IllegalStateException("请先进入游戏");
         String save=instant?renderer.saveSnapshot():renderer.saveGame();if(!saves.write(slot,save,renderer.level))throw new java.io.IOException("存档写入失败，请重试");
-        toast(slot==0?"即时存档已保存":"已保存到存档 "+slot);
+        captureSlotPreview(slot);
+        toast("已保存到存档 "+slot);
     }catch(Exception e){toast(e.getMessage());}});}
+    private void captureSlotPreview(int slot){
+        if(android.os.Build.VERSION.SDK_INT<26)return;
+        Bitmap frame=Bitmap.createBitmap(240,135,Bitmap.Config.ARGB_8888);
+        PixelCopy.request(surface,frame,result->{
+            if(result!=PixelCopy.SUCCESS){frame.recycle();return;}
+            try(ByteArrayOutputStream data=new ByteArrayOutputStream()){
+                frame.compress(Bitmap.CompressFormat.JPEG,60,data);
+                getPreferences(0).edit().putString("save-slot-"+slot+"-preview",Base64.encodeToString(data.toByteArray(),Base64.NO_WRAP)).apply();
+            }catch(Exception ignored){}finally{frame.recycle();}
+        },handler);
+    }
     private void readSlot(int slot){String save=saves.read(slot);if(save==null){toast(slot==0?"尚无即时存档":"这个槽位没有存档");return;}
+        if(startup!=null)startup.closeForLoad();
         controls.release();gamepad.release();renderer.releaseKeys();surface.queueEvent(()->{try{renderer.loadGame(save);toast(slot==0?"即时存档已读取":"已读取存档 "+slot);}catch(Exception e){toast(e.getMessage());}});
     }
     private void showInventory(){renderer.releaseKeys();surface.queueEvent(()->{
@@ -166,7 +234,7 @@ public final class MainActivity extends Activity {
         runOnUiThread(()->{
             InventoryDialog inventoryDialog=new InventoryDialog(this,items,selected,new InventoryDialog.Actions(){
                 public void empty(){surface.queueEvent(()->renderer.game.selected=-1);}
-                public void use(int id){surface.queueEvent(()->{GameEngine.Item item=renderer.game.items.get(id);if(item!=null&&item.tab==2)renderer.game.useMedicine(id);else renderer.selectItem(id);});}
+                public void use(int id){surface.queueEvent(()->{GameEngine.Item item=renderer.game.items.get(id);if(item==null)return;if(item.tab==2)renderer.game.useMedicine(id);else if(item.tab==3){renderer.selectItem(-1);runOnUiThread(()->item(id));}else renderer.selectItem(id);});}
                 public void combine(int first,int second){surface.queueEvent(()->renderer.game.combine(first,second));}
             });
             controls.release();renderer.releaseKeys();renderer.uiDepth++;inventoryDialog.setOnDismissListener(d->renderer.uiDepth=Math.max(0,renderer.uiDepth-1));inventoryDialog.open();
@@ -175,6 +243,7 @@ public final class MainActivity extends Activity {
     private void item(int id){surface.queueEvent(()->{
         GameEngine.Item item=renderer.game.items.get(id);if(item==null)return;int selected=renderer.game.selected;
         runOnUiThread(()->{
+            if(item.tab==3){showItemInfo(item);return;}
             boolean readable=item.required<0||renderer.game.inventory.contains(item.required);
             AlertDialog.Builder b=new AlertDialog.Builder(this).setTitle(item.info.isEmpty()?item.name:item.info).setMessage(item.description+(item.content.isEmpty()?"":readable?"\n\n"+item.content.replace("||","\n\n"):"\n\n需要先准备能播放磁带的录音机。"));
             b.setPositiveButton(item.tab==2?"使用草药":"选中 / 使用",(d,w)->surface.queueEvent(()->{if(item.tab==2)renderer.game.useMedicine(id);else renderer.selectItem(id);}));
@@ -182,6 +251,23 @@ public final class MainActivity extends Activity {
             b.setNegativeButton("返回",null);show(b.create());
         });
     });}
+    private void showItemInfo(GameEngine.Item item){
+        Dialog dialog=new Dialog(this,android.R.style.Theme_Black_NoTitleBar_Fullscreen);
+        FrameLayout page=new FrameLayout(this);page.setBackgroundColor(Color.TRANSPARENT);
+        LinearLayout paper=new LinearLayout(this);paper.setOrientation(LinearLayout.VERTICAL);paper.setPadding(dp(18),dp(14),dp(18),dp(10));paper.setBackground(OriginalUi.background(this,"book"));
+        OriginalFont.Text title=new OriginalFont.Text(this);title.setText(item.info.isEmpty()?item.name:item.info);title.setTextSize(20);title.setTextColor(0xFFFFE2A6);paper.addView(title,new LinearLayout.LayoutParams(-1,-2));
+        ItemMeshPreview.Viewport artwork=new ItemMeshPreview.Viewport(this);artwork.item(item.picpos);paper.addView(artwork,new LinearLayout.LayoutParams(-1,dp(150)));
+        ScrollView scroll=new ScrollView(this);OriginalFont.Text body=new OriginalFont.Text(this);body.setText((item.description.isEmpty()?"":item.description+"\n\n")+item.content.replace("||","\n\n"));body.setTextSize(16);body.setTextColor(0xFFF5E8CF);body.setPadding(0,dp(12),0,dp(12));scroll.addView(body);paper.addView(scroll,new LinearLayout.LayoutParams(-1,0,1));
+        android.graphics.Bitmap originalBack=OriginalUi.bitmap(this,"ggoback");
+        ImageView close=new ImageView(this);
+        close.setImageBitmap(android.graphics.Bitmap.createBitmap(originalBack,0,0,originalBack.getWidth(),Math.max(1,originalBack.getHeight()/2)));
+        close.setScaleType(ImageView.ScaleType.CENTER_INSIDE);close.setContentDescription("返回");
+        close.setOnClickListener(v->dialog.dismiss());paper.addView(close,new LinearLayout.LayoutParams(-1,dp(42)));
+        FrameLayout.LayoutParams panel=new FrameLayout.LayoutParams(Math.min(getResources().getDisplayMetrics().widthPixels-dp(36),dp(650)),Math.min(getResources().getDisplayMetrics().heightPixels-dp(48),dp(560)),Gravity.CENTER);page.addView(paper,panel);
+        dialog.setContentView(page);dialog.setCancelable(true);controls.release();if(gamepad!=null)gamepad.release();renderer.releaseKeys();dialog.show();
+        dialog.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(Color.TRANSPARENT));dialog.getWindow().setDimAmount(0f);dialog.getWindow().setLayout(-1,-1);dialog.getWindow().getDecorView().setSystemUiVisibility(immersiveFlags());
+        dialog.setOnKeyListener((d,code,event)->{if((code==KeyEvent.KEYCODE_BACK||code==KeyEvent.KEYCODE_BUTTON_B||code==KeyEvent.KEYCODE_DPAD_CENTER||code==KeyEvent.KEYCODE_ENTER)&&event.getAction()==KeyEvent.ACTION_UP){dialog.dismiss();return true;}return code==KeyEvent.KEYCODE_BACK||code==KeyEvent.KEYCODE_BUTTON_B;});
+    }
     private void showPuzzle(int id){surface.queueEvent(()->{
         PuzzleState state=renderer.game.puzzleState();if(state==null)return;
         runOnUiThread(()->{
@@ -193,8 +279,8 @@ public final class MainActivity extends Activity {
             PuzzleView view=new PuzzleView(this,state,renderer.game);root.addView(view,new LinearLayout.LayoutParams(-1,Math.min((int)(getResources().getDisplayMetrics().heightPixels*.68f),getResources().getDisplayMetrics().widthPixels+dp(90))));
             Button mic=state.type==108?OriginalUi.button(this,"麦克风 · 吹去灰尘",null,()->{}):null;
             if(mic!=null)root.addView(mic,new LinearLayout.LayoutParams(-1,dp(44)));
-            AlertDialog dialog=new AlertDialog.Builder(this).setTitle(title).setView(root).setPositiveButton("确认",(d,w)->surface.queueEvent(()->renderer.game.completePuzzle(state.solved()))).setNegativeButton("稍后再试",(d,w)->surface.queueEvent(()->renderer.game.puzzle=-1)).create();
-            dialog.setCanceledOnTouchOutside(false);dialog.setOnCancelListener(d->surface.queueEvent(()->renderer.game.puzzle=-1));show(dialog);
+            AlertDialog dialog=new AlertDialog.Builder(this).setTitle(title).setView(root).setPositiveButton("确认",(d,w)->surface.queueEvent(()->renderer.game.completePuzzle(state.solved()))).setNegativeButton("稍后再试",(d,w)->surface.queueEvent(()->renderer.game.cancelPuzzle())).create();
+            dialog.setCanceledOnTouchOutside(false);dialog.setOnCancelListener(d->surface.queueEvent(()->renderer.game.cancelPuzzle()));show(dialog);
             if(mic!=null)connectMicrophone(dialog,mic,new MicrophoneInput.Listener(){public void level(float strength){view.blow(strength);}public void pulse(char symbol){}public void error(String message){toast(message);}});
         });
     });}
@@ -207,8 +293,8 @@ public final class MainActivity extends Activity {
         light.setProgress(state.progress);
         Button camera=OriginalUi.button(this,"摄像头",null,()->camera(false,value->light.setProgress(value)));
         root.addView(camera,new LinearLayout.LayoutParams(-1,dp(44)));
-        AlertDialog dialog=new AlertDialog.Builder(this).setTitle("透光查看底片").setView(root).setPositiveButton("继续",(d,w)->surface.queueEvent(()->renderer.game.puzzle=-1)).create();
-        dialog.setCanceledOnTouchOutside(false);dialog.setOnCancelListener(d->surface.queueEvent(()->renderer.game.puzzle=-1));show(dialog);
+        AlertDialog dialog=new AlertDialog.Builder(this).setTitle("透光查看底片").setView(root).setPositiveButton("继续",(d,w)->surface.queueEvent(()->renderer.game.cancelPuzzle())).create();
+        dialog.setCanceledOnTouchOutside(false);dialog.setOnCancelListener(d->surface.queueEvent(()->renderer.game.cancelPuzzle()));show(dialog);
     }
     private void showMorse(PuzzleState state){
         LinearLayout root=new LinearLayout(this);root.setOrientation(LinearLayout.VERTICAL);root.setPadding(dp(16),dp(8),dp(16),dp(8));
@@ -219,7 +305,7 @@ public final class MainActivity extends Activity {
         row=new LinearLayout(this);root.addView(row);click(row,"字母间隔",()->{if(!state.letter())toast("这个点划组合不是有效字母");refresh.run();});click(row,"清空重发",()->{state.morse="";state.decoded="";refresh.run();});
         Button mic=OriginalUi.button(this,"麦克风",null,()->{});root.addView(mic,new LinearLayout.LayoutParams(-1,dp(44)));
         TextView table=new TextView(this);table.setText("A ·—   E ·   N —·   O ———   S ···\n1 ·————  2 ··———  4 ····—  8 ———··");table.setPadding(0,dp(12),0,dp(8));root.addView(table);
-        AlertDialog dialog=new AlertDialog.Builder(this).setTitle("无线电发报").setView(root).setPositiveButton("发送",(d,w)->surface.queueEvent(()->renderer.game.completePuzzle(state.solved()))).setNegativeButton("稍后再试",(d,w)->surface.queueEvent(()->renderer.game.puzzle=-1)).create();dialog.setCanceledOnTouchOutside(false);dialog.setOnCancelListener(d->surface.queueEvent(()->renderer.game.puzzle=-1));show(dialog);
+        AlertDialog dialog=new AlertDialog.Builder(this).setTitle("无线电发报").setView(root).setPositiveButton("发送",(d,w)->surface.queueEvent(()->renderer.game.completePuzzle(state.solved()))).setNegativeButton("稍后再试",(d,w)->surface.queueEvent(()->renderer.game.cancelPuzzle())).create();dialog.setCanceledOnTouchOutside(false);dialog.setOnCancelListener(d->surface.queueEvent(()->renderer.game.cancelPuzzle()));show(dialog);
         connectMicrophone(dialog,mic,new MicrophoneInput.Listener(){public void level(float strength){}public void pulse(char symbol){state.signal(symbol);refresh.run();}public void error(String message){toast(message);}});
     }
     private void permission(String name,Runnable task){
@@ -281,7 +367,7 @@ public final class MainActivity extends Activity {
             picture.setScaleType(ImageView.ScaleType.FIT_CENTER);
             Dialog dialog = new Dialog(this, android.R.style.Theme_Black_NoTitleBar_Fullscreen);
             FrameLayout page = new FrameLayout(this);
-            page.setBackgroundColor(Color.BLACK);
+            page.setBackgroundColor(Color.TRANSPARENT);
             if (id >= 1000) {
                 ScrollView scroll = new ScrollView(this);
                 scroll.setFillViewport(true);
@@ -296,10 +382,14 @@ public final class MainActivity extends Activity {
             dialog.setCancelable(true);
             dialog.setCanceledOnTouchOutside(false);
             page.setOnClickListener(v -> dialog.dismiss());
-            showModal(dialog);
-            dialog.getWindow().setLayout(-1, -1);
+            controls.release();if(gamepad!=null)gamepad.release();renderer.releaseKeys();
+            dialog.show();
+            dialog.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(Color.TRANSPARENT));
+            dialog.getWindow().setDimAmount(0f);
+            dialog.getWindow().setLayout(-1,-1);
+            dialog.getWindow().getDecorView().setSystemUiVisibility(immersiveFlags());
+            // Keep the world ticking behind collectible letters and help overlays.
             dialog.setOnDismissListener(d -> {
-                renderer.uiDepth = Math.max(0, renderer.uiDepth - 1);
                 surface.queueEvent(() -> renderer.game.picture = -1);
             });
         } catch (Exception error) {
@@ -317,7 +407,7 @@ public final class MainActivity extends Activity {
             renderer.releaseKeys();
         }
     }
-    @Override protected void onResume(){super.onResume();surface.onResume();if(activeCamera!=null)activeCamera.resumeCamera();if(audio!=null)audio.resume();if(startup!=null)startup.resume();if(moviePlayback!=null)moviePlayback.resume();resumed=true;handler.post(refresh);}
+    @Override protected void onResume(){super.onResume();surface.onResume();applyFrameRateLimit(getPreferences(0).getInt("fps-cap",60));if(activeCamera!=null)activeCamera.resumeCamera();if(audio!=null)audio.resume();if(startup!=null)startup.resume();if(moviePlayback!=null)moviePlayback.resume();resumed=true;handler.post(refresh);}
     @Override protected void onPause(){resumed=false;handler.removeCallbacks(refresh);stopMicrophone();if(activeCamera!=null)activeCamera.pauseCamera();controls.release();if(gamepad!=null)gamepad.release();renderer.releaseKeys();surface.onPause();if(audio!=null)audio.pause();if(startup!=null)startup.pause();if(moviePlayback!=null)moviePlayback.pause();super.onPause();}
     @Override protected void onDestroy() {
         if (movieDialog != null) {

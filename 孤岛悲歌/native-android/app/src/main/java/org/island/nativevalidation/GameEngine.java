@@ -33,7 +33,7 @@ public final class GameEngine {
             solid=virtual?"1".equals(data.get("block")):!"0".equals(data.get("block"));
             String model=data.getOrDefault("model","").toLowerCase(Locale.ROOT);
             door=model.contains("men");
-            furniture="1".equals(data.get("block"))||model.matches(".*(xiang|gui|men|zhuo|huajia|shizhu|langan|shitou|mutou|shujia|mugang|migang|jiutong|tielong|shidiao|muqiao|shuzhishiban|tanta|jiguanshizhu).*")
+            furniture="1".equals(data.get("block"))||model.matches(".*(xiang|gui|men|zhuo|huajia|shizhu|langan|shitou|mutou|shujia|mugang|migang|jiutong|tielong|shidiao|muqiao|shuzhishiban|tanta|jiguanshizhu|ding).*")
                 ||(model.contains("cilunzhijia")&&"1".equals(data.get("block")));
             skin=num(data.get("texture"),0);skins=data.getOrDefault("skins","").split(",");
             String[] pos=data.getOrDefault("origin","0 0 0").split("\\s+");x=flt(pos[0]);y=flt(pos[1]);z=flt(pos[2]);
@@ -144,7 +144,7 @@ public final class GameEngine {
     public void start()throws Exception{reset();load(1,0,90);pushAction(1);}
     public void reset(){markedBoards.clear();pendingCombination=null;stack.clear();fibers.clear();lines.clear();entities.clear();worldState.clear();visibilityOverrides.clear();runtimeState.clear();pendingMotionState="";puzzleStates.clear();dialog="";error="";faults.clear();removed.clear();used.clear();triggered.clear();inventory.clear();inventory.add(20000);selected=-1;health=MAX_HEALTH;ammo=0;ended=false;poisoned=false;rescueChoice=false;poisonClock=0;wait=0;puzzle=-1;movie=-1;picture=-1;executionSteps=0;}
     public void sceneReady(){host.restoreMotionState(pendingMotionState);pendingMotionState="";loading=false;}
-    public boolean busy(){return loading||health<=0||ended||rescueChoice||!dialog.isEmpty()||!stack.isEmpty()||wait>0||puzzle>=0||movie>=0||picture>=0||!error.isEmpty();}
+    public boolean busy(){return loading||health<=0||ended||rescueChoice||!dialog.isEmpty()||!stack.isEmpty()||wait>0||puzzle>=0||movie>=0||!error.isEmpty();}
     private boolean paused(){return loading||health<=0||ended||rescueChoice||!dialog.isEmpty()||puzzle>=0||movie>=0||picture>=0||!error.isEmpty();}
     public void hurt(int amount){if(health<=0||ended)return;health=Math.max(0,health-Math.max(0,amount));if(amount>0)sound("hit.wav");host.report("damage:"+amount+" health:"+health);}
     private void sound(String sample){host.effect("gameplay-sound",new String[]{sample});}
@@ -174,6 +174,28 @@ public final class GameEngine {
         // furniture hotspot (map 5 white pearl 11551 inside rack 11511).
         if(e.auto!=0||e.solid||e.bounds==null)return false;
         for(int axis=0;axis<3;axis++)if(e.bounds[axis+3]-e.bounds[axis]>32)return false;
+        return true;
+    }
+    boolean isPreciseAimTarget(Entity e){
+        if(e==null||e.virtual||e.used||e.removed||e.bounds==null||interaction(e.id)==null)return false;
+        for(int axis=0;axis<3;axis++)if(e.bounds[axis+3]-e.bounds[axis]>32)return false;
+        return true;
+    }
+    boolean isBroadObservationContainer(Entity broad,Entity precise){
+        boolean observationVolume=broad!=null
+            &&((broad.virtual&&broad.auto==0)||(broad.furniture&&!broad.door));
+        if(!observationVolume||precise==null||broad==precise
+            ||broad.removed||broad.bounds==null||!isPreciseAimTarget(precise))return false;
+        Rule rule=interaction(broad.id);
+        if(rule==null||rule.n("type",0)!=0)return false;
+        float[] outer=broad.bounds,inner=precise.bounds;
+        for(int axis=0;axis<3;axis++){
+            float low=inner[axis]+(axis==0?precise.dx:axis==1?precise.dy:precise.dz);
+            float high=inner[axis+3]+(axis==0?precise.dx:axis==1?precise.dy:precise.dz);
+            float outerLow=outer[axis]+(axis==0?broad.dx:axis==1?broad.dy:broad.dz);
+            float outerHigh=outer[axis+3]+(axis==0?broad.dx:axis==1?broad.dy:broad.dz);
+            if(low<outerLow-.01f||high>outerHigh+.01f)return false;
+        }
         return true;
     }
     private boolean acceptsSelectedItem(Entity e){
@@ -214,6 +236,14 @@ public final class GameEngine {
         if(action!=0){if(type==1||type==2){e.used=true;used.add(key(e.originalId));}pushAction(action);host.report("interact:"+id+" action:"+action);}
     }
     public PuzzleState puzzleState(){Rule r=interactions.get(puzzle);if(puzzle==COMBINATION_PUZZLE&&pendingCombination!=null){r=new Rule();r.fields.put("type",Collections.singletonList("201"));}if(r==null)return null;String key=key(puzzle);PuzzleState s=puzzleStates.get(key);if(s==null){s=new PuzzleState(puzzle,r);puzzleStates.put(key,s);}if(inventory.contains(selected))s.chosen=selected;return s;}
+    private void resetPuzzleCamera(int id){
+        Rule r=interactions.get(id);
+        if(r!=null&&r.n("type",0)==108)host.effect("follow",new String[]{"1"});
+    }
+    public void cancelPuzzle(){
+        int id=puzzle;resetPuzzleCamera(id);puzzle=-1;
+        if(id==COMBINATION_PUZZLE)pendingCombination=null;
+    }
     public boolean completePuzzle(boolean success){
         int id=puzzle;Rule r=interactions.get(id);PuzzleState state=puzzleState();
         if(success&&(state==null||!state.solved()))return false;
@@ -222,7 +252,7 @@ public final class GameEngine {
             if(success&&recipe!=null&&inventory.contains(recipe.n("item1",-1))&&inventory.contains(recipe.n("item2",-1))){applyCombination(recipe);puzzleStates.remove(key(id));}
             return true;
         }
-        puzzle=-1;if(r!=null){
+        resetPuzzleCamera(id);puzzle=-1;if(r!=null){
             if(success&&state!=null){
                 Entity object=find(id);if(object!=null){object.used=true;used.add(key(object.originalId));}
                 if(state.type==101||state.type==102)for(int item:state.items){inventory.remove(item);if(selected==item)selected=-1;}
@@ -335,7 +365,8 @@ public final class GameEngine {
                 case "untoxin":poisoned=false;poisonClock=0;host.report("poison:false");break;
                 case "saveada":if(inventory.contains(22260)){rescueChoice=true;host.report("rescue:choice");}else say("没有可以救阿大的解毒草。");break;
                 case "setaction":wait=host.motion(find(n),n,op.name,a);break;
-                case "follow":case "fog":case "setblack":case "allblack":case "fadein":case "fadeout":case "playsound":case "playback":case "bound":host.effect(op.name,a);break;
+                case "fadein":case "fadeout":host.effect(op.name,a);wait=a.length>0?Math.max(.1f,num(a[0],1)/10f):.1f;break;
+                case "follow":case "fog":case "setblack":case "allblack":case "playsound":case "playback":case "bound":host.effect(op.name,a);break;
                 default:fail("未实现的原指令 "+op.name+" "+op.value);
             }
         }
